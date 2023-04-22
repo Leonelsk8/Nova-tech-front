@@ -8,7 +8,7 @@ function App() {
   const {idiom, setIdiom} = useState(es);
 
   const idiomChange = (value)=>{
-    vaiue === 'es' ? setIdiom(en) : setIdiom(es);
+    value === 'es' ? setIdiom(en) : setIdiom(es);
   }
 
   return (
