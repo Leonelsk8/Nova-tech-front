@@ -1,21 +1,18 @@
-import { useState } from 'react';
-import './App.css';
-import en from './English.json';
-import es from './Spanish.json';
+import { Routes, Route } from 'react-router-dom';
+import Register from './pages/Register';
+import AppNavbar from './components/AppNavbar/AppNavbar';
+import AppFooter from './components/AppFooter/AppFooter';
 
 function App() {
-
-  const {idiom, setIdiom} = useState(es);
-
-  const idiomChange = (value)=>{
-    value === 'es' ? setIdiom(en) : setIdiom(es);
-  }
-
   return (
     <>
-      
+      <AppNavbar />
+      <Routes>
+        <Route path='/' element={<Register />} />
+      </Routes>
+      <AppFooter />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
