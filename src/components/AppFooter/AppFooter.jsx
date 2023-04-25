@@ -1,8 +1,6 @@
 const AppFooter = () => {
   return (
-    <div className='container-fluid bg-light py-5'>
-      <p className="container">Footer</p>
-    </div>
+    <div className='bg-light text-center py-5'>Hi there. Im the footer</div>
   );
 };
 
