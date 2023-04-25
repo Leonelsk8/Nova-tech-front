@@ -1,0 +1,11 @@
+{
+  "Navbar":{
+    "title": "example"
+  },
+  "Footer":{
+    "title": "example"
+  },
+  "Cartshop":{
+    "shops": "exmples shops"
+  }
+}
