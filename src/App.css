@@ -1,0 +1,28 @@
+.bgNav-Light{
+  background-color: #5F7161;
+}
+
+.bgFootButt-Light{
+  background-color: #6D8B74;
+}
+
+.bg-Light {
+  background-color: #D0c9c0;
+}
+
+.bgCardBan-Light{
+  background-color: #EFEAD8;
+}
+
+.butt{
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+  transition: 0.5s;
+}
+
+.butt:hover{
+  background-color: #839788;
+  border: 2px solid white;
+  box-shadow: 1px 1px 5px;
+}

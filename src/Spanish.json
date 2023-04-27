@@ -2,6 +2,10 @@
   "Navbar":{
     "title": "ejemplos"
   },
+  "Store":{
+    "search": "Busqueda",
+    "category": "Productos"
+  },
   "Footer":{
     "title": "ejemplos"
   },

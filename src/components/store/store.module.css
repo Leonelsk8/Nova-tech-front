@@ -1,0 +1,63 @@
+.cards{
+  border-radius: 7px;
+  border: 2px solid #fff;
+}
+
+.buttCart{
+  border-radius: 100%;
+  border: none;
+  background-color: rgb(252, 243, 231);
+  padding: 4px 10px;
+}
+
+.cartPlus{
+  width: 100%;
+  font-weight:  bold;
+  font-size: 20px;
+}
+
+.buttCart:hover{
+  color: #fff;
+  background-color: #6D8B74;
+  animation: carrAnimate 0.3s linear;
+  
+}
+
+@keyframes carrAnimate {
+  0%{
+    transform: scale(100%);
+  }
+  50%{
+    transform: scale(50%);
+  }
+  100%{
+    transform: scale(110%);
+  }
+}
+
+.dropp{
+  border: none;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropp:focus{
+  background-color:  #5F7161;
+}
+
+.dropp:hover{
+  background-color:  #5F7161;
+}
+
+.droppmenu{
+  background-color: #5F7161;
+  width: 100%;
+}
+
+.dropitem:hover{
+  background-color: rgba(46, 46, 46, 0.832);
+}
+
