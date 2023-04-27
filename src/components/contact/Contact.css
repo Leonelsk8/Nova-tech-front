@@ -1,0 +1,65 @@
+.contact {  
+  background-color: aquamarine;
+  margin: 10px;
+  padding: 10px;
+}
+
+form {
+  width: 25rem;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: double 10px;
+  color: black;
+}
+
+.header-contact {
+  width: 100%;
+  height: 6rem;
+  background-color: #efead8;
+}
+
+.header-contact > h2,
+.header-contact > p {
+  color: #021330;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header-contact > p {
+  font-size: 1rem;
+}
+
+.field-name,
+.field-email,
+.field-message {
+  width: 90%;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  margin: 1rem;
+}
+
+.symbol-required::after{
+  content: '*';
+  color: #FF0000;
+}
+.field-message{
+  height: 10rem;
+}
+
+.btn-send {
+  width: 100%;
+  background-color: #6d8b74;
+}
+
+.btn-send:hover,
+.btn-send:focus {
+  background-color: #10dd08;
+  color: #ffffff;
+}
