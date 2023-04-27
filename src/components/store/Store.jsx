@@ -1,33 +1,51 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import {Container ,Col,Row, Dropdown , Image} from 'react-bootstrap';
 import Card from './Cards';
 import style from './store.module.css';
 import img1 from '../../assets/img1Bann.jpg';
 import img2 from '../../assets/img2Bann.jpg';
 import img3 from '../../assets/img3Bann.jpg';
+import { getProducts } from '../../API/Api';
+import Loader from '../loader/Loader';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Store = (props) => {
   const lang = props.lang;
+
+  const [dataProd, setDataProd] = useState([]);
+
+  useEffect(()=>{
+    const resp = async()=>{ 
+      await getProducts()
+      .then(response => setDataProd(response.data))
+      .catch(error => console.log(error))
+    };
+    resp();
+  },[]);
+
+  AOS.init();
+
   return (
     <>
       <Container fluid className='pt-5'>
         <Row>
-          <Col className='bgCardBan-Light py-5' lg={12}>
+          <Col className='bgCardBan-Light py-5' lg={12} >
             <h2 className='text-center mb-3'>Todo lo que necesitas para vivir a gusto</h2>
             <Row className='justify-content-center'>
-              <Col lg={3}>
+              <Col lg={3} data-aos="fade-down">
                 <div>
                   <Image src={img2} width={'100%'}></Image>
                   <p className='text-center mt-2'>Ofrecemos electrodomésticos con diseños elegantes y modernos que aportan una apariencia sofisticada a tu casa o negocio.</p>
                 </div>
               </Col>
-              <Col lg={3}>
+              <Col lg={3} data-aos="fade-down">
                 <div>
                   <Image src={img1} width={'100%'}></Image>
                   <p className='text-center mt-2'>Ofrecemos las mejores marcas que garantizan la calidad y la confiabilidad necesaria.</p>
                 </div>
               </Col>
-              <Col lg={3}>
+              <Col lg={3} data-aos="fade-down">
                 <div>
                   <Image src={img3} width={'100%'}></Image>
                   <p className='text-center mt-2'>Tenemos una amplia selección de electrodomésticos de última generación para satisfacer todas tus necesidades.</p>
@@ -134,11 +152,9 @@ const Store = (props) => {
           </Col>
           <Col lg={9}>
             <Row>
-              <Col lg={3}><Card styles={style}/></Col>
-              <Col lg={3}><Card styles={style}/></Col>
-              <Col lg={3}><Card styles={style}/></Col>
-              <Col lg={3}><Card styles={style}/></Col>
-              
+              {
+                dataProd.length === 0 ? <Col lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col lg={3} key={index}><Card title={resp.title} price={resp.price} icon={resp.icon} styles={style}/></Col>))
+              }
             </Row>
           </Col>
         </Row>
