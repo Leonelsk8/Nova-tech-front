@@ -17,7 +17,7 @@ const Contact = () => {
   }
 
   return (
-    <form className='contact vh-100' ref={refForm} action='' onSubmit={handleSubmit}>
+    <form className='contact' ref={refForm} action='' onSubmit={handleSubmit}>
       <div className="header-contact">
         <h2>Contact Us </h2>
         <p>Please fill this form</p>
