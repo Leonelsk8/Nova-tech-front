@@ -5,8 +5,19 @@ const DBURL = import.meta.env.VITE_DB_URL;
 
 export const getProducts = async()=>{
   try {
-    const response = await axios.get(`${DBURL}${endpointProduct.get}`)
-    return response
+    return await axios.get(`${DBURL}${endpointProduct.get}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const getProductById = async(id)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointProduct.getId}/${id}`, {
+      headers: {
+        "access-token": "token"
+      }
+    });
   } catch (error) {
     console.log(error);
   }

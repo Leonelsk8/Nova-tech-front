@@ -26,6 +26,7 @@ const Store = (props) => {
 
   AOS.init();
 
+
   return (
     <>
       <Container fluid className='pt-5'>
@@ -153,7 +154,7 @@ const Store = (props) => {
           <Col lg={9}>
             <Row>
               {
-                dataProd.length === 0 ? <Col lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col lg={3} key={index}><Card title={resp.title} price={resp.price} icon={resp.icon} styles={style}/></Col>))
+                dataProd.length === 0 ? <Col lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col lg={3} key={index}><Card title={resp.title} price={resp.price} icon={resp.icon} id={resp._id} styles={style}/></Col>))
               }
             </Row>
           </Col>
