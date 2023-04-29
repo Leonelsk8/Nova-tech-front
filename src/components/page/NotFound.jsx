@@ -17,7 +17,7 @@ const NotFound = () => {
         </Row>
       </Container>
     </div>
-  );
+  ); 
 };
 
 export default NotFound;

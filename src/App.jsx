@@ -6,6 +6,7 @@ import Contact from './components/contact/Contact';
 import Products from './components/page/Products';
 import Home from './components/page/Home';
 import NotFound from './components/page/NotFound';
+import AboutUS from './components/aboutUS/AboutUS';
 
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='contact' element={<Contact />} />
         <Route path='products' element={<Products />} />
         <Route path='*' element={< NotFound/>} />
+        <Route path='abautUs' element={< AboutUS/>} />
       </Routes>
     </>
   );
