@@ -21,6 +21,7 @@ const landing = () => {
         setDifumi(0);
       }
     }
+
     window.addEventListener('scroll', handleScroll);
   }, []);
 

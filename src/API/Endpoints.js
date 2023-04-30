@@ -1,6 +1,7 @@
 const endpointProduct = {
   create: '/products/create-product',
   get: '/products/get-products',
+  getAll: '/products/get-all-products',
   getId: '/products/get-product-by-id',
   edit: '/products/edit-product',
   delete: '/products/delete-product',

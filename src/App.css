@@ -21,6 +21,15 @@
   transition: 0.5s;
 }
 
+.buttDisabled{
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+  background-color: gray;
+  color: #EFEAD8;
+  cursor: none;
+}
+
 .butt:hover{
   background-color: #839788;
   border: 2px solid white;

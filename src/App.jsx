@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import en from './English.json';
 import es from './Spanish.json';
 import Store from './components/store/Store';
-import Landing from './components/landing/Landing';
 import { Routes, Route, Router } from 'react-router-dom';
 
 function App() {
@@ -17,16 +16,11 @@ function App() {
   const isLog=true;
   return (
     <>
-      <Landing/>
-      <section className='bg-Light'>
-        
-        <Routes>
-          <Route path='*' element={<Store lang={idiom}/>}/>
-          <Route path='/home' element={<Store lang={idiom}/>}/>
-          <Route path='/prod/:id' element={isLog ? <h1>hola</h1>: <h1>chau</h1>}/>
-        </Routes>
-        
-      </section>
+      <Routes>
+        <Route path='*' element={<Store lang={idiom}/>}/>
+        <Route path='/home' element={<Store lang={idiom}/>}/>
+        <Route path='/prod/:id' element={isLog ? <h1>hola</h1>: <h1>chau</h1>}/>
+      </Routes>
     </>
   )
 }

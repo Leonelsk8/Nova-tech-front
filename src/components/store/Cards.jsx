@@ -11,7 +11,9 @@ const Cards = (props) => {
   const navigate = useNavigate();
   return (
     <Card className={`${style.cards}`} data-aos="zoom-in">
-      <Card.Img variant="top" src={icon} />
+      <div className={style.contentImg}>
+        <Card.Img variant="top" src={icon} className={style.imgCards} />
+      </div>
       <Card.Body className="bgCardBan-Light d-flex flex-column justify-content-between">
         <Card.Title>{title}</Card.Title>
         <Card.Text>
