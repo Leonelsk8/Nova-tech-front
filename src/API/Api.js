@@ -11,6 +11,22 @@ export const getProducts = async(pag)=>{
   }
 }
 
+export const getProductCategory = async(category)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointProduct.getCate}/${category}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const searchProd = async(title)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointProduct.searchProd}/${title}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export const getAllProducts = async()=>{
   try {
     return await axios.get(`${DBURL}${endpointProduct.getAll}`,{

@@ -74,3 +74,19 @@
   object-fit:contain;
   object-position: center center;
 }
+
+.buttAll{
+  color: #fff;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  padding: 5px 0px 5px 11px;
+  transition: 0.3s;
+  border-radius: 5px;
+
+}
+
+.buttAll:hover{
+  background-color:  #5F7161;
+}
