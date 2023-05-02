@@ -2,14 +2,14 @@ import React from 'react';
 import {Dropdown} from 'react-bootstrap';
 
 const Dropdowns = (props) => {
-  const {style , title , classD, classDtwo , itemIndex, categoryChange, loadingChange, modeDL} = props;
+  const {style , title , classD, classDtwo , itemIndex, categoryChange, loadingChange, modeDL, lang} = props;
 
   const items = [
     {
-      titleOne: 'Completas',
-      titleTwo: 'Hardware',
-      titleTree: 'Perifericos',
-      titleFor: 'Notebooks',
+      titleOne: lang.Store.pcC,
+      titleTwo: lang.Store.pcH,
+      titleTree: lang.Store.pcP,
+      titleFor: lang.Store.pcN,
       catOne: 'PC-COMPLETA',
       catTwo: 'PC-HARDWARE',
       catTree: 'PC-PERIFERICO',
@@ -36,9 +36,9 @@ const Dropdowns = (props) => {
       catFor: ''
     },
     {
-      titleOne: 'Parlantes',
-      titleTwo: 'Auriculares',
-      titleTree: 'Microfonos',
+      titleOne: lang.Store.audiP,
+      titleTwo: lang.Store.audiA,
+      titleTree: lang.Store.audiM,
       titleFor: '',
       catOne: 'AUD-PARLANTES',
       catTwo: 'AUD-AURIS',
@@ -46,8 +46,8 @@ const Dropdowns = (props) => {
       catFor: ''
     },
     {
-      titleOne: 'Freezer',
-      titleTwo: 'Heladeras',
+      titleOne: lang.Store.heF,
+      titleTwo: lang.Store.catTitleSix,
       titleTree: '',
       titleFor: '',
       catOne: 'FREEZER',
@@ -56,9 +56,9 @@ const Dropdowns = (props) => {
       catFor: ''
     },
     {
-      titleOne: 'Aire acondicionado',
-      titleTwo: 'Calefactores',
-      titleTree: 'Ventiladores',
+      titleOne: lang.Store.climA,
+      titleTwo: lang.Store.climC,
+      titleTree: lang.Store.climV,
       titleFor: '',
       catOne: 'CLIM-AIR',
       catTwo: 'CLIM-CALE',

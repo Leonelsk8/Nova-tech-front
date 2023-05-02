@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 
 const Cards = (props) => {
   const style = props.styles;
-  const { title, price, icon, id, offert, modeDL, textDL } = props;
+  const { title, price, icon, id, offert, modeDL, textDL, lang } = props;
   const priceOff = (price * 50)/100;
   AOS.init();
   const navigate = useNavigate();
@@ -19,12 +19,12 @@ const Cards = (props) => {
         <Card.Title>{title}</Card.Title>
         <div>
           {
-            offert === true ? <div><p className='text-danger'>{`Precio: `}<s>{`$${price}`}</s><b> -50%</b></p><p className='text-success'>{`Precio: $${priceOff}`}</p></div> : <p className='text-success'>{`Precio: $${price}`}</p>
+            offert === true ? <div><p className='text-danger'>{`${lang.Store.price} `}<s>{`$${price}`}</s><b> -50%</b></p><p className='text-success'>{`${lang.Store.price} $${priceOff}`}</p></div> : <p className='text-success'>{`${lang.Store.price} $${price}`}</p>
           }
         </div>
         <div className='d-flex justify-content-between'>
           <button className={modeDL === 'dark' ? `${style.buttCartdark} ${style.buttCart}` : `${style.buttCartlight} ${style.buttCart}`}><i className={`bi bi-cart-plus ${style.cartPlus}`}></i></button>
-          <button className={`text-white bgFootButt-${modeDL} butt-${modeDL} butt`} onClick={() => navigate(`/prod/${id}`)}>Comprar</button>
+          <button className={`text-white bgFootButt-${modeDL} butt-${modeDL} butt`} onClick={() => navigate(`/prod/${id}`)}>{lang.Store.buttBuy}</button>
         </div>
       </Card.Body>
     </Card>

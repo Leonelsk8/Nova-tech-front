@@ -1,14 +1,89 @@
 {
+  "Languaje":{
+    "lang": "en"
+  },
+  
   "Navbar":{
-    "title": "example"
+    "home": "Home",
+    "services": "Services",
+    "about": "About us",
+    "contact": "Contact",
+    "login": "Log in",
+    "register": "Register",
+    "servititleone": "Products",
+    "servititletwo": "Users",
+    "serviPublione": "Create product",
+    "serviPublitwo": "Edit product",
+    "serviPublitree": "Delete product",
+    "serviPublifor": "Modify offers",
+    "serviUserone": "Suspend user",
+    "serviUsertwo": "Messages",
+    "profile": "Profile"
   },
+
+  "Landing":{
+    "title": "¡¡Take advantage of the monthly offers!!",
+    "description": "In Nova Tech don't miss our monthly offers! Every month, we offer an incredible 50% discount on a wide selection of products. Every month we select 8 different products for this great offer.",
+    "butt": "See offers",
+    "circletwo": "8 Products",
+    "circletree": "Monthly"
+  },
+
   "Store":{
-    "search": "Busqueda:",
-    "category": "Categorias:"
+    "sectionOneTitle": "Everything you need to live comfortably",
+    "sectionOneDescOne": "We offer appliances with sleek, modern designs that add a sophisticated look to your home or business.",
+    "sectionOneDescTwo": "We offer the best brands that guarantee the necessary quality and reliability.",
+    "sectionOneDescTree": "We have a wide selection of state-of-the-art appliances to meet all your needs.",
+    "search": "Search:",
+    "category": "Category:",
+    "catTitleOne": "All",
+    "catTitleTwo": "Computers",
+    "catTitleTree": "TV",
+    "catTitleFor": "Cell phones",
+    "catTitleFive": "Audio",
+    "catTitleSix": "Refrigerators",
+    "catTitleSeven": "Conditioning",
+    "catTitleHeight": "Tablets",
+    "pcC": "Complet",
+    "pcH": "Hardware",
+    "pcP": "Peripherals",
+    "pcN": "Notebooks",
+    "audiP": "Speakers",
+    "audiA": "Headphones",
+    "audiM": "Microphones",
+    "heF": "Frieza",
+    "climA": "Air-conditioning",
+    "climC": "Heaters",
+    "climV": "Fan",
+    "price": "Price:",
+    "buttNext": "Next",
+    "buttPrev": "Previous",
+    "buttBuy": "Buy",
+    "notresult": "No results",
+    "panIconone": "You can pay by card, debit, cash or up to 12 installments without a card, always at the best price",
+    "panIcontwo": "Just for being registered in Nova Tech you can have free shipping on thousands of products.",
+    "panIcontree": "¿You do not like? Give it back! At Nova Tech, there's nothing you can't do, because you're always protected.",
+    "panelEndOneone": "The best selection of products online.",
+    "panelEndOnetwo": "Shop from the comfort of your home.",
+    "panelEndOnetree": "Find everything you need in one place.",
+    "panelEndOnefor": "Quality and confidence in each purchase.",
+    "panelEndOnefive": "Free shipping on purchases over $50,000.",
+    "panelEndTwoone": "Competitive prices on all our products.",
+    "panelEndTwotwo": "!Do not wait any longer to have what you need!",
+    "panelEndTwotree": "Discover our special monthly offers.",
+    "panelEndTwofor": "Choose from a wide variety of products.",
+    "panelEndTwofive": "Make your purchases online safely and with peace of mind.",
+    "panelEndTreeone": "Exceptional customer service.",
+    "panelEndTreetwo": "All the brands you love in one place.",
+    "panelEndTreetree": "Buy now and pay later with our deferred payment option.",
+    "panelEndTreefor": "High quality products at low prices.",
+    "panelEndTreefive": "More than 10 years of experience in e-commerce."
   },
+
   "Footer":{
     "title": "example"
   },
+
   "Cartshop":{
     "shops": "exmples shops"
   }

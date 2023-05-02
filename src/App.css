@@ -71,7 +71,7 @@
 }
 
 .linkNav-light{
-  color: #cbcbcb;
+  color: #b0b0b0;
   text-decoration: none;
 }
 
@@ -128,4 +128,25 @@
   left: 40px;
   background: #333;
   color: white;
+}
+
+.lang-div{
+  background-color: #222222be;
+  border: solid 0.5px #fff;
+  border-radius: 10%;
+}
+
+.lang-select {
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+
+.lang-select option {
+  background-color: #222;
+  color: #fff;
+  border: none;
 }

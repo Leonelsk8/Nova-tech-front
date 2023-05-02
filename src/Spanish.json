@@ -1,10 +1,83 @@
 {
-  "Navbar":{
-    "title": "ejemplos"
+  "Languaje":{
+    "lang": "es"
   },
+
+  "Navbar":{
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Sobre nosotros",
+    "contact": "Contacto",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "servititleone": "Productos",
+    "servititletwo": "Usuarios",
+    "serviPublione": "Crear producto",
+    "serviPublitwo": "Editar producto",
+    "serviPublitree": "Eliminar producto",
+    "serviPublifor": "Modificar ofertas",
+    "serviUserone": "Suspender usuario",
+    "serviUsertwo": "Mensajes",
+    "profile": "Perfil"
+  },
+
+  "Landing":{
+    "title": "¡¡Aprovecha las ofertas mensuales!!",
+    "description": "En Nova Tech no te pierdas nuestras ofertas mensuales! Cada mes, ofrecemos un descuento increible del 50% en una amplia selección de productos. Todos los meses seleccionamos 8 productos diferentes para esta gran oferta.",
+    "butt": "Ver ofertas",
+    "circletwo": "8 Productos",
+    "circletree": "Mensuales"
+  },
+
   "Store":{
-    "search": "Busqueda",
-    "category": "Productos"
+    "sectionOneTitle": "Todo lo que necesitas para vivir a gusto",
+    "sectionOneDescOne": "Ofrecemos electrodomésticos con diseños elegantes y modernos que aportan una apariencia sofisticada a tu casa o negocio.",
+    "sectionOneDescTwo": "Ofrecemos las mejores marcas que garantizan la calidad y la confiabilidad necesaria.",
+    "sectionOneDescTree": "Tenemos una amplia selección de electrodomésticos de última generación para satisfacer todas tus necesidades.",
+    "search": "Búsqueda",
+    "category": "Categoría",
+    "catTitleOne": "Todos",
+    "catTitleTwo": "Computadoras",
+    "catTitleTree": "TV",
+    "catTitleFor": "Celulares",
+    "catTitleFive": "Audio",
+    "catTitleSix": "Heladeras",
+    "catTitleSeven": "Climatización",
+    "catTitleHeight": "Tablets",
+    "pcC": "Completas",
+    "pcH": "Hardware",
+    "pcP": "Periféricos",
+    "pcN": "Notebooks",
+    "audiP": "Parlantes",
+    "audiA": "Auriculares",
+    "audiM": "Microfónos",
+    "heF": "Freezer",
+    "climA": "Aire acondicionado",
+    "climC": "Caléfactores",
+    "climV": "Ventiladores",
+    "price": "Precio:",
+    "buttNext": "Siguiente",
+    "buttPrev": "Anterior",
+    "buttBuy": "Comprar",
+    "notresult": "No hay resultados",
+    "panIconone": "Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta, siempre al mejor precio",
+    "panIcontwo": "Solo por estar registrado en Nova Tech podes tener envíos gratis en miles de productos.",
+    "panIcontree": "¿No te gusta? ¡Devolvelo! En Nova Tech, no hay nada que no puedas hacer, porque estás siempre protegido.",
+    "panelEndOneone": "La mejor selección de productos en línea.",
+    "panelEndOnetwo": "Compra desde la comodidad de tu hogar.",
+    "panelEndOnetree": "Encuentra todo lo que necesitas en un solo lugar.",
+    "panelEndOnefor": "Calidad y confianza en cada compra.",
+    "panelEndOnefive": "Envío gratis en compras superiores a $50000.",
+    "panelEndTwoone": "Precios competitivos en todos nuestros productos.",
+    "panelEndTwotwo": "¡No esperes más para tener lo que necesitas!",
+    "panelEndTwotree": "Descubre nuestras ofertas especiales mensuales.",
+    "panelEndTwofor": "Elige entre una amplia variedad de productos.",
+    "panelEndTwofive": "Haz tus compras en línea con seguridad y tranquilidad.",
+    "panelEndTreeone": "Atención al cliente excepcional.",
+    "panelEndTreetwo": "Todas las marcas que amas en un solo lugar.",
+    "panelEndTreetree": "Compra ahora y paga después con nuestra opción de pago aplazado.",
+    "panelEndTreefor": "Productos de alta calidad a precios bajos.",
+    "panelEndTreefive": "Más de 10 años de experiencia en el comercio electrónico."
   },
   "Footer":{
     "title": "ejemplos"
