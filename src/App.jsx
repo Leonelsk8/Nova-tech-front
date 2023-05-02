@@ -8,7 +8,6 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { Routes, Route} from 'react-router-dom';
 
-function App() {
 
   const [lang, setLang] = useState(es);
   const [bgMode, setbgMode] = useState('light');
@@ -38,7 +37,7 @@ function App() {
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang}/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
