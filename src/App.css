@@ -1,0 +1,152 @@
+.bgNav-light{
+  background-color: #5F7161;
+}
+
+.bgNav-dark{
+  background-color: #191919;
+}
+
+.bgFootButt-light{
+  background-color: #6D8B74;
+}
+
+.bgFootButt-dark{
+  background-color: #1f1f1f;
+}
+
+.bglight {
+  background-color: #D0c9c0;
+}
+
+.bgdark {
+  background-color: #1b1919;
+}
+
+.bgCardBan-light{
+  background-color: #EFEAD8;
+}
+
+.bgCardBan-dark{
+  background-color: #232324;
+}
+
+.sectOrigin{
+  overflow-x: hidden;
+}
+
+.butt{
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  transition: 0.3s;
+}
+
+.buttDisabled{
+  padding: 4px 10px;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+  background-color: gray;
+  color: #EFEAD8;
+  cursor: none;
+}
+
+.butt-light:hover{
+  background-color: #839788;
+  border: 1px solid white;
+  box-shadow: 0.5px 0.5px 5px;
+}
+
+.butt-dark:hover{
+  background-color: #313131e9;
+  border: 1px solid white;
+  box-shadow: 0.5px 0.5px 5px;
+}
+
+.widthCien{
+  width: 100%;
+}
+
+.heightCien{
+  height: 100%;
+}
+
+.linkNav-light{
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+.linkNav-light:hover{
+  color:#fff;
+}
+
+.interruptor{
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background: #212121df;
+  border-radius: 30px;
+  box-shadow: 0px 0px 5px rgb(41, 94, 35);
+}
+
+.interruptor input{
+  appearance: none;
+}
+
+.buttBann-light:hover{
+  background-color: #5f7161cd;
+  box-shadow: 2px 2px 8px;
+}
+
+.buttBann-dark:hover{
+  background-color: #3f3f3fcd;
+  box-shadow: 2px 2px 8px;
+}
+
+.interruptor span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background: rgb(255, 255, 255);
+  border: 6px solid #1c1c1c;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moon{
+  filter: drop-shadow(0px 0px 4px #fff);
+  width: 20px;
+  height: 20px;
+}
+
+.interruptor input:checked ~ span{
+  left: 40px;
+  background: #333;
+  color: white;
+}
+
+.lang-div{
+  background-color: #222222be;
+  border: solid 0.5px #fff;
+  border-radius: 10%;
+}
+
+.lang-select {
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fff;
+  padding: 2px 4px;
+}
+
+
+.lang-select option {
+  background-color: #222;
+  color: #fff;
+  border: none;
+}
