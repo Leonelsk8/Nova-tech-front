@@ -5,6 +5,7 @@ import en from './English.json';
 import es from './Spanish.json';
 import Store from './components/store/Store';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 import { Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -35,7 +36,7 @@ function App() {
         <Route path='/login' element={<h1>aca va el login</h1>}/>
         <Route path='/register' element={<h1>aca va el register</h1>}/>
       </Routes>
-
+      <Footer modeDL={bgMode} textDL={textMode} lang={lang}/>
     </>
   )
 }
