@@ -5,7 +5,7 @@ import { getOfferts } from '../../API/Api';
 import Loader from '../loader/Loader';
 
 const Offerts = (props) => {
-  const {style} = props;
+  const {style, modeDL, textDL} = props;
   const [Prod, setProd] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -22,7 +22,7 @@ const Offerts = (props) => {
     <>
       <Container fluid>
         <Row>
-          <Col xs={12} md={12} lg={12} className='bgFootButt-Light py-5'>
+          <Col xs={12} md={12} lg={12} className={`bgFootButt-${modeDL} py-5`}>
             <div className={'text-center text-white'}>
               <h1>Aprovecha las ofertas de este mes!!</h1>
             </div>
@@ -31,13 +31,13 @@ const Offerts = (props) => {
       </Container>
       
       <section className='position-relative'>
-        <section className={`${style.bgSlime} bgFootButt-Light`}></section>
+        <section className={`${style.bgSlime} bgFootButt-${modeDL}`}></section>
         <Container >
           <Row>
             <Col xs={12} md={12} lg={12}>
               <Row className={'justify-content-center'}>
                 {
-                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : Prod.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Cards title={resp.title} price={resp.price} icon={resp.icon} id={resp._id} offert={resp.offert} styles={style}/></Col>))
+                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : Prod.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Cards title={resp.title} price={resp.price} icon={resp.icon} id={resp._id} offert={resp.offert} styles={style} modeDL={modeDL} textDL={textDL}/></Col>))
                 }
               </Row>
             </Col>

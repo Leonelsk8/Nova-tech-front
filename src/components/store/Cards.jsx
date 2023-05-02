@@ -6,7 +6,7 @@ import {useNavigate} from 'react-router-dom';
 
 const Cards = (props) => {
   const style = props.styles;
-  const { title, price, icon, id, offert } = props;
+  const { title, price, icon, id, offert, modeDL, textDL } = props;
   const priceOff = (price * 50)/100;
   AOS.init();
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Cards = (props) => {
       <div className={style.contentImg}>
         <Card.Img variant="top" src={icon} className={style.imgCards} />
       </div>
-      <Card.Body className="bgCardBan-Light d-flex flex-column justify-content-between">
+      <Card.Body className={`bgCardBan-${modeDL} text-${textDL} d-flex flex-column justify-content-between`}>
         <Card.Title>{title}</Card.Title>
         <div>
           {
@@ -23,8 +23,8 @@ const Cards = (props) => {
           }
         </div>
         <div className='d-flex justify-content-between'>
-          <button className={style.buttCart}><i className={`bi bi-cart-plus ${style.cartPlus}`}></i></button>
-          <button className="text-white bgFootButt-Light butt" onClick={() => navigate(`/prod/${id}`)}>Comprar</button>
+          <button className={modeDL === 'dark' ? `${style.buttCartdark} ${style.buttCart}` : `${style.buttCartlight} ${style.buttCart}`}><i className={`bi bi-cart-plus ${style.cartPlus}`}></i></button>
+          <button className={`text-white bgFootButt-${modeDL} butt-${modeDL} butt`} onClick={() => navigate(`/prod/${id}`)}>Comprar</button>
         </div>
       </Card.Body>
     </Card>

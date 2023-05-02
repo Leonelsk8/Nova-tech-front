@@ -2,7 +2,7 @@ import React from 'react';
 import {Dropdown} from 'react-bootstrap';
 
 const Dropdowns = (props) => {
-  const {style , title , classD, classDtwo , itemIndex, categoryChange, loadingChange} = props;
+  const {style , title , classD, classDtwo , itemIndex, categoryChange, loadingChange, modeDL} = props;
 
   const items = [
     {
@@ -79,9 +79,9 @@ const Dropdowns = (props) => {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle className={style.dropp} variant="secondary" id="dropdown-basic">{title}</Dropdown.Toggle>
+      <Dropdown.Toggle className={`${style.dropp} ${modeDL === 'dark' ? style.droppHovdark : style.droppHovlight} ${modeDL === 'dark' ? style.droppdark : style.dropplight}`} variant="secondary" id="dropdown-basic">{title}</Dropdown.Toggle>
 
-      <Dropdown.Menu className={`${style.droppmenu}`}>
+      <Dropdown.Menu className={`${style.droppmenu} ${modeDL === 'dark' ? style.menudark : style.menulight}`}>
         <Dropdown.Item className={`text-white ${style.dropitem}`} type='button' onClick={()=>{categoryChange(items[itemIndex].catOne); loadingChange(true);}}>{items[itemIndex].titleOne}</Dropdown.Item>
         <Dropdown.Item className={`text-white ${style.dropitem}`} type='button' onClick={()=>{categoryChange(items[itemIndex].catTwo); loadingChange(true);}}>{items[itemIndex].titleTwo}</Dropdown.Item>
         <Dropdown.Item className={`text-white ${style.dropitem} ${classD}`} type='button' onClick={()=>{categoryChange(items[itemIndex].catTree); loadingChange(true);}}>{items[itemIndex].titleTree}</Dropdown.Item>

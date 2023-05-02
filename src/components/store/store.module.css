@@ -1,15 +1,24 @@
 .cards{
   border-radius: 7px;
-  border: 2px solid #fff;
+  border: 1px solid #ffffffe8;
   height: 100%;
 }
 
-.buttCart{
+.buttCartlight{
   border-radius: 100%;
   border: none;
-  background-color: rgb(252, 243, 231);
+  background-color: rgb(255, 244, 230);
   padding: 4px 10px;
 }
+
+.buttCartdark{
+  border-radius: 100%;
+  border: none;
+  background-color: rgba(75, 75, 75, 0.836);
+  padding: 4px 10px;
+  color: #fff;
+}
+
 
 .cartPlus{
   width: 100%;
@@ -45,17 +54,32 @@
   align-items: center;
 }
 
-.dropp:focus{
+.dropplight:focus{
   background-color:  #5F7161;
 }
 
-.dropp:hover{
+.droppdark:focus{
+  background-color:  #353535;
+}
+
+.droppHovlight:hover{
   background-color:  #5F7161;
+}
+
+.droppHovdark:hover{
+  background-color:  #353535;
 }
 
 .droppmenu{
-  background-color: #5F7161;
   width: 100%;
+}
+
+.menulight{
+  background-color: #5F7161;
+}
+
+.menudark{
+  background-color: #212121;
 }
 
 .dropitem:hover{
@@ -87,8 +111,12 @@
 
 }
 
-.buttAll:hover{
+.buttAlllight:hover{
   background-color:  #5F7161;
+}
+
+.buttAlldark:hover{
+  background-color:  #353535;
 }
 
 .publicidad{

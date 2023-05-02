@@ -7,15 +7,16 @@ import style from './landing.module.css';
 import 'animate.css';
 import { Link } from 'react-scroll';
 
-const landing = () => {
+const landing = (props) => {
 
+  const {modeDL} = props;
   const [zIndexvalue, setZIndex] = useState(0);
   const [difuminated, setDifumi] = useState(0);
   const [interval, setInterval] = useState(2000)
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 100) {
         setZIndex(-1);
         setDifumi(1);
         if(window.scrollY >= 500){
@@ -33,7 +34,7 @@ const landing = () => {
   }, []);
 
   return (
-    <section className={`sticky-top`} style={{ zIndex: zIndexvalue}}>
+    <section className={`sticky-top `} style={{ zIndex: zIndexvalue}}>
       <section className="animate__animated animate__fadeIn">
         <Carousel controls={false} interval={interval}>
           <Carousel.Item>
@@ -56,7 +57,7 @@ const landing = () => {
                 <p className='fs-8 '>En Nova Tech no te pierdas nuestras ofertas mensuales! Cada mes, ofrecemos un descuento increible del 50% en una amplia selección de productos. Todos los meses seleccionamos 8 productos diferentes para esta gran oferta.</p>
               </div>
               <div>
-                <Link to="sectionOfferts" smooth={true} duration={500} className={style.butt}>
+                <Link to="sectionOfferts" smooth={true} duration={500} className={`bgNav-${modeDL} buttBann-${modeDL} ${style.butt}`}>
                   Ver ofertas
                 </Link>
               </div>
@@ -64,13 +65,13 @@ const landing = () => {
             <Col md={6} lg={7} className='d-none d-md-block'>
               <Row className={`${style.rowLand}`} >
                 <Col md={12} lg={12} className='ps-5 d-flex align-items-center animate__animated animate__bounceIn'>
-                  <div className={style.circles}><h1>50%</h1><p>OFF</p></div>
+                  <div className={`bgNav-${modeDL} ${style.circles}`}><h1>50%</h1><p>OFF</p></div>
                 </Col>
                 <Col md={12} lg={12} className='d-flex align-items-center justify-content-end pe-5 animate__animated animate__bounceIn'>
-                  <div className={style.circles}><h4>8 productos</h4></div>
+                  <div className={`bgNav-${modeDL} ${style.circles}`}><h4>8 productos</h4></div>
                 </Col>
                 <Col md={12} lg={12} className='ps-5 d-flex align-items-center animate__animated animate__bounceIn'>
-                  <div className={style.circles}><h4>Mensuales</h4></div>
+                  <div className={`bgNav-${modeDL} ${style.circles}`}><h4>Mensuales</h4></div>
                 </Col>
               </Row>
             </Col>

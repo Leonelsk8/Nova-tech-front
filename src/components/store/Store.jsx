@@ -19,7 +19,7 @@ import imgEndtwo from '../../assets/imgEndtwo.jpg';
 import imgEndtree from '../../assets/imgEndtree.jpg';
 
 const Store = (props) => {
-  const lang = props.lang;
+  const {lang, modeDL, textDL} = props;
   AOS.init();
   const [dataProd, setDataProd] = useState([]);
   const [pag, setPag] = useState(1);
@@ -69,11 +69,11 @@ const Store = (props) => {
 
   return (
     <>
-      <Landing/>
-      <section className='bg-Light position-relative sectOrigin' style={{zIndex: 1}}>
+      <Landing modeDL={modeDL}/>
+      <section className={`bg${modeDL} text position-relative sectOrigin`} style={{zIndex: 1}}>
         <Container fluid className='pt-5'>
           <Row>
-            <Col className='bgCardBan-Light py-5' xs={12} md={12} lg={12} >
+            <Col className={`bgCardBan-${modeDL} text-${textDL} py-5`} xs={12} md={12} lg={12} >
               <h2 className='text-center mb-3'>Todo lo que necesitas para vivir a gusto</h2>
               <Row className='justify-content-center'>
                 <Col xs={12} md={4} lg={3} data-aos="fade-down">
@@ -101,14 +101,14 @@ const Store = (props) => {
 
         <Container fluid className="pb-5 pt-4">
           <Row>
-            <Col className={`bgFootButt-Light text-white py-4 mt-4`} md={12} lg={3}>
+            <Col className={`bgFootButt-${modeDL} text-white py-4 mt-4`} md={12} lg={3}>
               <Row className={`${style.colCatSearch}`}>
                 <Col xs={12} md={6} lg={12}>
                   <div className='pt-lg-3'>
                     <h3 className='d-none d-lg-block'>{lang.Store.search}</h3>
                     <form className={`${style.formSearch} mb-lg-3 d-flex`} role="search" onSubmit={handleSubmit}>
                       <input type="search" className="form-control me-2 me-lg-0" placeholder="Search" onChange={handleChange}/>
-                      <button className='bgNav-Light butt text-white' type='submit'>Buscar</button>
+                      <button className={`bgNav-${modeDL} butt butt-${modeDL} text-white`} type='submit'>Buscar</button>
                     </form>
                   </div>
                 </Col>
@@ -119,14 +119,14 @@ const Store = (props) => {
                       
                     <div className="collapse d-lg-block" id="collapseExample">
                       <div className={``}>
-                        <button className={style.buttAll} onClick={()=>{setLoading(true); Allcategory();}}>Todos</button>
-                        <Dropdowns style={style} title={'Computadoras'} classD={'nada'} classDtwo={'nada'} itemIndex={0} categoryChange={setCategory} loadingChange={setLoading}/>
-                        <Dropdowns style={style} title={'TV'} classD={'nada'} classDtwo={'d-none'} itemIndex={1} categoryChange={setCategory} loadingChange={setLoading}/>
-                        <Dropdowns style={style} title={'Celulares'} classD={'nada'} classDtwo={'nada'} itemIndex={2} categoryChange={setCategory} loadingChange={setLoading}/>
-                        <Dropdowns style={style} title={'Audio'} classD={'nada'} classDtwo={'d-none'} itemIndex={3} categoryChange={setCategory} loadingChange={setLoading}/>
-                        <Dropdowns style={style} title={'Heladeras'} classD={'d-none'} classDtwo={'d-none'} itemIndex={4} categoryChange={setCategory} loadingChange={setLoading}/> 
-                        <Dropdowns style={style} title={'Climatización'} classD={'nada'} classDtwo={'d-none'} itemIndex={5} categoryChange={setCategory} loadingChange={setLoading}/>
-                        <Dropdowns style={style} title={'Tablets'} classD={'nada'} classDtwo={'d-none'} itemIndex={6} categoryChange={setCategory} loadingChange={setLoading}/>
+                        <button className={modeDL === 'dark' ? `${style.buttAll} ${style.buttAlldark}` : `${style.buttAll} ${style.buttAlllight}`} onClick={()=>{setLoading(true); Allcategory();}}>Todos</button>
+                        <Dropdowns style={style} title={'Computadoras'} classD={'nada'} classDtwo={'nada'} itemIndex={0} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/>
+                        <Dropdowns style={style} title={'TV'} classD={'nada'} classDtwo={'d-none'} itemIndex={1} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/>
+                        <Dropdowns style={style} title={'Celulares'} classD={'nada'} classDtwo={'nada'} itemIndex={2} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/>
+                        <Dropdowns style={style} title={'Audio'} classD={'nada'} classDtwo={'d-none'} itemIndex={3} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/>
+                        <Dropdowns style={style} title={'Heladeras'} classD={'d-none'} classDtwo={'d-none'} itemIndex={4} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/> 
+                        <Dropdowns style={style} title={'Climatización'} classD={'nada'} classDtwo={'d-none'} itemIndex={5} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/>
+                        <Dropdowns style={style} title={'Tablets'} classD={'nada'} classDtwo={'d-none'} itemIndex={6} categoryChange={setCategory} loadingChange={setLoading} modeDL={modeDL}/>
                       </div>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ const Store = (props) => {
             <Col xs={12} md={12} lg={9}>
               <Row>
                 {
-                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Card title={resp.title} price={resp.price} icon={resp.icon} id={resp._id} styles={style}/></Col>))
+                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Card title={resp.title} price={resp.price} icon={resp.icon} id={resp._id} styles={style} modeDL={modeDL} textDL={textDL}/></Col>))
                   
                 }
                 {
@@ -149,8 +149,8 @@ const Store = (props) => {
                   isLoading ? <Col className="d-none"></Col> :
                   <Col xs={12} md={12} lg={12} className='mt-3'>
                     <div className='d-flex justify-content-center'>
-                      <button className={pag <= 1 ? 'buttDisabled me-3' : 'me-3 bgFootButt-Light butt text-white'} onClick={()=>{setLoading(true); setPag(pag-1);}} disabled={pag<=1 ? true : false}>Anterior</button>
-                      <button className={dataProd.length < 12 ? 'buttDisabled' : 'bgFootButt-Light butt text-white'} onClick={()=>{setLoading(true); setPag(pag+1);}} disabled={dataProd.length < 12 ? true : false}>Siguiente</button>
+                      <button className={pag <= 1 ? 'buttDisabled me-3' : `me-3 bgFootButt-${modeDL} butt-${modeDL} butt text-white`} onClick={()=>{setLoading(true); setPag(pag-1);}} disabled={pag<=1 ? true : false}>Anterior</button>
+                      <button className={dataProd.length < 12 ? 'buttDisabled' : `bgFootButt-${modeDL} butt-${modeDL} butt text-white`} onClick={()=>{setLoading(true); setPag(pag+1);}} disabled={dataProd.length < 12 ? true : false}>Siguiente</button>
                     </div>
                   </Col>
 
@@ -162,8 +162,8 @@ const Store = (props) => {
         
         <Container fluid className='my-5'>
           <Row>
-            <Col xs={12} md={12} lg={12} className='bgCardBan-Light py-5 border-top border-bottom border-1 border-black'>
-              <Row className='justify-content-center'>
+            <Col xs={12} md={12} lg={12} className={`bgCardBan-${modeDL} text-${textDL} py-5 border-top border-bottom border-1 border-${textDL}`}>
+              <Row className='justify-content-center align-items-center'>
                 <Col xs={6} md={4} lg={4} className="px-2 px-lg-5 text-center">
                   <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/payment.svg" alt="paymentIcon" data-aos="zoom-in"></img>
                   <p className='mt-3'>Podés pagar con tarjeta, débito, efectivo o hasta 12 cuotas sin tarjeta con Mercado Crédito.</p>
@@ -180,8 +180,8 @@ const Store = (props) => {
             </Col>
           </Row>
         </Container>
-        <section className='bgCardBan-Light my-5 pb-5 border-top border-bottom border-1 border-black' id='sectionOfferts'>
-          <Offerts style={style}/>
+        <section className={`bgCardBan-${modeDL} my-5 pb-5 border-top border-bottom border-1 border-${textDL}`} id='sectionOfferts'>
+          <Offerts style={style} modeDL={modeDL} textDL={textDL}/>
         </section>
         
         <Container className='pt-2 pb-5'>
@@ -189,7 +189,7 @@ const Store = (props) => {
             <Col xs={12} md={12} lg={5} className='p-1'>
               <img src={imgEndtwo} className={style.publicidad}></img>
             </Col>
-            <Col xs={12} md={12} lg={7} className='bgFootButt-Light p-4 text-white border border-1 border-white'>
+            <Col xs={12} md={12} lg={7} className={`bgFootButt-${modeDL} p-4 text-white border border-1 border-white`}>
               <p>✔ La mejor selección de productos en línea.</p>
               <p>✔ Compra desde la comodidad de tu hogar.</p>
               <p>✔ Encuentra todo lo que necesitas en un solo lugar.</p>
@@ -198,7 +198,7 @@ const Store = (props) => {
             </Col>
           </Row>
           <Row className='justify-content-center flex-column-reverse flex-lg-row mt-4' data-aos="fade-left">
-            <Col xs={12} md={12} lg={7} className='bgFootButt-Light p-4 text-white border border-1 border-white'>
+            <Col xs={12} md={12} lg={7} className={`bgFootButt-${modeDL} p-4 text-white border border-1 border-white`}>
               <p>✔ Precios competitivos en todos nuestros productos.</p>
               <p>✔ ¡No esperes más para tener lo que necesitas!</p>
               <p>✔ Descubre nuestras ofertas especiales mensuales.</p>
@@ -213,7 +213,7 @@ const Store = (props) => {
             <Col xs={12} md={12} lg={5} className='p-1'>
              <img src={imgEndtree} className={style.publicidad}></img>
             </Col>
-            <Col xs={12} md={12} lg={7} className='bgFootButt-Light p-4 text-white border border-1 border-white'>
+            <Col xs={12} md={12} lg={7} className={`bgFootButt-${modeDL} p-4 text-white border border-1 border-white`}>
               <p>✔ Atención al cliente excepcional.</p>
               <p>✔ Todas las marcas que amas en un solo lugar.</p>
               <p>✔ Compra ahora y paga después con nuestra opción de pago aplazado.</p>

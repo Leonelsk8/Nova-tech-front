@@ -45,7 +45,6 @@
 }
 
 .circles{
-  background-color: #5F7161;
   height: 70%;
   width: 30%;
   border-radius: 100%;
@@ -65,7 +64,6 @@
 }
 
 .butt{
-  background-color: #5F7161;
   padding: 10px 100px;
   border-radius: 20px;
   color: #fff;
@@ -75,10 +73,7 @@
   cursor: pointer;
 }
 
-.butt:hover{
-  background-color: #5f7161cd;
-  box-shadow: 2px 2px 8px;
-}
+
 
 @media (min-width: 768px) and (max-width: 991px) {
   .circles{
