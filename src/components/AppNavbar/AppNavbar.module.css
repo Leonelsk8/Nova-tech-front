@@ -1,3 +1,5 @@
-.bgNavbar {
-  background-color: #5F7161;
+@import url(../../assets/styles/index.css);
+
+.appNav {
+  background-color: var(--bg-navbar-nt);
 }

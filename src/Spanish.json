@@ -7,5 +7,10 @@
   },
   "Cartshop":{
     "shops": "ejemplos venta"
+  },
+  "Register": {
+    "title": "Registro",
+    "name": "Nombre",
+    "lastName": "Apellido"
   }
 }

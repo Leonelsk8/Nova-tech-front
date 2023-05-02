@@ -1,11 +1,14 @@
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './components/footer/styleFooter.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <Router>
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </Router>
-);
+  </BrowserRouter>
+</React.StrictMode>
+)
