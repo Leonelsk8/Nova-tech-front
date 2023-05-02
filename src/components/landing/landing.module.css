@@ -71,9 +71,63 @@
   color: #fff;
   border: solid #fff 1.5px;
   transition: 0.5s;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .butt:hover{
   background-color: #5f7161cd;
   box-shadow: 2px 2px 8px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .circles{
+    height: 75%;
+    width: 50%;
+    padding: 0px 5px 0px 5px;
+    margin: 0px;
+  }
+  .butt{
+    background-color: #5F7161;
+    padding: 6px 85px;
+    border-radius: 20px;
+    color: #fff;
+    border: solid #fff 1.5px;
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 767px){
+  .rowLand{
+    height: auto;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .cardLand{
+    background-color: rgba(0, 0, 0, 0.611);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .backBan{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.288);
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+  }
+
+  .textXS{
+    top: 15%;
+    background-color: rgba(0, 0, 0, 0.532);
+    width: 100%;
+    color: #fff;
+    border-radius: 5%;
+  }
 }

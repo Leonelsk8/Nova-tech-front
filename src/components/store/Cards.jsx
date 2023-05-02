@@ -6,7 +6,8 @@ import {useNavigate} from 'react-router-dom';
 
 const Cards = (props) => {
   const style = props.styles;
-  const { title, price, icon, id } = props;
+  const { title, price, icon, id, offert } = props;
+  const priceOff = (price * 50)/100;
   AOS.init();
   const navigate = useNavigate();
   return (
@@ -16,9 +17,11 @@ const Cards = (props) => {
       </div>
       <Card.Body className="bgCardBan-Light d-flex flex-column justify-content-between">
         <Card.Title>{title}</Card.Title>
-        <Card.Text>
-          {`Precio: $${price}`}
-        </Card.Text>
+        <div>
+          {
+            offert === true ? <div><p className='text-danger'>{`Precio: `}<s>{`$${price}`}</s><b> -50%</b></p><p className='text-success'>{`Precio: $${priceOff}`}</p></div> : <p className='text-success'>{`Precio: $${price}`}</p>
+          }
+        </div>
         <div className='d-flex justify-content-between'>
           <button className={style.buttCart}><i className={`bi bi-cart-plus ${style.cartPlus}`}></i></button>
           <button className="text-white bgFootButt-Light butt" onClick={() => navigate(`/prod/${id}`)}>Comprar</button>

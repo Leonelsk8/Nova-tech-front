@@ -66,11 +66,11 @@ const Dropdowns = (props) => {
       catFor: ''
     },
     {
-      titleOne: 'LG',
+      titleOne: 'Samsung',
       titleTwo: 'Noga',
       titleTree: 'BGH',
       titleFor: '',
-      catOne: 'TABLET-LG',
+      catOne: 'TABLET-SAMSUNG',
       catTwo: 'TABLET-NOGA',
       catTree: 'TABLET-BGH',
       catFor: ''

@@ -3,6 +3,8 @@ import {endpointProduct , endpointUsers} from './Endpoints';
 
 const DBURL = import.meta.env.VITE_DB_URL;
 
+// products
+
 export const getProducts = async(pag)=>{
   try {
     return await axios.get(`${DBURL}${endpointProduct.get}/${pag}`);
@@ -10,6 +12,15 @@ export const getProducts = async(pag)=>{
     console.log(error);
   }
 }
+
+export const getOfferts = async()=>{
+  try {
+    return await axios.get(`${DBURL}${endpointProduct.getOfferts}`);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 
 export const getProductCategory = async(category)=>{
   try {
@@ -50,3 +61,5 @@ export const getProductById = async(id)=>{
     console.log(error);
   }
 }
+
+//users

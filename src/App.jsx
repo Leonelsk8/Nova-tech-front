@@ -21,6 +21,7 @@ function App() {
         <Route path='/home' element={<Store lang={idiom}/>}/>
         <Route path='/prod/:id' element={isLog ? <h1>hola</h1>: <h1>chau</h1>}/>
       </Routes>
+
     </>
   )
 }
