@@ -4,8 +4,11 @@
   background-color: var(--bg-nt);
 }
 
-.regCol {
+.regCollight {
   background-color: #fefefe;
+}
+.regColdark {
+  background-color: #0b0b0b;
 }
 
 .regButton {

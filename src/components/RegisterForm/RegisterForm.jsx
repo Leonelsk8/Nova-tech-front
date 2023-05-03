@@ -1,16 +1,15 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, InputGroup, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { passwordCheckValidation } from '../../assets/utils/validations';
-import { customAlert, messages } from '../../assets/utils/alters';
-import { endPoints } from '../../assets/utils/configs';
 import registerImg from '../../assets/nt-white.png';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import styles from './RegisterForm.module.css';
 
-export default function RegisterForm() {
+export default function RegisterForm(props) {
+  
+  const { modeDL, textDL, lang } = props;
+
   const {
     register,
     handleSubmit,
@@ -27,47 +26,15 @@ export default function RegisterForm() {
     },
   });
 
-  const URL_SERVER = import.meta.env.VITE_URL_SERVER;
-  const navigate = useNavigate();
   const password = watch('password');
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (register) => {
     console.log(register);
-    try {
-      const response = await axios.post(
-        `${URL_SERVER}${endPoints.users}create-user`,
-        register
-      );
-
-      customAlert(
-        response.data,
-        messages.registerSuccessText,
-        messages.successIcon,
-        () => {
-          console.log(response);
-          navigate('/');
-        }
-      );
-    } catch (error) {
-      let errorsMsg = '';
-      error.response.data.errors.forEach((err) => {
-        errorsMsg += err.msg + '\n';
-      });
-      customAlert(
-        messages.registerFailureTitle,
-        errorsMsg,
-        messages.errorIcon,
-        () => {
-          console.log(error);
-          navigate('/error404');
-        }
-      );
-    }
-  };
+  }
 
   return (
-    <Container fluid className={styles.regContainer}>
+    <Container fluid className={`bg${modeDL}`}>
       <Row className='d-flex justify-content-center align-items-center'>
         <Col md={9} className='d-flex justify-content-center my-4'>
           <img
@@ -77,7 +44,7 @@ export default function RegisterForm() {
             className={`my-2 me-3 ${styles.regImg}`}
           />
         </Col>
-        <Col md={9} className={`${styles.regCol} rounded py-3 mb-4`}>
+        <Col md={9} lg={4} className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-4`}>
           <h2 className='mt-2 mb-4 border-bottom pb-3'>Registro</h2>
           <Form
             onSubmit={handleSubmit(onSubmit)}
