@@ -68,34 +68,12 @@ export const getProductById = async (id) => {
 
 export const createUser = async (userData) => {
   try {
-    const response = await axios.post(
+    return await axios.post(
       `${DBURL}${endpointUsers.create}`,
       userData
     );
-    // customAlert(
-    //   response.data,
-    //   'Ya puedes iniciar sesión.',
-    //   'success',
-    //   () => {
-    //     console.log(response);
-    //     //navigate('/login');
-    //   }
-    // );
-    console.log(response);
   } catch (error) {
-    // let errorsMsg = '';
-    // error.response.data.errors.forEach((err) => {
-    //   errorsMsg += err.msg + '\n';
-    // });
-    // customAlert(
-    //   'Error de registro.',
-    //   errorsMsg,
-    //   'error',
-    //   () => {
-    //     console.log(error);
-    //     //navigate('/register');
-    //   }
-    // );
     console.log(error);
+    return error.response.data.errors[0].value
   }
 };

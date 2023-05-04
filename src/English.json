@@ -109,12 +109,18 @@
     "passwordMin": "Min 8 characters",
     "passwordMax": "Max 50 characters",
     "passwordPattern": "The password must have letters and numbers",
-    "passwordCheck": "Repeat password",
+    "passwordCheck": "Confirm password",
     "passwordCheckMatch": "Passwords do not match",
     "language": "Language",
     "smallLanguage": "(optional)",
     "alreadyRegQuest": "Already registered?",
     "alreadyRegLink": "Sign in",
-    "submitButton": "Register"
+    "submitButton": "Register",
+    "alertSuccessTitle": "Registration successful!",
+    "alertSuccessText": "You can now log in.",
+    "alertErrorTitle": "Oops...",
+    "alertErrorTextInit": "The email",
+    "alertErrorTextEnd": "It is already in use. Try another one.",
+    "alertButtonText": "Accept"
   }
 }

@@ -117,7 +117,8 @@
     "alertSuccessTitle": "¡Registro exitoso!",
     "alertSuccessText": "Ya puedes iniciar sesión.",
     "alertErrorTitle": "Ups...",
-    "alertErrorText": "Error al registrarse",
+    "alertErrorTextInit": "El email",
+    "alertErrorTextEnd": "ya está en uso. Intenta con otro correo.",
     "alertButtonText": "Aceptar"
   }
 }

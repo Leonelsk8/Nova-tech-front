@@ -2,11 +2,12 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { passwordCheckValidation } from '../../assets/utils/validations';
 import registerImg from '../../assets/nt-white.png';
 import styles from './RegisterForm.module.css';
 import { createUser } from '../../API/Api';
+import { customAlert } from '../../assets/utils/alters';
 
 export default function RegisterForm(props) {
   const { modeDL, textDL, lang } = props;
@@ -15,6 +16,7 @@ export default function RegisterForm(props) {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm({
     defaultValues: {
@@ -29,9 +31,30 @@ export default function RegisterForm(props) {
 
   const password = watch('password');
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate()
 
   const onSubmit = async (register) => {
-    createUser(register);
+    const response = await createUser(register);
+    if (response === register.email) {
+      return customAlert(
+        lang.Register.alertErrorTitle,
+        `${lang.Register.alertErrorTextInit} "${register.email}" ${lang.Register.alertErrorTextEnd}`,
+        'error',
+        lang.Register.alertButtonText,
+        () => {
+          reset({ email: '', password: '', passwordCheck: '' });
+        }
+      );
+    }
+    return customAlert(
+      lang.Register.alertSuccessTitle,
+      lang.Register.alertSuccessText,
+      'success',
+      lang.Register.alertButtonText,
+      () => {
+        navigate('/login');
+      }
+    );
   };
 
   return (
@@ -149,7 +172,7 @@ export default function RegisterForm(props) {
               </Form.Group>
             </Row>
 
-            <Row className=''>
+            <Row>
               <Form.Group as={Col} className='col-12 col-md-6'>
                 <Form.Label>{lang.Register.password}</Form.Label>
                 <Form.Control
@@ -238,7 +261,10 @@ export default function RegisterForm(props) {
                 </Form.Select>
               </Form.Group>
 
-              <Form.Group as={Col} className='col-12 col-md-6 d-flex justify-content-center align-items-center mt-4 mt-md-0 gap-2 flex-md-column'>
+              <Form.Group
+                as={Col}
+                className='col-12 col-md-6 d-flex justify-content-center align-items-center mt-4 mt-md-0 gap-2 flex-md-column'
+              >
                 <small>{lang.Register.alreadyRegQuest}</small>
                 <Link to='/login'>{lang.Register.alreadyRegLink}</Link>
               </Form.Group>
