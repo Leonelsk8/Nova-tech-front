@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { passwordCheckValidation } from '../../assets/utils/validations';
 import registerImg from '../../assets/nt-white.png';
 import styles from './RegisterForm.module.css';
+import { createUser } from '../../API/Api';
 
 export default function RegisterForm(props) {
   
@@ -31,6 +32,8 @@ export default function RegisterForm(props) {
 
   const onSubmit = async (register) => {
     console.log(register);
+
+    createUser(register)
   }
 
   return (
@@ -44,34 +47,34 @@ export default function RegisterForm(props) {
             className={`my-2 me-3 ${styles.regImg}`}
           />
         </Col>
-        <Col md={9} lg={4} className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-4`}>
-          <h2 className='mt-2 mb-4 border-bottom pb-3'>Registro</h2>
+        <Col md={9} lg={5} className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-4`}>
+          <h2 className='mt-2 mb-4 border-bottom pb-3'>{lang.Register.title}</h2>
           <Form
             onSubmit={handleSubmit(onSubmit)}
             className='d-flex flex-column gap-2'
           >
             <Row>
               <Form.Group as={Col}>
-                <Form.Label>Nombre</Form.Label>
+                <Form.Label>{lang.Register.name}</Form.Label>
                 <Form.Control
                   type='text'
                   {...register('name', {
                     required: {
                       value: true,
-                      message: 'Complete este campo.',
+                      message: lang.Register.nameRequired,
                     },
                     minLength: {
                       value: 2,
-                      message: 'Mínimo 2 caracteres.',
+                      message: lang.Register.nameMin,
                     },
                     maxLength: {
                       value: 50,
-                      message: 'Máximo 50 caracteres.',
+                      message: lang.Register.nameMax,
                     },
                     pattern: {
                       value:
                         /^[a-zA-ZÁÉÍÓÚÑáéíóúñ'-]+(\s[a-zA-ZÁÉÍÓÚÑáéíóúñ'-]+)*$/,
-                      message: 'Formato no válido.',
+                      message: lang.Register.namePattern,
                     },
                   })}
                 />
@@ -81,26 +84,26 @@ export default function RegisterForm(props) {
               </Form.Group>
 
               <Form.Group as={Col}>
-                <Form.Label>Apellido</Form.Label>
+                <Form.Label>{lang.Register.lastName}</Form.Label>
                 <Form.Control
                   type='text'
                   {...register('lastName', {
                     required: {
                       value: true,
-                      message: 'Complete este campo.',
+                      message: lang.Register.lastNameRequired,
                     },
                     minLength: {
                       value: 2,
-                      message: 'Mínimo 2 caracteres.',
+                      message: lang.Register.lastNameMin,
                     },
                     maxLength: {
                       value: 50,
-                      message: 'Máximo 50 caracteres.',
+                      message: lang.Register.lastNameMax,
                     },
                     pattern: {
                       value:
                         /^[a-zA-ZÁÉÍÓÚÑáéíóúñ'-]+(\s[a-zA-ZÁÉÍÓÚÑáéíóúñ'-]+)*$/,
-                      message: 'Formato no válido.',
+                      message: lang.Register.lastNamePattern,
                     },
                   })}
                 />
@@ -114,26 +117,26 @@ export default function RegisterForm(props) {
 
             <Row>
               <Form.Group as={Col}>
-                <Form.Label>Email</Form.Label>
+                <Form.Label>{lang.Register.email}</Form.Label>
                 <Form.Control
                   type='email'
                   {...register('email', {
                     required: {
                       value: true,
-                      message: 'El email es obligatorio.',
+                      message: lang.Register.emailRequired,
                     },
                     minLength: {
                       value: 5,
-                      message: 'Demasiado corto...',
+                      message: lang.Register.emailMin,
                     },
                     maxLength: {
                       value: 100,
-                      message: 'Máximo 100 caracteres.',
+                      message: lang.Register.emailMax,
                     },
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                       message:
-                        'El correo electrónico debe tener un formato válido.',
+                        lang.Register.emailPattern,
                     },
                   })}
                 />
@@ -145,25 +148,25 @@ export default function RegisterForm(props) {
 
             <Row className=''>
               <Form.Group as={Col} className='col-6'>
-                <Form.Label>Contraseña</Form.Label>
+                <Form.Label>{lang.Register.password}</Form.Label>
                 <Form.Control
                   type={showPassword ? 'text' : 'password'}
                   {...register('password', {
                     required: {
                       value: true,
-                      message: 'La contraseña es obligatoria.',
+                      message: lang.Register.passwordRequired,
                     },
                     minLength: {
                       value: 8,
-                      message: 'Mínimo 8 caracteres.',
+                      message: lang.Register.passwordMin,
                     },
                     maxLength: {
                       value: 50,
-                      message: 'Máximo 50 caracteres.',
+                      message: lang.Register.passwordMax,
                     },
                     pattern: {
                       value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,50}$/,
-                      message: 'La contraseña debe tener letras y números.',
+                      message: lang.Register.passwordPattern,
                     },
                   })}
                 />
@@ -175,7 +178,7 @@ export default function RegisterForm(props) {
               </Form.Group>
 
               <Form.Group as={Col} className='col-6'>
-                <Form.Label>Confirmar</Form.Label>
+                <Form.Label>{lang.Register.passwordCheck}</Form.Label>
                 <InputGroup>
                   <Form.Control
                     className='rounded'
@@ -183,14 +186,14 @@ export default function RegisterForm(props) {
                     {...register('passwordCheck', {
                       required: {
                         value: true,
-                        message: 'La contraseña es obligatoria.',
+                        message: lang.Register.passwordRequired,
                       },
                       maxLength: {
                         value: 50,
-                        message: 'Máximo 50 caracteres.',
+                        message: lang.Register.passwordMax,
                       },
                       validate: (value) =>
-                        passwordCheckValidation(password, value),
+                        passwordCheckValidation(password, value, lang.Register.passwordCheckMatch),
                     })}
                   />
                   {/* MOSTRAR/OCULTAR CONTRASEÑA */}
@@ -217,7 +220,7 @@ export default function RegisterForm(props) {
             <Row>
               <Form.Group as={Col} className=''>
                 <Form.Label>
-                  Idioma <small className='text-secondary'>(opcional)</small>
+                  {lang.Register.language} <small className='text-secondary'>{lang.Register.smallLanguage}</small>
                 </Form.Label>
                 <Form.Select {...register('lang')}>
                   <option value='es'>Español</option>
@@ -229,13 +232,13 @@ export default function RegisterForm(props) {
                 as={Col}
                 className='text-center d-flex flex-column justify-content-center align-items-center flex-md-row align-items-md-end gap-md-2 pb-md-2'
               >
-                <small>¿Ya estás registrado?</small>
-                <Link to='/login'>Iniciar sesión</Link>
+                <small>{lang.Register.alreadyRegQuest}</small>
+                <Link to='/login'>{lang.Register.alreadyRegLink}</Link>
               </Form.Group>
             </Row>
 
             <button type='submit' className={`mt-4 ${styles.regButton}`}>
-              Registrarme
+              {lang.Register.submitButton}
             </button>
           </Form>
         </Col>

@@ -1,6 +1,6 @@
-export const passwordCheckValidation = (password, passwordCheck) => {
+export const passwordCheckValidation = (password, passwordCheck, message) => {
   if (password !== passwordCheck) {
-    return 'Las contraseñas no coinciden.';
+    return message;
   }
   return true;
 };

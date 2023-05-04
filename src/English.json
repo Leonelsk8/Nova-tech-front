@@ -86,5 +86,35 @@
 
   "Cartshop":{
     "shops": "exmples shops"
+  },
+  "Register": {
+    "title": "Register",
+    "name": "Name",
+    "nameRequired": "Enter your name",
+    "nameMin": "Min 2 characters",
+    "nameMax": "Max 50 characters",
+    "namePattern": "Invalid format",
+    "lastName": "Last name",
+    "lastNameRequired": "Enter your last name",
+    "lastNameMin": "Min 2 characters",
+    "lastNameMax": "Max 50 characters",
+    "lastNamePattern": "Invalid format",
+    "email": "Email",
+    "emailRequired": "Email is required",
+    "emailMin": "Min 5 characters",
+    "emailMax": "Max 100 characters",
+    "emailPattern": "The email must have a valid format",
+    "password": "Password",
+    "passwordRequired": "Password is required",
+    "passwordMin": "Min 8 characters",
+    "passwordMax": "Max 50 characters",
+    "passwordPattern": "The password must have letters and numbers",
+    "passwordCheck": "Repeat password",
+    "passwordCheckMatch": "Passwords do not match",
+    "language": "Language",
+    "smallLanguage": "(optional)",
+    "alreadyRegQuest": "Already registered?",
+    "alreadyRegLink": "Sign in",
+    "submitButton": "Register"
   }
 }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { endpointProduct, endpointUsers } from './Endpoints';
 
-import { customAlert } from '../assets/utils/alters';
+//import { customAlert } from '../assets/utils/alters';
 // import { useNavigate } from 'react-router-dom';
 
 const DBURL = import.meta.env.VITE_DB_URL;
@@ -69,32 +69,33 @@ export const getProductById = async (id) => {
 export const createUser = async (userData) => {
   try {
     const response = await axios.post(
-      `${DBURL}${endpointUsers.users}create-user`,
+      `${DBURL}${endpointUsers.create}`,
       userData
     );
-
-    customAlert(
-      response.data,
-      'Ya puedes iniciar sesión.',
-      'success',
-      () => {
-        console.log(response);
-        //navigate('/login');
-      }
-    );
+    // customAlert(
+    //   response.data,
+    //   'Ya puedes iniciar sesión.',
+    //   'success',
+    //   () => {
+    //     console.log(response);
+    //     //navigate('/login');
+    //   }
+    // );
+    console.log(response);
   } catch (error) {
-    let errorsMsg = '';
-    error.response.data.errors.forEach((err) => {
-      errorsMsg += err.msg + '\n';
-    });
-    customAlert(
-      'Error de registro.',
-      errorsMsg,
-      'error',
-      () => {
-        console.log(error);
-        //navigate('/register');
-      }
-    );
+    // let errorsMsg = '';
+    // error.response.data.errors.forEach((err) => {
+    //   errorsMsg += err.msg + '\n';
+    // });
+    // customAlert(
+    //   'Error de registro.',
+    //   errorsMsg,
+    //   'error',
+    //   () => {
+    //     console.log(error);
+    //     //navigate('/register');
+    //   }
+    // );
+    console.log(error);
   }
 };
