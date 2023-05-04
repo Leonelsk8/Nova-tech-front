@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Form, Button, Container, Row, Col, InputGroup, Card } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { passwordCheckValidation } from '../../assets/utils/validations';
 import registerImg from '../../assets/nt-white.png';
@@ -8,7 +9,6 @@ import styles from './RegisterForm.module.css';
 import { createUser } from '../../API/Api';
 
 export default function RegisterForm(props) {
-  
   const { modeDL, textDL, lang } = props;
 
   const {
@@ -31,15 +31,13 @@ export default function RegisterForm(props) {
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (register) => {
-    console.log(register);
-
-    createUser(register)
-  }
+    createUser(register);
+  };
 
   return (
     <Container fluid className={`bg${modeDL}`}>
       <Row className='d-flex justify-content-center align-items-center'>
-        <Col md={9} className='d-flex justify-content-center my-4'>
+        <Col xs={12} className='d-flex justify-content-center my-4'>
           <img
             src={registerImg}
             alt='Nova Tech Logo'
@@ -47,14 +45,20 @@ export default function RegisterForm(props) {
             className={`my-2 me-3 ${styles.regImg}`}
           />
         </Col>
-        <Col md={9} lg={5} className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-4`}>
-          <h2 className='mt-2 mb-4 border-bottom pb-3'>{lang.Register.title}</h2>
+        <Col
+          md={6}
+          lg={4}
+          className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-4`}
+        >
+          <h2 className='mt-2 mb-4 border-bottom pb-3'>
+            {lang.Register.title}
+          </h2>
           <Form
             onSubmit={handleSubmit(onSubmit)}
             className='d-flex flex-column gap-2'
           >
             <Row>
-              <Form.Group as={Col}>
+              <Form.Group as={Col} className='col-12 col-md-6'>
                 <Form.Label>{lang.Register.name}</Form.Label>
                 <Form.Control
                   type='text'
@@ -83,7 +87,7 @@ export default function RegisterForm(props) {
                 )}
               </Form.Group>
 
-              <Form.Group as={Col}>
+              <Form.Group as={Col} className='col-12 col-md-6'>
                 <Form.Label>{lang.Register.lastName}</Form.Label>
                 <Form.Control
                   type='text'
@@ -135,8 +139,7 @@ export default function RegisterForm(props) {
                     },
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message:
-                        lang.Register.emailPattern,
+                      message: lang.Register.emailPattern,
                     },
                   })}
                 />
@@ -147,7 +150,7 @@ export default function RegisterForm(props) {
             </Row>
 
             <Row className=''>
-              <Form.Group as={Col} className='col-6'>
+              <Form.Group as={Col} className='col-12 col-md-6'>
                 <Form.Label>{lang.Register.password}</Form.Label>
                 <Form.Control
                   type={showPassword ? 'text' : 'password'}
@@ -177,7 +180,7 @@ export default function RegisterForm(props) {
                 )}
               </Form.Group>
 
-              <Form.Group as={Col} className='col-6'>
+              <Form.Group as={Col} className='col-12 col-md-6'>
                 <Form.Label>{lang.Register.passwordCheck}</Form.Label>
                 <InputGroup>
                   <Form.Control
@@ -193,7 +196,11 @@ export default function RegisterForm(props) {
                         message: lang.Register.passwordMax,
                       },
                       validate: (value) =>
-                        passwordCheckValidation(password, value, lang.Register.passwordCheckMatch),
+                        passwordCheckValidation(
+                          password,
+                          value,
+                          lang.Register.passwordCheckMatch
+                        ),
                     })}
                   />
                   {/* MOSTRAR/OCULTAR CONTRASEÑA */}
@@ -218,9 +225,12 @@ export default function RegisterForm(props) {
             </Row>
 
             <Row>
-              <Form.Group as={Col} className=''>
+              <Form.Group as={Col} className='col-12 col-md-6'>
                 <Form.Label>
-                  {lang.Register.language} <small className='text-secondary'>{lang.Register.smallLanguage}</small>
+                  {lang.Register.language}{' '}
+                  <small className='text-secondary'>
+                    {lang.Register.smallLanguage}
+                  </small>
                 </Form.Label>
                 <Form.Select {...register('lang')}>
                   <option value='es'>Español</option>
@@ -228,16 +238,13 @@ export default function RegisterForm(props) {
                 </Form.Select>
               </Form.Group>
 
-              <Form.Group
-                as={Col}
-                className='text-center d-flex flex-column justify-content-center align-items-center flex-md-row align-items-md-end gap-md-2 pb-md-2'
-              >
+              <Form.Group as={Col} className='col-12 col-md-6 d-flex justify-content-center align-items-center mt-4 mt-md-0 gap-2 flex-md-column'>
                 <small>{lang.Register.alreadyRegQuest}</small>
                 <Link to='/login'>{lang.Register.alreadyRegLink}</Link>
               </Form.Group>
             </Row>
 
-            <button type='submit' className={`mt-4 ${styles.regButton}`}>
+            <button type='submit' className={`mt-3 ${styles.regButton}`}>
               {lang.Register.submitButton}
             </button>
           </Form>

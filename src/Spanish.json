@@ -113,6 +113,11 @@
     "smallLanguage": "(opcional)",
     "alreadyRegQuest": "¿Ya estás registrado?",
     "alreadyRegLink": "Iniciar sesión",
-    "submitButton": "Registrarme"
+    "submitButton": "Registrarme",
+    "alertSuccessTitle": "¡Registro exitoso!",
+    "alertSuccessText": "Ya puedes iniciar sesión.",
+    "alertErrorTitle": "Ups...",
+    "alertErrorText": "Error al registrarse",
+    "alertButtonText": "Aceptar"
   }
 }
