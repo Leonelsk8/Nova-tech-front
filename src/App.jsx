@@ -7,8 +7,10 @@ import Store from './components/store/Store';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { Routes, Route} from 'react-router-dom';
+import Login from './components/page/Login';
 
 
+function App() {
   const [lang, setLang] = useState(es);
   const [bgMode, setbgMode] = useState('light');
   const [textMode, settextMode] = useState('dark');
@@ -32,7 +34,7 @@ import { Routes, Route} from 'react-router-dom';
         <Route path='/prod/:id' element={isLog ? <h1>hola</h1>: <h1>chau</h1>}/>
         <Route path='/aboutus' element={<h1>aca va el about us</h1>}/>
         <Route path='/contact' element={<h1>aca va el contacto</h1>}/>
-        <Route path='/login' element={<h1>aca va el login</h1>}/>
+        <Route path='/login' element={<Login modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
         <Route path='/register' element={<h1>aca va el register</h1>}/>
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang}/>
