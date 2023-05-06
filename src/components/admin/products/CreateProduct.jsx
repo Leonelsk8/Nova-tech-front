@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
 import {createProduct, uploadImage , uploadImagess} from '../../../API/Api';
+import {customAlert} from '../../../assets/utils/alters';
 
 
 const CreateProduct = (props) => {
@@ -63,14 +64,14 @@ const CreateProduct = (props) => {
     e.preventDefault()
     
     
-    if(sendDisabled) return alert('No estan todos los campos completados');
+    if(sendDisabled) return customAlert('Error', 'No estan todos los campos completados', 'warning', 'Ok', ()=>{console.log('error')});
 
     console.log(productData);
 
     try {
       await createProduct(productData)
-      .then(response => {alert('producto creado con exito')})
-      .catch(error => console.log(error))
+      .then(response => {customAlert('Exito', 'Producto creado con exito', 'success', 'Ok', ()=>{console.log(response)})})
+      .catch(error => {customAlert('Error', 'El producto no se pudo crear', 'error', 'Ok', ()=>{console.log(error)})})
     } catch (error) {
       console.log(error);
     }
@@ -81,7 +82,7 @@ const CreateProduct = (props) => {
     if(productData.titleEs !== '' && productData.titleEn !== '' && productData.descriptionEs !== '' && productData.descriptionEn !== '' && productData.category !== '' && productData.price !== null && productData.quantity !== null && imageUrl !== '' && imagesUrls.length !== 0){
       setSendDisabled(false)
     }
-  },[productData]);
+  },[productData, imageUrl, imagesUrls]);
 
   return (
     <div>
@@ -144,22 +145,26 @@ const CreateProduct = (props) => {
         <div className="mb-3">
           <div>
             <label htmlFor="imagePortada" className="form-label">Ingrese Imagen de portada {'(solo una)'}</label>
-            <input className="form-control" name="image" onChange={handleImageChange} type="file" id="imagePortada"/>
+            <input className="form-control" name="image" onChange={handleImageChange} type="file" id="imagePortada" accept="image/jpeg, image/png, image/webp"/>
           </div>
           <div className='row py-2 px-5 justify-content-center'>
             <div className='col-12 border border-1 border-secondary d-flex justify-content-center py-3 align-items-center'>
-              {imageUrl !== '' ? <img width={'250px'} src={imageUrl} alt="Uploaded"/> : <p>Espere a que se suba la imagen</p>}
+              <div className='row'>
+                {imageUrl !== '' ? <div className='col-10 col-md-8 col-lg-6'><img className={style.imageUpload} src={imageUrl} alt="Uploaded"/></div> : <p>Espere a que se suba la imagen</p>}
+              </div>
             </div>
           </div>
         </div>
         <div className="mb-3">
           <div>
             <label htmlFor="imagenes" className="form-label">Ingrese Imagenes de muestra</label>
-            <input className="form-control" name="imagess" onChange={handleImagessChange} type="file" id="imagenes" multiple/>
+            <input className="form-control" name="imagess" onChange={handleImagessChange} type="file" id="imagenes" multiple accept="image/jpeg, image/png, image/webp"/>
           </div>
           <div className='row py-2 px-5 justify-content-center'>
             <div className='col-12 border border-1 border-secondary d-flex justify-content-center py-3 align-items-center'>
-              {imagesUrls.length !== 0 ? imagesUrls.map((url, index)=>(<img width={'250px'} key={index} src={url} alt="Uploaded"/>)) : <p>Espere a que se suban las imagenes</p>}
+              <div className='row'>
+                {imagesUrls.length !== 0 ? imagesUrls.map((url, index)=>(<div key={index} className='col-5 col-md-4 col-lg-4'><img className={style.imageUpload} key={index} src={url} alt="Uploaded"/></div>)) : <p>Espere a que se suban las imagenes</p>}
+              </div>
             </div>
           </div>
         </div>
