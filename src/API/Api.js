@@ -62,4 +62,30 @@ export const getProductById = async(id)=>{
   }
 }
 
+export const createProduct = async(productData)=>{
+  try {
+    return await axios.post(`${DBURL}${endpointProduct.create}`, productData);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const uploadImage = async(formImage)=>{
+  try {
+    return await axios.post(`${DBURL}${endpointProduct.uploadImage}`, formImage);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const uploadImagess = async (formImagess)=>{
+  try {
+    return await axios.post(`${DBURL}${endpointProduct.uploadImagess}`, formImagess, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 //users

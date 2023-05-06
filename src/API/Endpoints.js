@@ -9,7 +9,9 @@ const endpointProduct = {
   edit: '/products/edit-product',
   delete: '/products/delete-product',
   offert: '/products/offert-product',
-  restartOffert: '/products/restart-offert'
+  restartOffert: '/products/restart-offert',
+  uploadImage: '/products/imageone-upload',
+  uploadImagess: '/products/images-upload'
 }
 
 const endpointUsers ={

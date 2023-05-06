@@ -1,0 +1,21 @@
+.buttPanel{
+  color: #fff;
+  text-align: start;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  border-bottom: #fff 0.5px solid;
+}
+
+.buttPanel:hover{
+  background-color: #ffffff29;
+}
+
+.inputWidth{
+  width: 200px;
+}
+
+.inputWidthTwo{
+  width: 150px;
+}
