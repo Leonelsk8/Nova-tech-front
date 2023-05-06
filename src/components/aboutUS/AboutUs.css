@@ -1,3 +1,8 @@
+.banner {
+  background-color: #6D8B74;
+  color: white;
+  border-radius: 10px;
+}
 .section-whit {
   background-color: #fff;
   padding: 70px 0;
@@ -16,7 +21,7 @@
 }
 
 .team-item:hover {
-  background: #6D8B74;
+  background: #78997f;
   color: white;
 }
 
@@ -31,12 +36,8 @@
   transition: all 0.25s ease-in-out;
 }
 
-.section-subtitle {
-  white-space: pre-line;
-  color: #000;
-}
 .team-item:hover h3 {
-  color: blue;
+  color: rgb(2, 78, 2);
 }
 
 .team-info {
@@ -58,5 +59,6 @@
   -webkit-border-radius: 50px;
   border-radius: 50px;
 }
+
 
 

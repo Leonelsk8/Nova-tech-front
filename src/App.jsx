@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import en from './English.json';
@@ -8,6 +8,8 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Register from './pages/Register';
 import { Routes, Route } from 'react-router-dom';
+import AboutUS from './components/aboutUS/AboutUS';
+import Contact from './components/contact/Contact';
 
 const App = () => {
   const [lang, setLang] = useState(es);
@@ -42,8 +44,8 @@ const App = () => {
           path='/prod/:id'
           element={isLog ? <h1>hola</h1> : <h1>chau</h1>}
         />
-        <Route path='/aboutus' element={<h1>aca va el about us</h1>} />
-        <Route path='/contact' element={<h1>aca va el contacto</h1>} />
+        <Route path='aboutUs' element={<AboutUS/>} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<h1>aca va el login</h1>} />
         <Route
           path='/register'
