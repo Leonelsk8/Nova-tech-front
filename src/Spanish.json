@@ -139,8 +139,9 @@
       "titleEn": "Título en Inglés",
       "descEs": "Descripción en Español",
       "descEn": "Descripción en Inglés",
-      "price": "Precio",
+      "price": "Precio (Ingrese sin puntos)",
       "category": "Categoría",
+      "select": "Seleccionar",
       "selectOpc1": "Pc completa",
       "selectOpc2": "Hardware",
       "selectOpc3": "Periferico",
@@ -163,14 +164,15 @@
       "selectOpc20": "Tablet Noga",
       "selectOpc21": "Tablet BGH",
       "quantity": "Cantidad",
-      "image": "Ingrese imagen de portada",
+      "image": "Ingrese imagen de portada (solo una)",
       "images": "Ingrese Imagenes de muestra",
-      "loader": "Espere a que se suban las imagenes",
+      "loaderOne": "Espere a que se suba la imagen",
+      "loaderTwo": "Espere a que se suban las imágenes",
       "create": "Crear producto",
       "messageAlert1": "No estan todos los campos completados",
       "messageAlert2": "Producto creado con éxito",
       "messageAlert3": "El producto no se pudo crear",
-      "exit": "Éxito"
+      "success": "Éxito"
     }
   }
 }

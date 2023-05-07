@@ -12,6 +12,16 @@
   background-color: #ffffff29;
 }
 
+.buttPanelActive{
+  color: #fff;
+  text-align: start;
+  border: none;
+  background-color: #ffffff29;
+  font-size: 16px;
+  border-radius: 10px;
+  border-bottom: #fff 0.5px solid;
+}
+
 .inputWidth{
   width: 200px;
 }
@@ -23,3 +33,17 @@
 .imageUpload{
   width: 100%;
 }
+
+.backCard{
+  background-color: #ddd;
+  border: solid 0.5px #000000;
+
+}
+
+
+.contProd{
+  overflow-y: scroll;
+  max-height: 1000px;
+}
+
+

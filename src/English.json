@@ -141,8 +141,9 @@
       "titleEn": "Title in English",
       "descEs": "Description in Spanish",
       "descEn": "Description in English",
-      "price": "Price",
+      "price": "Price (Enter without points)",
       "category": "Category",
+      "select": "Select",
       "selectOpc1": "Full pc",
       "selectOpc2": "Hardware",
       "selectOpc3": "Peripheral",
@@ -165,14 +166,15 @@
       "selectOpc20": "Noga Tablet",
       "selectOpc21": "Tablet BGH",
       "quantity": "Quantity",
-      "image": "Enter cover image",
+      "image": "Enter cover image (just one)",
       "images": "Enter Sample Images",
-      "loader": "Wait for images to load",
+      "loaderOne": "Wait for the image to upload",
+      "loaderTwo": "Wait for images to upload",
       "create": "Create product",
       "messageAlert1": "Not all fields are completed",
       "messageAlert2": "Product created successfully",
       "messageAlert3": "Product could not be created",
-      "exit": "Success"
+      "success": "Success"
     }
   }
 }
