@@ -47,8 +47,10 @@ const Contact = () => {
           />
         </fieldset>
         <fieldset className='field-message'>
-          <label className='symbol-required'>Email</label>
-          <textarea
+          <label className='symbol-required'>
+            Message
+            </label>
+          <textarea className='textareaResponsive'
             maxLength='500'
             placeholder='type yout message'
             name='message'

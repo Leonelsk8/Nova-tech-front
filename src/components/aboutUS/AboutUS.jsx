@@ -29,7 +29,7 @@ const AboutUS = () => {
               </div>
             </div>
           </div>
-          <div className='col-sm-4 col-md-3'>
+          <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
             <div className='card team-item p-2'>
               <div className='text-center m-2'>
                 <img src='/img/Leo.png' className='team-img' alt='imagen' />
@@ -63,7 +63,7 @@ const AboutUS = () => {
               </div>
             </div>
           </div>
-          <div className='col-sm-4 col-md-3'>
+          <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
             <div className='card team-item p-2'>
               <div className='text-center m-2 text-black'>
                 <img src='/img/Ivan.png' className='team-img' alt='imagen' />
@@ -97,7 +97,7 @@ const AboutUS = () => {
               </div>
             </div>
           </div>
-          <div className='col-sm-4 col-md-3'>
+          <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
             <div className='card team-item p-2'>
               <div className='text-center m-2'>
                 <img src='/img/Matias.png' className='team-img' alt='imagen' />
@@ -129,7 +129,7 @@ const AboutUS = () => {
               </div>
             </div>
           </div>
-          <div className='col-sm-4 col-md-3'>
+          <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
             <div className='card team-item p-2'>
               <div className='text-center m-2'>
                 <img src='/img/Carlos.png' className='team-img' alt='imagen' />
