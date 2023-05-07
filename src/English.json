@@ -175,6 +175,27 @@
       "messageAlert2": "Product created successfully",
       "messageAlert3": "Product could not be created",
       "success": "Success"
+    },
+    "editProduct": {
+      "title": "Title:",
+      "desc": "Description:",
+      "price": "Price:",
+      "quantity": "Quantity:",
+      "category": "Category:",
+      "butt": "Edit",
+      "alertOne": "Product modified successfully",
+      "alertTwo": "The product could not be modified"
+    },
+    "notResult" : "No results",
+    "searchNot": "The product was not found",
+    "buttDelete": "Delete",
+    "deleteProduct":{
+      "alertOne": "¿Do you want to remove this product?",
+      "alertOneop": "¡You won't be able to reverse this!",
+      "alertOneconf": "Yes to delete",
+      "alertOnecancel": "Cancel",
+      "alertTwo": "Done!",
+      "alertTwoop": "Product removed successfully"
     }
   }
 }

@@ -100,6 +100,16 @@ export const editProduct = async (productEdit, id)=>{
   }
 }
 
+export const deleteProduct = async (id) =>{
+  try {
+    return await axios.delete(`${DBURL}${endpointProduct.delete}/${id}`,{
+      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 //users
 
 export const createUser = async (userData) => {

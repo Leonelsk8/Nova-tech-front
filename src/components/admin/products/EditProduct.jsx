@@ -45,7 +45,7 @@ const EditProduct = (props) => {
       let title = lang.Languaje.lang === 'es' ? item.titleEs.toLowerCase() : item.titleEn.toLowerCase();
       return title.includes(search);
     });
-    postFiltrados.length >= 1 ? setProductSearch(postFiltrados) : customAlert('Sin resultados', 'el producto no se encontró', 'info', 'Ok', ()=>{}); 
+    postFiltrados.length >= 1 ? setProductSearch(postFiltrados) : customAlert(lang.admin.notResult, lang.admin.searchNot, 'info', 'Ok', ()=>{}); 
     
   }
 
@@ -73,8 +73,8 @@ const EditProduct = (props) => {
 
     try {
       await editProduct(productEdit, productEdit._id)
-      .then(response => {customAlert(lang.admin.createProduct.success, 'Producto modificado con exito' , 'success', 'Ok', ()=>{console.log(response)});setLoading(true); render()})
-      .catch(error => {customAlert('Error', 'el producto no se pudo modificar','error', 'Ok', ()=>{console.log(error)})})
+      .then(response => {customAlert(lang.admin.createProduct.success, lang.admin.editProduct.alertOne , 'success', 'Ok', ()=>{console.log(response)});setLoading(true); render()})
+      .catch(error => {customAlert('Error', lang.admin.editProduct.alertTwo,'error', 'Ok', ()=>{console.log(error)})})
     } catch (error) {
       console.log(error);
     }
@@ -92,7 +92,7 @@ const EditProduct = (props) => {
     <>
     <div>
       <div className='mb-3 d-flex flex-wrap justify-content-between'>
-        <h2>{lang.admin.titleProd}</h2>
+        <h2>{lang.admin.prodOpctwo}</h2>
         <form className={`d-flex`} role="search" onSubmit={handleSubmit}>
           <input type="search" className="form-control me-2 me-lg-0" placeholder={lang.Store.search} onChange={handleChange}/>
           <button className={`bgNav-${modeDL} butt butt-${modeDL} text-white`} type='submit'>{lang.Store.search}</button>
@@ -101,21 +101,21 @@ const EditProduct = (props) => {
       <div className={style.contProd}>
         {
           productSearch !== null ? productSearch.map((prod, index)=>(<div className={`p-3 mt-2 rounded text-dark ${style.backCard}`} key={index}>
-          <p><b>Titulo: </b>{lang.Languaje.lang === 'es' ? prod.titleEs : prod.titleEn}</p>
-          <p><b>Descripcion: </b>{lang.Languaje.lang === 'es' ? `${prod.descriptionEs.slice(0, 200)}...` : `${prod.descriptionEn.slice(0, 200)}...`}</p>
-          <p><b>Precio: </b>{prod.price} $</p>
-          <p><b>Cantidad: </b>{prod.quantity}</p>
-          <p><b>Categoria: </b>{prod.category}</p>
-          <div><button className={`butt butt-${modeDL} text-white bgFootButt-${modeDL}`} onClick={()=>getProductId(prod._id)} data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></div>
+          <p><b>{lang.admin.editProduct.title} </b>{lang.Languaje.lang === 'es' ? prod.titleEs : prod.titleEn}</p>
+          <p><b>{lang.admin.editProduct.desc} </b>{lang.Languaje.lang === 'es' ? `${prod.descriptionEs.slice(0, 200)}...` : `${prod.descriptionEn.slice(0, 200)}...`}</p>
+          <p><b>{lang.admin.editProduct.price} </b>{prod.price} $</p>
+          <p><b>{lang.admin.editProduct.quantity} </b>{prod.quantity}</p>
+          <p><b>{lang.admin.editProduct.category} </b>{prod.category}</p>
+          <div><button className={`butt butt-${modeDL} text-white bgFootButt-${modeDL}`} onClick={()=>getProductId(prod._id)} data-bs-toggle="modal" data-bs-target="#exampleModal">{lang.admin.editProduct.butt}</button></div>
         </div>)) :
           loading || products===null ? <Loader/> :
           products.map((prod, index)=>(<div className={`p-3 mt-2 rounded text-dark ${style.backCard}`} key={index}>
-            <p><b>Titulo: </b>{lang.Languaje.lang === 'es' ? prod.titleEs : prod.titleEn}</p>
-            <p><b>Descripcion: </b>{lang.Languaje.lang === 'es' ? `${prod.descriptionEs.slice(0, 200)}...` : `${prod.descriptionEn.slice(0, 200)}...`}</p>
-            <p><b>Precio: </b>{prod.price} $</p>
-            <p><b>Cantidad: </b>{prod.quantity}</p>
-            <p><b>Categoria: </b>{prod.category}</p>
-            <div><button className={`butt butt-${modeDL} text-white bgFootButt-${modeDL}`} onClick={()=>getProductId(prod._id)} data-bs-toggle="modal" data-bs-target="#exampleModal">Editar</button></div>
+            <p><b>{lang.admin.editProduct.title} </b>{lang.Languaje.lang === 'es' ? prod.titleEs : prod.titleEn}</p>
+            <p><b>{lang.admin.editProduct.desc} </b>{lang.Languaje.lang === 'es' ? `${prod.descriptionEs.slice(0, 200)}...` : `${prod.descriptionEn.slice(0, 200)}...`}</p>
+            <p><b>{lang.admin.editProduct.price} </b>{prod.price} $</p>
+            <p><b>{lang.admin.editProduct.quantity} </b>{prod.quantity}</p>
+            <p><b>{lang.admin.editProduct.category} </b>{prod.category}</p>
+            <div><button className={`butt butt-${modeDL} text-white bgFootButt-${modeDL}`} onClick={()=>getProductId(prod._id)} data-bs-toggle="modal" data-bs-target="#exampleModal">{lang.admin.editProduct.butt}</button></div>
           </div>))
         }
       </div>
@@ -186,9 +186,6 @@ const EditProduct = (props) => {
                       </div>
                       <button type="submit" className={sendDisabled ? 'buttDisabled' : `bgFootButt-${modeDL} butt-${modeDL} butt text-white`} disabled={sendDisabled ? true : false}>{lang.admin.prodOpctwo}</button>
                     </form>
-                  </div>
-                  <div className="modal-footer">
-                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                   </div>
                 </div>
               </div>

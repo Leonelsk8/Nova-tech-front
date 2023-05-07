@@ -173,6 +173,27 @@
       "messageAlert2": "Producto creado con éxito",
       "messageAlert3": "El producto no se pudo crear",
       "success": "Éxito"
+    },
+    "editProduct": {
+      "title": "Título:",
+      "desc": "Descripción:",
+      "price": "Precio:",
+      "quantity": "Cantidad:",
+      "category": "Categoría:",
+      "butt": "Editar",
+      "alertOne": "Producto modificado con éxito",
+      "alertTwo": "El producto no se pudo modificar"
+    },
+    "notResult" : "Sin resultados",
+    "searchNot": "El producto no se encontró",
+    "buttDelete": "Eliminar",
+    "deleteProduct":{
+      "alertOne": "¿Quieres eliminar este producto?",
+      "alertOneop": "¡No podrás revertir esto!",
+      "alertOneconf": "Si eliminar",
+      "alertOnecancel": "Cancelar",
+      "alertTwo": "Hecho!",
+      "alertTwoop": "Producto eliminado con éxito"
     }
   }
 }
