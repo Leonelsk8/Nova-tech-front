@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import { Routes, Route } from 'react-router-dom';
 import AboutUS from './components/aboutUS/AboutUS';
 import Contact from './components/contact/Contact';
+import UserProfilePage from './pages/UserProfilePage'
 
 const App = () => {
   const [lang, setLang] = useState(es);
@@ -51,6 +52,7 @@ const App = () => {
           path='/register'
           element={<Register modeDL={bgMode} textDL={textMode} lang={lang} />}
         />
+      <Route path='/profile' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} />} /> {/* Trabajo en proceso */}
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang} />
     </>
