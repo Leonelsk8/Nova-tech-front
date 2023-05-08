@@ -186,6 +186,14 @@
       "alertOne": "Product modified successfully",
       "alertTwo": "The product could not be modified"
     },
+    "offerProd":{
+      "title": "Deals of the month",
+      "butt": "Reset bidding",
+      "add": "Add new offers",
+      "alertOne": "You exceeded the limit, you cannot continue bidding",
+      "alertTwo": "There are no more products to restart",
+      "noOffert": "There are no offers posted"
+    },
     "notResult" : "No results",
     "searchNot": "The product was not found",
     "buttDelete": "Delete",

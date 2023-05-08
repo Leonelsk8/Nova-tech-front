@@ -184,6 +184,14 @@
       "alertOne": "Producto modificado con éxito",
       "alertTwo": "El producto no se pudo modificar"
     },
+    "offerProd":{
+      "title": "Ofertas del mes",
+      "butt": "Reiniciar ofertas",
+      "add": "Agregar ofertas nuevas",
+      "alertOne": "Superaste el límite, no puedes seguir ofertando",
+      "alertTwo": "Ya no hay productos que reiniciar",
+      "noOffert": "No hay ofertas públicadas"
+    },
     "notResult" : "Sin resultados",
     "searchNot": "El producto no se encontró",
     "buttDelete": "Eliminar",

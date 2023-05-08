@@ -46,4 +46,66 @@
   max-height: 1000px;
 }
 
+.contentImgsearch{
+  width: 100%; 
+  height: 6em;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px gray;
+}
 
+.contentImg{
+  width: 100%; 
+  height: 13em;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px gray;
+}
+
+.imgCards{
+  height: 100%;
+  object-fit:contain;
+  object-position: center center;
+}
+
+.prices{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0%;
+  background-color: #000000b9;
+  transition: 0.5s;
+  cursor: pointer;
+  color:#fff;
+  flex-direction: column;
+}
+
+.prices:hover{
+  opacity: 100%;
+}
+
+.buttOffert{
+  position: relative;
+  border: none;
+  text-align: start;
+  width: 100%;
+  text-decoration: none;
+}
+
+.bacck{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00000091;
+  top: 0;
+  left: 0;
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+.bacck:hover{
+  opacity: 100%;
+}

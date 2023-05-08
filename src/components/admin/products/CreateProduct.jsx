@@ -90,11 +90,11 @@ const CreateProduct = (props) => {
       <form className='mt-4' onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="inputTitleEs" className="form-label">{lang.admin.createProduct.titleEs}</label>
-          <input type="text" onChange={handleChange} name='titleEs' className="form-control" id="inputTitleEs" aria-describedby="emailHelp"/>
+          <input type="text" onChange={handleChange} name='titleEs' className="form-control" id="inputTitleEs" maxLength={65} aria-describedby="emailHelp"/>
         </div>
         <div className="mb-3">
           <label htmlFor="inputTitleEn" className="form-label">{lang.admin.createProduct.titleEn}</label>
-          <input type="text" onChange={handleChange} name='titleEn' className="form-control" id="inputTitleEn"/>
+          <input type="text" onChange={handleChange} name='titleEn' className="form-control" id="inputTitleEn"  maxLength={65}/>
         </div>
         <div className="mb-3">
           <label htmlFor="inputDescriptionEs" className="form-label">{lang.admin.createProduct.descEs}</label>
