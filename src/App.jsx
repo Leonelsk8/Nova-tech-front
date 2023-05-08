@@ -10,6 +10,7 @@ import Register from './pages/Register';
 import { Routes, Route } from 'react-router-dom';
 import AboutUS from './components/aboutUS/AboutUS';
 import Contact from './components/contact/Contact';
+import NotFound from './components/page/NotFound'; 
 
 const App = () => {
   const [lang, setLang] = useState(es);
@@ -47,6 +48,7 @@ const App = () => {
         <Route path='aboutUs' element={<AboutUS/>} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<h1>aca va el login</h1>} />
+        <Route path='*' element={< NotFound/>} />
         <Route
           path='/register'
           element={<Register modeDL={bgMode} textDL={textMode} lang={lang} />}
