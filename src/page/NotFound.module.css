@@ -1,22 +1,17 @@
-body {
-  background-color: #6D8B74;
-
-  height: 100vh;
+.body {
+  background-color: #6d8b74;
 }
 
-.img  {
-  width: 100%;
-  border-radius: 50px;
-}
-
-h2 {
-  color: #fff;
-  }
-  
-p {
+.error {
   color: #fff;
 }
 
 .inicio {
   color: blue;
+}
+
+.img404 {
+  border-radius: 50px;
+  width: 80%;
+  height: 80%;
 }

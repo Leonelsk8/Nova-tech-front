@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useRef } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
@@ -18,10 +19,10 @@ const Contact = (props) => {
   };
 
   return (
-    <div className='d-flex justify-content-center'>
+    <div className='d-flex justify-content-center vh-100'>
       <form className='contact contactForm' ref={refForm} action='' onSubmit={handleSubmit}>
         <div className='header-contact'>
-          <h2>{lang.Contact.Contac}</h2>
+          <h2>{lang.Contact.title}</h2>
           <p>{lang.Contact.subtitle}</p>
         </div>
         <fieldset className='field-name'>

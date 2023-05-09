@@ -91,7 +91,7 @@
     "Carlos": "Age: 34 Years Student: Web Development (rolling Code) Currently working in private security, I have not defined what to do at the end of the course, but with great expectations of changing my future."
   },
   "Contact": {
-    "Contac": "Contact",
+    "title": "Contact",
     "subtitle": "Please complete this form",
     "nombre": "Name",
     "email": "Email",

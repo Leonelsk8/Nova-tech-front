@@ -8,11 +8,12 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import { Routes, Route} from 'react-router-dom';
 import Panel from './components/admin/Panel'
-import Register from './pages/Register';
+import Register from './page/Register';
 import AboutUS from './components/aboutUS/AboutUS';
 import Contact from './components/contact/Contact';
-import UserProfilePage from './pages/UserProfilePage'
-import Login from './pages/Login';
+import UserProfilePage from './page/UserProfilePage'
+import Login from './page/Login';
+import NotFound from './page/NotFound'
 
 const App = () => {
   const [lang, setLang] = useState(es);
@@ -33,13 +34,13 @@ const App = () => {
     <>
       <Navbar modeDLchange={bgChange} modeDL={bgMode} lang={lang} langChange={langChange}/>
       <Routes>
-        <Route path='*' element={<Store modeDL={bgMode} textDL={textMode} lang={lang} />}/>
+        <Route path='*' element={<NotFound modeDL={bgMode} textDL={textMode} lang={lang} />}/>
         <Route path='/home' element={<Store modeDL={bgMode} textDL={textMode} lang={lang} />} />
         <Route path='/prod/:id' element={isLog ? <h1>hola</h1> : <h1>chau</h1>}/>
         <Route path='/register'  element={<Register modeDL={bgMode} textDL={textMode} lang={lang} />}/>
         <Route path='/panel-admin' element={<Panel modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
-        <Route path='/aboutUs' element={<AboutUS/>} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/aboutUs' element={<AboutUS modeDL={bgMode} textDL={textMode} lang={lang} />} />
+        <Route path='/contact' element={<Contact modeDL={bgMode} textDL={textMode} lang={lang} />} />
         <Route path='/profile' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} />} /> {/* Trabajo en proceso */}
         <Route path='/login' element={<Login modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
       </Routes>
