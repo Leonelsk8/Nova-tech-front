@@ -19,7 +19,7 @@ const Contact = (props) => {
 
   return (
     <div className='d-flex justify-content-center'>
-      <form className='contact' ref={refForm} action='' onSubmit={handleSubmit}>
+      <form className='contact contactForm' ref={refForm} action='' onSubmit={handleSubmit}>
         <div className='header-contact'>
           <h2>{lang.Contact.Contac}</h2>
           <p>{lang.Contact.subtitle}</p>

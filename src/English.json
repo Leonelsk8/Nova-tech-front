@@ -1,15 +1,15 @@
 {
-  "Languaje":{
+  "Languaje": {
     "lang": "en"
   },
-  
-  "Navbar":{
+
+  "Navbar": {
     "home": "Home",
     "services": "Services",
     "about": "About us",
     "contact": "Contact",
     "login": "Log in",
-    "register": "Register",
+    "register": "Sign up",
     "servititleone": "Products",
     "servititletwo": "Users",
     "serviPublione": "Create product",
@@ -18,10 +18,11 @@
     "serviPublifor": "Modify offers",
     "serviUserone": "Suspend user",
     "serviUsertwo": "Messages",
-    "profile": "Profile"
+    "profile": "Profile",
+    "panelAdmin": "Control Panel"
   },
 
-  "Landing":{
+  "Landing": {
     "title": "¡¡Take advantage of the monthly offers!!",
     "description": "In Nova Tech don't miss our monthly offers! Every month, we offer an incredible 50% discount on a wide selection of products. Every month we select 8 different products for this great offer.",
     "butt": "See offers",
@@ -29,7 +30,7 @@
     "circletree": "Monthly"
   },
 
-  "Store":{
+  "Store": {
     "sectionOneTitle": "Everything you need to live comfortably",
     "sectionOneDescOne": "We offer appliances with sleek, modern designs that add a sophisticated look to your home or business.",
     "sectionOneDescTwo": "We offer the best brands that guarantee the necessary quality and reliability.",
@@ -80,25 +81,58 @@
     "panelEndTreefive": "More than 10 years of experience in e-commerce."
   },
 
-  "Aboutus":{
+  "Aboutus": {
     "title": "About us",
     "parrafo": "Welcome to our appliance store! We are a company passionate about technology and committed to providing our customers with the best shopping experience. In our extensive catalog you will find a variety of brands and models, all carefully selected to ensure offer you the best quality and performance. We focus not only on offering you high-quality products, but also a unique and satisfying shopping experience. We invite you to visit us and discover everything we have to offer. We are waiting for you with open arms! !",
 
     "Leo": "Age: 22 years old Student: Web Development (Rolling Code) Information systems engineering student, reason that motivated me to do code school. And now my biggest hobby is programming because it's something I like. I have programming bases thanks to the engineering degree",
-     "Ivan": "Age: 27 Years Student: Web Development (rolling Code) Starting my path as a developer. My goal is to specialize and get to know development tools in depth to be able to create complex structures in a deep and professional way",
-     "Matias": "Age: 27 Years Student: Web Development (Rolling Code). I am a student of Engineering and RollingCode to broaden my knowledge of programming languages",
-     "Carlos": "Age: 34 Years Student: Web Development (rolling Code) Currently working in private security, I have not defined what to do at the end of the course, but with great expectations of changing my future."
+    "Ivan": "Age: 27 Years Student: Web Development (rolling Code) Starting my path as a developer. My goal is to specialize and get to know development tools in depth to be able to create complex structures in a deep and professional way",
+    "Matias": "Age: 27 Years Student: Web Development (Rolling Code). I am a student of Engineering and RollingCode to broaden my knowledge of programming languages",
+    "Carlos": "Age: 34 Years Student: Web Development (rolling Code) Currently working in private security, I have not defined what to do at the end of the course, but with great expectations of changing my future."
   },
-  "Contact":{
+  "Contact": {
     "Contac": "Contact",
-    "subtitle":"Please complete this form",
+    "subtitle": "Please complete this form",
     "nombre": "Name",
-    "email":"Email",
+    "email": "Email",
     "mensaje": "Message",
     "enviar": "Send"
   },
-
-  "Cartshop":{
+  "Footer": {
+    "title": "electronic shop",
+    "subTitle": "Follow us!",
+    "contact": "Contact",
+    "information": "Information",
+    "questions": "Frequent questions",
+    "atention": "Customer Support",
+    "term": "Terms and Conditions",
+    "already": "All rights reserved"
+  },
+  "Login": {
+    "title": "Login",
+    "email": "Email",
+    "emailRequired": "Email is required.",
+    "emailMin": "Minimum 5 characters.",
+    "emailMax": "Maximum 100 characters.",
+    "emailPattern": "The email must be in a valid format.",
+    "password": "Password",
+    "passwordRequired": "La contraseña es obligatoriaThe password is required.",
+    "passwordMin": "Minimum 8 characters.",
+    "passwordMax": "Maximum 50 characters.",
+    "passwordPattern": "The password must have letters and numbers.",
+    "language": "Language",
+    "smallLanguage": "(optional)",
+    "alreadyRegQuest": "Still not registered?",
+    "alreadyRegLink": "Register now",
+    "submitButton": "Login",
+    "alertSuccessTitle": "Congratulations!",
+    "alertSuccessText": "You successfully logged in.",
+    "alertErrorTitle": "Ups...",
+    "alertError": "Wrong email or password!",
+    "alertErrorButtonText": "Try again",
+    "alertButtonText": "Press to continue"
+  },
+  "Cartshop": {
     "shops": "exmples shops"
   },
   "Register": {
@@ -136,5 +170,88 @@
     "alertErrorTextInit": "The email",
     "alertErrorTextEnd": "It is already in use. Try another one.",
     "alertButtonText": "Accept"
+  },
+
+  "admin": {
+    "title": "Welcome Admin",
+    "titleProd": "Products",
+    "prodOpcone": "Create product",
+    "prodOpctwo": "Edit Product",
+    "prodOpctree": "Delete Product",
+    "prodOpcfor": "Modify offers",
+    "titleUser": "Users",
+    "userOpcone": "List users",
+    "userOpctwo": "Suspend user",
+    "userOpctree": "Messages",
+    "createProduct": {
+      "title": "Create product",
+      "titleEs": "Title in Spanish",
+      "titleEn": "Title in English",
+      "descEs": "Description in Spanish",
+      "descEn": "Description in English",
+      "price": "Price (Enter without points)",
+      "category": "Category",
+      "select": "Select",
+      "selectOpc1": "Full pc",
+      "selectOpc2": "Hardware",
+      "selectOpc3": "Peripheral",
+      "selectOpc4": "Notebook",
+      "selectOpc5": "Samsung TV",
+      "selectOpc6": "TV BGH",
+      "selectOpc7": "LG TV",
+      "selectOpc8": "Samsung Mobile",
+      "selectOpc9": "Motorola Mobile",
+      "selectOpc10": "Iphone",
+      "selectOpc11": "Speakers",
+      "selectOpc12": "Headphones",
+      "selectOpc13": "Microphone",
+      "selectOpc14": "Fridge",
+      "selectOpc15": "Freezer",
+      "selectOpc16": "Air conditioning",
+      "selectOpc17": "Heater",
+      "selectOpc18": "Fan",
+      "selectOpc19": "Samsung Tablet",
+      "selectOpc20": "Noga Tablet",
+      "selectOpc21": "Tablet BGH",
+      "quantity": "Quantity",
+      "image": "Enter cover image (just one)",
+      "images": "Enter Sample Images",
+      "loaderOne": "Wait for the image to upload",
+      "loaderTwo": "Wait for images to upload",
+      "create": "Create product",
+      "messageAlert1": "Not all fields are completed",
+      "messageAlert2": "Product created successfully",
+      "messageAlert3": "Product could not be created",
+      "success": "Success"
+    },
+    "editProduct": {
+      "title": "Title:",
+      "desc": "Description:",
+      "price": "Price:",
+      "quantity": "Quantity:",
+      "category": "Category:",
+      "butt": "Edit",
+      "alertOne": "Product modified successfully",
+      "alertTwo": "The product could not be modified"
+    },
+    "offerProd": {
+      "title": "Deals of the month",
+      "butt": "Reset bidding",
+      "add": "Add new offers",
+      "alertOne": "You exceeded the limit, you cannot continue bidding",
+      "alertTwo": "There are no more products to restart",
+      "noOffert": "There are no offers posted"
+    },
+    "notResult": "No results",
+    "searchNot": "The product was not found",
+    "buttDelete": "Delete",
+    "deleteProduct": {
+      "alertOne": "¿Do you want to remove this product?",
+      "alertOneop": "¡You won't be able to reverse this!",
+      "alertOneconf": "Yes to delete",
+      "alertOnecancel": "Cancel",
+      "alertTwo": "Done!",
+      "alertTwoop": "Product removed successfully"
+    }
   }
 }

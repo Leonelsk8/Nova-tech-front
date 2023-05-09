@@ -1,6 +1,6 @@
 import { Container, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './NotFount.css';
+//import style from './NotFound.module.css';
 
 const NotFound = () => {
   return (

@@ -4,7 +4,7 @@
   padding: 10px;
 }
 
-form {
+.contactForm {
   width: 25rem;
   height: 30rem;
   display: flex;
