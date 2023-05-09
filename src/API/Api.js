@@ -44,7 +44,7 @@ export const getAllProducts = async () => {
   try {
     return await axios.get(`${DBURL}${endpointProduct.getAll}`, {
       headers: {
-        'access-token': 'token',
+        'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
       },
     });
   } catch (error) {
@@ -56,13 +56,81 @@ export const getProductById = async (id) => {
   try {
     return await axios.get(`${DBURL}${endpointProduct.getId}/${id}`, {
       headers: {
-        'access-token': 'token',
+        'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
       },
     });
   } catch (error) {
     console.log(error);
   }
 };
+
+export const createProduct = async(productData)=>{
+  try {
+    return await axios.post(`${DBURL}${endpointProduct.create}`, productData);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const uploadImage = async(formImage)=>{
+  try {
+    return await axios.post(`${DBURL}${endpointProduct.uploadImage}`, formImage);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const uploadImagess = async (formImagess)=>{
+  try {
+    return await axios.post(`${DBURL}${endpointProduct.uploadImagess}`, formImagess, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const editProduct = async (productEdit, id)=>{
+  try {
+    return await axios.patch(`${DBURL}${endpointProduct.edit}/${id}`, productEdit,{
+      headers: { 
+        'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const deleteProduct = async (id) =>{
+  try {
+    return await axios.delete(`${DBURL}${endpointProduct.delete}/${id}`,{
+      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const restartOfferts = async()=>{
+  try {
+    return await axios.patch(`${DBURL}${endpointProduct.restartOffert}`,{title: 'title'},{
+      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const offertProd = async(id)=>{
+  try {
+    return await axios.patch(`${DBURL}${endpointProduct.offert}/${id}`,{title: 'title'},{
+      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 //users
 

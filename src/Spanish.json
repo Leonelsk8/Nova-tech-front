@@ -18,7 +18,8 @@
     "serviPublifor": "Modificar ofertas",
     "serviUserone": "Suspender usuario",
     "serviUsertwo": "Mensajes",
-    "profile": "Perfil"
+    "profile": "Perfil",
+    "panelAdmin": "Panel de control"
   },
 
   "Landing":{
@@ -80,7 +81,38 @@
     "panelEndTreefive": "Más de 10 años de experiencia en el comercio electrónico."
   },
   "Footer":{
-    "title": "ejemplos"
+    "title": "tienda de electronica",
+    "subTitle": "¡Seguinos!",
+    "contact": "Contacto",
+    "information": "Información",
+    "questions": "Preguntas frecuentes",
+    "atention": "Atención al cliente",
+    "term": "Terminos y condiciones",
+    "already":"Todos los derechos reservados"
+  },
+  "Login":{
+    "title": "Iniciar sesion",
+    "email": "Email",
+    "emailRequired": "El email es obligatorio.",
+    "emailMin": "Mínimo 5 caracteres.",
+    "emailMax": "Máximo 100 caracteres.",
+    "emailPattern": "El correo electrónico debe tener un formato válido.",
+    "password": "Contraseña",
+    "passwordRequired": "La contraseña es obligatoria.",
+    "passwordMin": "Mínimo 8 caracteres.",
+    "passwordMax": "Máximo 50 caracteres.",
+    "passwordPattern": "La contraseña debe tener letras y números.",
+    "language": "Idioma",
+    "smallLanguage": "(opcional)",
+    "alreadyRegQuest": "¿Aun no estas registrado?",
+    "alreadyRegLink": "Registrate",
+    "submitButton": "Iniciar sesión",
+    "alertSuccessTitle": "¡Felicidades!",
+    "alertSuccessText": "Inició correctamente sesión.",
+    "alertErrorTitle": "Ups...",
+    "alertError": "¡Email o contraseña incorrectos!",
+    "alertErrorButtonText": "Intentar de nuevo",
+    "alertButtonText": "Presione para continuar"
   },
   "Cartshop":{
     "shops": "ejemplos venta"
@@ -120,5 +152,88 @@
     "alertErrorTextInit": "El email",
     "alertErrorTextEnd": "ya está en uso. Intenta con otro correo.",
     "alertButtonText": "Aceptar"
+  },
+
+  "admin":{
+    "title":"Bienvenido Admin",
+    "titleProd": "Productos",
+    "prodOpcone": "Crear producto",
+    "prodOpctwo": "Editar producto",
+    "prodOpctree": "Eliminar producto",
+    "prodOpcfor": "Modificar ofertas",
+    "titleUser": "Usuarios",
+    "userOpcone": "Listar usuarios",
+    "userOpctwo": "Suspender usuario",
+    "userOpctree": "Mesajes",
+    "createProduct":{
+      "title": "Crear producto",
+      "titleEs": "Título en Español",
+      "titleEn": "Título en Inglés",
+      "descEs": "Descripción en Español",
+      "descEn": "Descripción en Inglés",
+      "price": "Precio (Ingrese sin puntos)",
+      "category": "Categoría",
+      "select": "Seleccionar",
+      "selectOpc1": "Pc completa",
+      "selectOpc2": "Hardware",
+      "selectOpc3": "Periferico",
+      "selectOpc4": "Notebook",
+      "selectOpc5": "TV Samsung",
+      "selectOpc6": "TV BGH",
+      "selectOpc7": "TV LG",
+      "selectOpc8": "Celular Samsung",
+      "selectOpc9": "Celular Motorola",
+      "selectOpc10": "Iphone",
+      "selectOpc11": "Parlantes",
+      "selectOpc12": "Auriculares",
+      "selectOpc13": "Microfono",
+      "selectOpc14": "Heladera",
+      "selectOpc15": "Freezer",
+      "selectOpc16": "Aire acondicionado",
+      "selectOpc17": "Calefactor",
+      "selectOpc18": "Ventilador",
+      "selectOpc19": "Tablet Samsung",
+      "selectOpc20": "Tablet Noga",
+      "selectOpc21": "Tablet BGH",
+      "quantity": "Cantidad",
+      "image": "Ingrese imagen de portada (solo una)",
+      "images": "Ingrese Imagenes de muestra",
+      "loaderOne": "Espere a que se suba la imagen",
+      "loaderTwo": "Espere a que se suban las imágenes",
+      "create": "Crear producto",
+      "messageAlert1": "No estan todos los campos completados",
+      "messageAlert2": "Producto creado con éxito",
+      "messageAlert3": "El producto no se pudo crear",
+      "success": "Éxito"
+    },
+    "editProduct": {
+      "title": "Título:",
+      "desc": "Descripción:",
+      "price": "Precio:",
+      "quantity": "Cantidad:",
+      "category": "Categoría:",
+      "butt": "Editar",
+      "alertOne": "Producto modificado con éxito",
+      "alertTwo": "El producto no se pudo modificar"
+    },
+    "offerProd":{
+      "title": "Ofertas del mes",
+      "butt": "Reiniciar ofertas",
+      "add": "Agregar ofertas nuevas",
+      "alertOne": "Superaste el límite, no puedes seguir ofertando",
+      "alertTwo": "Ya no hay productos que reiniciar",
+      "noOffert": "No hay ofertas públicadas"
+    },
+    "notResult" : "Sin resultados",
+    "searchNot": "El producto no se encontró",
+    "buttDelete": "Eliminar",
+    "deleteProduct":{
+      "alertOne": "¿Quieres eliminar este producto?",
+      "alertOneop": "¡No podrás revertir esto!",
+      "alertOneconf": "Si eliminar",
+      "alertOnecancel": "Cancelar",
+      "alertTwo": "Hecho!",
+      "alertTwoop": "Producto eliminado con éxito"
+    }
   }
 }

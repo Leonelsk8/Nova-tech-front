@@ -9,7 +9,7 @@
     "about": "About us",
     "contact": "Contact",
     "login": "Log in",
-    "register": "Register",
+    "register": "Sign up",
     "servititleone": "Products",
     "servititletwo": "Users",
     "serviPublione": "Create product",
@@ -18,7 +18,8 @@
     "serviPublifor": "Modify offers",
     "serviUserone": "Suspend user",
     "serviUsertwo": "Messages",
-    "profile": "Profile"
+    "profile": "Profile",
+    "panelAdmin": "Control Panel"
   },
 
   "Landing":{
@@ -81,9 +82,39 @@
   },
 
   "Footer":{
-    "title": "example"
+    "title": "electronic shop",
+    "subTitle": "Follow us!",
+    "contact": "Contact",
+    "information": "Information",
+    "questions": "Frequent questions",
+    "atention": "Customer Support",
+    "term": "Terms and Conditions",
+    "already":"All rights reserved"
   },
-
+  "Login":{
+    "title": "Login",
+    "email": "Email",
+    "emailRequired": "Email is required.",
+    "emailMin": "Minimum 5 characters.",
+    "emailMax": "Maximum 100 characters.",
+    "emailPattern": "The email must be in a valid format.",
+    "password": "Password",
+    "passwordRequired": "La contraseña es obligatoriaThe password is required.",
+    "passwordMin": "Minimum 8 characters.",
+    "passwordMax": "Maximum 50 characters.",
+    "passwordPattern": "The password must have letters and numbers.",
+    "language": "Language",
+    "smallLanguage": "(optional)",
+    "alreadyRegQuest": "Still not registered?",
+    "alreadyRegLink": "Register now",
+    "submitButton": "Login",
+    "alertSuccessTitle": "Congratulations!",
+    "alertSuccessText": "You successfully logged in.",
+    "alertErrorTitle": "Ups...",
+    "alertError": "Wrong email or password!",
+    "alertErrorButtonText": "Try again",
+    "alertButtonText": "Press to continue"
+  },
   "Cartshop":{
     "shops": "exmples shops"
   },
@@ -122,5 +153,88 @@
     "alertErrorTextInit": "The email",
     "alertErrorTextEnd": "It is already in use. Try another one.",
     "alertButtonText": "Accept"
+  },
+
+  "admin":{
+    "title":"Welcome Admin",
+    "titleProd": "Products",
+    "prodOpcone": "Create product",
+    "prodOpctwo": "Edit Product",
+    "prodOpctree": "Delete Product",
+    "prodOpcfor": "Modify offers",
+    "titleUser": "Users",
+    "userOpcone": "List users",
+    "userOpctwo": "Suspend user",
+    "userOpctree": "Messages",
+    "createProduct":{
+      "title": "Create product",
+      "titleEs": "Title in Spanish",
+      "titleEn": "Title in English",
+      "descEs": "Description in Spanish",
+      "descEn": "Description in English",
+      "price": "Price (Enter without points)",
+      "category": "Category",
+      "select": "Select",
+      "selectOpc1": "Full pc",
+      "selectOpc2": "Hardware",
+      "selectOpc3": "Peripheral",
+      "selectOpc4": "Notebook",
+      "selectOpc5": "Samsung TV",
+      "selectOpc6": "TV BGH",
+      "selectOpc7": "LG TV",
+      "selectOpc8": "Samsung Mobile",
+      "selectOpc9": "Motorola Mobile",
+      "selectOpc10": "Iphone",
+      "selectOpc11": "Speakers",
+      "selectOpc12": "Headphones",
+      "selectOpc13": "Microphone",
+      "selectOpc14": "Fridge",
+      "selectOpc15": "Freezer",
+      "selectOpc16": "Air conditioning",
+      "selectOpc17": "Heater",
+      "selectOpc18": "Fan",
+      "selectOpc19": "Samsung Tablet",
+      "selectOpc20": "Noga Tablet",
+      "selectOpc21": "Tablet BGH",
+      "quantity": "Quantity",
+      "image": "Enter cover image (just one)",
+      "images": "Enter Sample Images",
+      "loaderOne": "Wait for the image to upload",
+      "loaderTwo": "Wait for images to upload",
+      "create": "Create product",
+      "messageAlert1": "Not all fields are completed",
+      "messageAlert2": "Product created successfully",
+      "messageAlert3": "Product could not be created",
+      "success": "Success"
+    },
+    "editProduct": {
+      "title": "Title:",
+      "desc": "Description:",
+      "price": "Price:",
+      "quantity": "Quantity:",
+      "category": "Category:",
+      "butt": "Edit",
+      "alertOne": "Product modified successfully",
+      "alertTwo": "The product could not be modified"
+    },
+    "offerProd":{
+      "title": "Deals of the month",
+      "butt": "Reset bidding",
+      "add": "Add new offers",
+      "alertOne": "You exceeded the limit, you cannot continue bidding",
+      "alertTwo": "There are no more products to restart",
+      "noOffert": "There are no offers posted"
+    },
+    "notResult" : "No results",
+    "searchNot": "The product was not found",
+    "buttDelete": "Delete",
+    "deleteProduct":{
+      "alertOne": "¿Do you want to remove this product?",
+      "alertOneop": "¡You won't be able to reverse this!",
+      "alertOneconf": "Yes to delete",
+      "alertOnecancel": "Cancel",
+      "alertTwo": "Done!",
+      "alertTwoop": "Product removed successfully"
+    }
   }
 }
