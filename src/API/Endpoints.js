@@ -15,7 +15,8 @@ const endpointProduct = {
 }
 
 const endpointUsers ={
-  create: '/users/create-user'
+  create: '/users/create-user',
+  login: '/login'
 }
 
 export {endpointProduct , endpointUsers}

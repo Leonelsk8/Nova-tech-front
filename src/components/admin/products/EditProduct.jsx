@@ -4,7 +4,7 @@ import Loader from '../../loader/Loader';
 import {customAlert} from '../../../assets/utils/alters';
 
 const EditProduct = (props) => {
-  const {style, textDL, modeDL, lang} = props;
+  const {style, textDL, modeDL, lang, token} = props;
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState(null);
@@ -72,7 +72,7 @@ const EditProduct = (props) => {
     if(sendDisabled) return customAlert('Error', lang.admin.createProduct.messageAlert1, 'warning', 'Ok', ()=>{console.log('error')});
 
     try {
-      await editProduct(productEdit, productEdit._id)
+      await editProduct(productEdit, productEdit._id, token)
       .then(response => {customAlert(lang.admin.createProduct.success, lang.admin.editProduct.alertOne , 'success', 'Ok', ()=>{console.log(response)});setLoading(true); render()})
       .catch(error => {customAlert('Error', lang.admin.editProduct.alertTwo,'error', 'Ok', ()=>{console.log(error)})})
     } catch (error) {

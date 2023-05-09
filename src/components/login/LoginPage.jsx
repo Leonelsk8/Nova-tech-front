@@ -4,11 +4,11 @@ import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link,useNavigate } from 'react-router-dom';
 import registerImg from '../../assets/nt-white.png';
 import styles from './LoginPage.module.css';
-import axios from 'axios';
 import { customAlert } from '../../assets/utils/alters';
+import {login} from '../../API/api';
 
 export default function LoginPage(props) {
-  const { modeDL, textDL, lang } = props;
+  const { modeDL, textDL, lang, getToken } = props;
   const {
     register,
     handleSubmit,
@@ -25,38 +25,23 @@ export default function LoginPage(props) {
   const [showPassword, setShowPassword] = useState(false);
   const URL_BASE = import.meta.env.VITE_DB_URL;
   const navigate= useNavigate();
+
   const onSubmit = async (register) => {
-    try {
-      const response = await axios.post(`${URL_BASE}/login`, register);
-      console.log(response.data);
-      localStorage.setItem('token', response.data.token);//por lo pronto anda y esta guardando el token en el local storage solo falta usarlo con los lugares y tambien cambiar el tiempo de token para el logueado preguntar ambas cosas
-      return customAlert(
+      await login(register)
+      .then((resp)=>{console.log(resp.data); localStorage.setItem('tokenUser-novatech', resp.data.token); customAlert(
         lang.Login.alertSuccessTitle,
         lang.Login.alertSuccessText,
         'success',
         lang.Login.alertButtonText,
-      () => {
-        navigate('/home');
-      }
-    );
-
-      // alert(response.data.msg);
-      // navigate('/home');
-    } catch (error) {
-      console.log(error.response.data);
-      // alert('Email o contraseña incorrectos');
-
-      customAlert(
+        () => {getToken(); navigate('/home');})})
+      .catch((error)=>{console.log(error); customAlert(
         lang.Login.alertErrorTitle,
         lang.Login.alertError,
         'error',
         lang.Login.alertErrorButtonText,
-        () => {
-          reset({ email: '', password: ''});
-        }
-      );
-
-    }
+        () => {reset({ email: '', password: ''});}
+        );
+      });
   }
 
   return (
