@@ -11,7 +11,7 @@ import Panel from './components/admin/Panel'
 import Register from './pages/Register';
 import AboutUS from './components/aboutUS/AboutUS';
 import Contact from './components/contact/Contact';
-import Login from './components/page/Login';
+import Login from './pages/Login';
 
 const App = () => {
   const [lang, setLang] = useState(es);
