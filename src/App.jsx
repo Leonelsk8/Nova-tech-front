@@ -11,6 +11,7 @@ import Panel from './components/admin/Panel'
 import Register from './pages/Register';
 import AboutUS from './components/aboutUS/AboutUS';
 import Contact from './components/contact/Contact';
+import UserProfilePage from './pages/UserProfilePage'
 import Login from './pages/Login';
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
         <Route path='/panel-admin' element={<Panel modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
         <Route path='/aboutUs' element={<AboutUS/>} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/profile' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} />} /> {/* Trabajo en proceso */}
         <Route path='/login' element={<Login modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang} />
