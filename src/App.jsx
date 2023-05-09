@@ -6,11 +6,12 @@ import es from './Spanish.json';
 import Store from './components/store/Store';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
-import Register from './pages/Register';
+import Register from './page/Register'
 import { Routes, Route } from 'react-router-dom';
 import AboutUS from './components/aboutUS/AboutUS';
 import Contact from './components/contact/Contact';
-import NotFound from './components/page/NotFound'; 
+import NotFound from './components/page/NotFound';
+
 
 const App = () => {
   const [lang, setLang] = useState(es);
@@ -45,10 +46,10 @@ const App = () => {
           path='/prod/:id'
           element={isLog ? <h1>hola</h1> : <h1>chau</h1>}
         />
-        <Route path='aboutUs' element={<AboutUS/>} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='aboutUs' element={<AboutUS modeDL={bgMode} textDL={textMode} lang={lang}/>} />
+        <Route path='/contact' element={<Contact modeDL={bgMode} textDL={textMode} lang={lang}/>} />
         <Route path='/login' element={<h1>aca va el login</h1>} />
-        <Route path='*' element={< NotFound/>} />
+        <Route path='notfount' element={< NotFound modeDL={bgMode} textDL={textMode} lang={lang}/>} />
         <Route
           path='/register'
           element={<Register modeDL={bgMode} textDL={textMode} lang={lang} />}

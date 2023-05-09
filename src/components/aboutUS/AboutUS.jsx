@@ -1,7 +1,8 @@
 import './AboutUs.css';
 import { Link } from 'react-router-dom';
 
-const AboutUS = () => {
+const AboutUS = (props) => {
+  const { modeDL, textDL, lang } = props;
   return (
     <section className='section-white'>
       <div className='conteiner container-fluid'>
@@ -9,21 +10,11 @@ const AboutUS = () => {
           <div className='text-center'>
             <h2 className='section-title'></h2>
             <div className='banner'>
-              <h1>Sobre Nosotros</h1>
+              <h1>{lang.Aboutus.title}</h1>
               <div>
                 <small>
                   <h5>
-                    ¡Bienvenidos a nuestra tienda de electrodomésticos! Somos
-                    una empresa apasionada por la tecnología y comprometida con
-                    brindar a nuestros clientes la mejor experiencia de compra.
-                    En nuestro amplio catálogo encontrarás una variedad de
-                    marcas y modelos, todos cuidadosamente seleccionados para
-                    asegurarnos de ofrecerte la mejor calidad y rendimiento. Nos
-                    enfocamos no solo en ofrecerte productos de alta calidad,
-                    sino también una experiencia de compra única y
-                    satisfactoria. Te invitamos a que nos visites y descubras
-                    todo lo que tenemos para ofrecerte. ¡Te esperamos con los
-                    brazos abiertos!
+                  {lang.Aboutus.parrafo}
                   </h5>
                 </small>
               </div>
@@ -37,11 +28,7 @@ const AboutUS = () => {
               <h3>Leonel Gomez</h3>
               <div className='team-info'>
                 <p>
-                  Edad: 22 Años Estudiante: Desarrollo Web (rolling Code)
-                  Estudiante de ingeniería en sistemas de información, razón que
-                  me motivó a hacer Code school. Y ahora mi mayor pasatiempo es
-                  programar porque es algo que me gusta. Tengo bases de
-                  programación gracias a la carrera de Ingeniería.
+                {lang.Aboutus.Leo}
                 </p>
                 <div className='d-flex justify-content-center'>
                   <div>
@@ -71,11 +58,7 @@ const AboutUS = () => {
               <h3>Ivan Economo</h3>
               <div className='team-info'>
                 <p>
-                  Edad: 27 Años Estudiante: Desarrollo Web (rolling Code)
-                  Empezando mí camino como desarrollador. Mi objetivo es
-                  especializarme y conocer a fondo las herramientas de
-                  desarrollo para poder crear estructuras complejas de manera
-                  profunda y profesional.
+                {lang.Aboutus.Ivan}
                 </p>
                 <div className='d-flex justify-content-center'>
                   <div>
@@ -105,9 +88,7 @@ const AboutUS = () => {
               <h3>Matias Rosales</h3>
               <div className='team-info'>
                 <p>
-                  Edad: 27 Años Estudiante: Desarrollo Web (rolling Code). Soy
-                  estudiante de Ingenieria y empecé en RollingCode para ampliar
-                  mis conocimientos sobre lenguajes de programación.
+                {lang.Aboutus.Matias}
                 </p>
                 <div className='d-flex justify-content-center'>
                   <div>
@@ -137,10 +118,7 @@ const AboutUS = () => {
               <h3>Pereyra Carlos</h3>
               <div className='team-info'>
                 <p>
-                  Edad: 34 Años Estudiante: Desarrollo Web (rolling Code)
-                  Actualmente trabajando de seguridad privada, no tengo definido
-                  que hacer al finalizar el cursado, pero con grandes
-                  expectátivas de cambiar mi futuro.
+                {lang.Aboutus.Carlos}
                 </p>
                 <div className='d-flex justify-content-center'>
                   <div>

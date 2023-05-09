@@ -79,12 +79,23 @@
     "panelEndTreefor": "Productos de alta calidad a precios bajos.",
     "panelEndTreefive": "Más de 10 años de experiencia en el comercio electrónico."
   },
-  "Footer":{
-    "title": "ejemplos"
+  "Aboutus":{
+    "title": "Sobre Nosotros",
+    "parrafo": "Bienvenidos a nuestra tienda de electrodomésticos! Somos una empresa apasionada por la tegnologia y comprometida con brindar a nuestros clientes la mejor experiencia de compras. En nuestro amplio catalogo encontraras una variedad de marcas y modelos, todos cuidadosamente seleccionados para asegurarnos de ofrecerte la mejor calidad y rendimiento. Nos enfocamos no solo en ofrecerte productos de alta calidad, si no tambien una experiencia de compra unica y satisfactoria. Te invitamos a que nos visites y descubras todo que tenemos para ofrecerte. ¡te esperamos con los brazoz abiertos!",
+    "Leo": "Edad: 22 años Estudiante: Desarrolo Web (Rolling Code) Estudiante de ingenieria en sistemas de información, razon que me motivo a hacer el code school. Y ahora mi mayor pasatiempo es progrmar poirque es algo que me gusta. Tengo bases de programacion gracias a la carrera de ingenieria",
+    "Ivan": "Edad: 27 Años Estudiante: Desarrollo Web (rolling Code) Empezando mi camino como desarrollador. Mi objetivo es especializarme y conocer a fondo las herramientas de desarrollo para poder crear estructuras complejas de manera profunda y profesional",
+    "Matias": "Edad: 27 Años Estudiante: Desarrollo Web (Rolling Code). Soy estudiante de Ingenieria y RollingCode para ampliar mis conocimientos sobre lenguajes de programacion",
+    "Carlos": "Edad: 34 Años Estudiante: Desarrollo Web (rolling Code) Actualmente trabajando de seguridad privada, no tengo definido que hacer al finalizar el cursado, pero con grande expectátivas de cambiar mi futuro."
   },
-  "Cartshop":{
-    "shops": "ejemplos venta"
-  },
+  "Contact":{
+    "Contac": "Contacto",
+    "subtitle": "Por favor complete este formulario",
+    "nombre": "Nombre",
+    "email": "Email",
+    "mensaje": "Mensaje",
+    "enviar": "Enviar",
+    "tipo": "Escribe tu mensaje"
+  }, 
   "Register": {
     "title": "Registro",
     "name": "Nombre",

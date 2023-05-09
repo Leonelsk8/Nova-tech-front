@@ -2,7 +2,8 @@ import { useRef } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 
-const Contact = () => {
+const Contact = (props) => {
+  const { modeDL, textDL, lang } = props;
   const refForm = useRef();
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,12 +21,12 @@ const Contact = () => {
     <div className='d-flex justify-content-center'>
       <form className='contact' ref={refForm} action='' onSubmit={handleSubmit}>
         <div className='header-contact'>
-          <h2>Contact Us </h2>
-          <p>Please fill this form</p>
+          <h2>{lang.Contact.Contac}</h2>
+          <p>{lang.Contact.subtitle}</p>
         </div>
         <fieldset className='field-name'>
           <label className='symbol-required name' htmlFor=' Name'>
-            Name
+          {lang.Contact.nombre}
           </label>
           <input
             name='username'
@@ -36,7 +37,7 @@ const Contact = () => {
         </fieldset>
         <fieldset className='field-email'>
           <label className='symbol-required' name='email'>
-            Email
+          {lang.Contact.email}
           </label>
           <input
             placeholder='Ej:novatech068@gmail.com'
@@ -48,18 +49,18 @@ const Contact = () => {
         </fieldset>
         <fieldset className='field-message'>
           <label className='symbol-required'>
-            Message
+          {lang.Contact.mensaje}
             </label>
           <textarea className='textareaResponsive'
             maxLength='500'
-            placeholder='type yout message'
+            placeholder='ej: mensaje message'
             name='message'
             id=''
             cols='30'
             rows=''
           />
         </fieldset>
-        <button className='btn-send'>SEND</button>
+        <button className='btn-send'>{lang.Contact.enviar}</button>
       </form>
     </div>
   );

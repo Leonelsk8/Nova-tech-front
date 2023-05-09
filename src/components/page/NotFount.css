@@ -1,4 +1,22 @@
+body {
+  background-color: #6D8B74;
+
+  height: 100vh;
+}
+
 .img  {
-  width: 80%;
-  height: 80%;
+  width: 100%;
+  border-radius: 50px;
+}
+
+h2 {
+  color: #fff;
+  }
+  
+p {
+  color: #fff;
+}
+
+.inicio {
+  color: blue;
 }
