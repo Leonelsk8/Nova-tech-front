@@ -10,7 +10,7 @@ import Messages from './users/Messages';
 import SuspendUser from './users/SuspendUser';
 
 const Panel = (props) => {
-  const {modeDL, textDL, lang} = props
+  const {modeDL, textDL, lang, token} = props
   const [panel, setPanel] = useState(1);
 
   return (
@@ -40,13 +40,13 @@ const Panel = (props) => {
           </Col>
           <Col xs={12} md={12} lg={9} className={`bgCardBan-${modeDL} px-3 py-5 px-md-5 text-${textDL}`}>
             {
-              panel === 1 ? <CreateProduct modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
-              panel === 2 ? <EditProduct modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> : 
-              panel === 3 ? <DeleteProduct modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
-              panel === 4 ? <ModifyOfferts modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
-              panel === 5 ? <ListUser modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
-              panel === 6 ? <SuspendUser modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
-              <Messages modeDL={modeDL} textDL={textDL} lang={lang} style={style}/>
+              panel === 1 ? <CreateProduct token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
+              panel === 2 ? <EditProduct token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> : 
+              panel === 3 ? <DeleteProduct token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
+              panel === 4 ? <ModifyOfferts token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
+              panel === 5 ? <ListUser token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
+              panel === 6 ? <SuspendUser token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/> :
+              <Messages token={token} modeDL={modeDL} textDL={textDL} lang={lang} style={style}/>
             }
             
           </Col>

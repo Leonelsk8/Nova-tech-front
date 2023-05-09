@@ -75,6 +75,11 @@
   text-decoration: none;
 }
 
+.linkActive{
+  color: #fff;
+  text-decoration: none;
+}
+
 .linkNav-light:hover{
   color:#fff;
 }

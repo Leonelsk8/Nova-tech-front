@@ -19,7 +19,8 @@
     "serviUserone": "Suspend user",
     "serviUsertwo": "Messages",
     "profile": "Profile",
-    "panelAdmin": "Control Panel"
+    "panelAdmin": "Control Panel",
+    "closeSes": "Log out"
   },
 
   "Landing":{
