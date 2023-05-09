@@ -80,7 +80,38 @@
     "panelEndTreefive": "Más de 10 años de experiencia en el comercio electrónico."
   },
   "Footer":{
-    "title": "ejemplos"
+    "title": "tienda de electronica",
+    "subTitle": "¡Seguinos!",
+    "contact": "Contacto",
+    "information": "Información",
+    "questions": "Preguntas frecuentes",
+    "atention": "Atención al cliente",
+    "term": "Terminos y condiciones",
+    "already":"Todos los derechos reservados"
+  },
+  "Login":{
+    "title": "Iniciar sesion",
+    "email": "Email",
+    "emailRequired": "El email es obligatorio.",
+    "emailMin": "Mínimo 5 caracteres.",
+    "emailMax": "Máximo 100 caracteres.",
+    "emailPattern": "El correo electrónico debe tener un formato válido.",
+    "password": "Contraseña",
+    "passwordRequired": "La contraseña es obligatoria.",
+    "passwordMin": "Mínimo 8 caracteres.",
+    "passwordMax": "Máximo 50 caracteres.",
+    "passwordPattern": "La contraseña debe tener letras y números.",
+    "language": "Idioma",
+    "smallLanguage": "(opcional)",
+    "alreadyRegQuest": "¿Aun no estas registrado?",
+    "alreadyRegLink": "Registrate",
+    "submitButton": "Iniciar sesión",
+    "alertSuccessTitle": "¡Felicidades!",
+    "alertSuccessText": "Inició correctamente sesión.",
+    "alertErrorTitle": "Ups...",
+    "alertError": "¡Email o contraseña incorrectos!",
+    "alertErrorButtonText": "Intentar de nuevo",
+    "alertButtonText": "Presione para continuar"
   },
   "Cartshop":{
     "shops": "ejemplos venta"
