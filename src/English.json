@@ -82,9 +82,39 @@
   },
 
   "Footer":{
-    "title": "example"
+    "title": "electronic shop",
+    "subTitle": "Follow us!",
+    "contact": "Contact",
+    "information": "Information",
+    "questions": "Frequent questions",
+    "atention": "Customer Support",
+    "term": "Terms and Conditions",
+    "already":"All rights reserved"
   },
-
+  "Login":{
+    "title": "Login",
+    "email": "Email",
+    "emailRequired": "Email is required.",
+    "emailMin": "Minimum 5 characters.",
+    "emailMax": "Maximum 100 characters.",
+    "emailPattern": "The email must be in a valid format.",
+    "password": "Password",
+    "passwordRequired": "La contraseña es obligatoriaThe password is required.",
+    "passwordMin": "Minimum 8 characters.",
+    "passwordMax": "Maximum 50 characters.",
+    "passwordPattern": "The password must have letters and numbers.",
+    "language": "Language",
+    "smallLanguage": "(optional)",
+    "alreadyRegQuest": "Still not registered?",
+    "alreadyRegLink": "Register now",
+    "submitButton": "Login",
+    "alertSuccessTitle": "Congratulations!",
+    "alertSuccessText": "You successfully logged in.",
+    "alertErrorTitle": "Ups...",
+    "alertError": "Wrong email or password!",
+    "alertErrorButtonText": "Try again",
+    "alertButtonText": "Press to continue"
+  },
   "Cartshop":{
     "shops": "exmples shops"
   },

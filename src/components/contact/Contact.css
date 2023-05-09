@@ -1,5 +1,5 @@
 .contact {  
-  background-color: aquamarine;
+  background-color: #6d8b74;
   margin: 10px;
   padding: 10px;
 }
@@ -10,9 +10,9 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
-  border: double 10px;
-  color: black; 
+  border-radius: 25px;
+  border: solid 5px;
+  color: #000000; 
 }
 
 .header-contact {
@@ -47,7 +47,7 @@ form {
 
 .symbol-required::after{
   content: '*';
-  color: #FF0000;
+  color: #000000;
 }
 .field-message{
   height: 10rem;
@@ -60,6 +60,6 @@ form {
 
 .btn-send:hover,
 .btn-send:focus {
-  background-color: #10dd08;
+  background-color: #40bd3ca9;
   color: #ffffff;
 }

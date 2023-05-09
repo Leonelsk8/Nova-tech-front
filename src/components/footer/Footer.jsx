@@ -14,11 +14,11 @@ const Footer=(props)=> {
             <div className="navbar-brand d-flex align-items-center justify-content-center" href="./index.html">
               <div>
               <Link to="/home"><img className={`${style.icons} ${style.imgFooter}`} src={novatechLogo} alt="logoNova"/></Link>
-                <h6 className="my-auto text-center">tienda de electronica</h6>
+                <h6 className="my-auto text-center">{lang.Footer.title}</h6>
               </div>
             </div>
             <div className="mt-1 d-flex justify-content-center ">
-              <h5 className="my-auto ms-1 me-3 text-center m-2">¡Seguinos!</h5>
+              <h5 className="my-auto ms-1 me-3 text-center m-2">{lang.Footer.subTitle}</h5>
               <div className='d-flex'>
                 {/* le ponemos enlaces de fb ig y tw.. agregamos mas?? */}
               <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-facebook "></i></a>
@@ -28,7 +28,7 @@ const Footer=(props)=> {
             </div>
           </article>
           <article className="col-sm-12 col-md-4 mt-2  mb-1 text-center">
-            <h5>Contacto</h5>
+            <h5>{lang.Footer.contact}</h5>
 
             <div className="d-flex justify-content-center">
               <div>
@@ -59,10 +59,10 @@ const Footer=(props)=> {
             </div>
           </article>
           <article className={`col-sm-12 col-md-4 mt-2 mb-1 text-center text-white`}>
-            <h5 >Información</h5>
-            <Link className={`nav-link ${style.icons}`} to="/E404">Preguntas frecuentes</Link>
-            <Link className={`nav-link ${style.icons}`} to="/E404">Atención al cliente</Link>
-            <Link className={`nav-link ${style.icons}`} to="/E404">Terminos y condiciones</Link>
+            <h5 >{lang.Footer.information}</h5>
+            <Link className={`nav-link ${style.icons}`} to="/E404">{lang.Footer.questions}</Link>
+            <Link className={`nav-link ${style.icons}`} to="/E404">{lang.Footer.atention}</Link>
+            <Link className={`nav-link ${style.icons}`} to="/E404">{lang.Footer.term}</Link>
           </article>
         </div>
       </section>
@@ -71,7 +71,7 @@ const Footer=(props)=> {
       </div>
       <section className={`bgNav-${modeDL} py-1`}>
         <p className={`text-center text-white mb-0`}>
-          &copy; Todos los derechos reservados
+          &copy; {lang.Footer.already}
         </p>
       </section>
     </>
