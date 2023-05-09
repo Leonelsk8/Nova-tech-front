@@ -69,7 +69,7 @@ const ModifyOfferts = (props) => {
     <div className={`row mb-3 py-3 bgFootButt-${modeDL} justify-content-center rounded border border-1 border-dark`}>
       {
         loading ? <Loader/> : prodOfferts.length === 0 ? <div className='text-white d-flex justify-content-center'>{lang.admin.offerProd.noOffert}</div> : prodOfferts.map((prod, index)=>(
-          <div key={index} className={`col-3 mb-4`}>
+          <div key={index} className={`p-0 p-md-3 col-6 col-md-5 col-lg-3 mb-4`}>
             <Card data-aos="zoom-in">
               <div className={style.contentImg}>
                 <Card.Img variant="top" className={style.imgCards} src={prod.icon}/>
@@ -98,12 +98,12 @@ const ModifyOfferts = (props) => {
               <button className={style.buttOffert} onClick={()=>sendOffert(prod._id)}>
               <Card className='animate__animated animate__zoomIn'>
                 <div className='row'> 
-                  <div className='col-2'>
+                  <div className='col-4 col-md-2'>
                     <div className={`${style.contentImgsearch}`}>
                       <Card.Img variant="top" className={style.imgCards} src={prod.icon}/>
                     </div>
                   </div>
-                  <div className='col-10'>
+                  <div className='col-8 col-md-10'>
                     <Card.Body>
                       <Card.Title>{lang.Languaje.lang === 'es' ? prod.titleEs : prod.titleEn}</Card.Title>
                       <Card.Text>

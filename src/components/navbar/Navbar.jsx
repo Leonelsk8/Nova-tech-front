@@ -24,19 +24,9 @@ const Header = (props) => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className='me-auto mt-md-2 mt-lg-0 fw-bold align-items-lg-center'>
               <Link className='text-decoration-none linkNav-light ms-lg-3 me-lg-3' to='/home'>{lang.Navbar.home}</Link>
-              <NavDropdown className="linkNav-light" title={lang.Navbar.services} id='my-nav'>
-                <NavDropdown.Header>{lang.Navbar.servititleone}</NavDropdown.Header>
-                <NavDropdown.Item href='#'>{lang.Navbar.serviPublione}</NavDropdown.Item>
-                <NavDropdown.Item href='#'>{lang.Navbar.serviPublitwo}</NavDropdown.Item>
-                <NavDropdown.Item href='#'>{lang.Navbar.serviPublitree}</NavDropdown.Item>
-                <NavDropdown.Item href='#'>{lang.Navbar.serviPublifor}</NavDropdown.Item>
-                <NavDropdown.Divider/>
-                <NavDropdown.Header>{lang.Navbar.servititletwo}</NavDropdown.Header>
-                <NavDropdown.Item href='#'>{lang.Navbar.serviUserone}</NavDropdown.Item>
-                <NavDropdown.Item href='#'>{lang.Navbar.serviUsertwo}</NavDropdown.Item>
-              </NavDropdown>
               <Link className='text-decoration-none linkNav-light ms-lg-1 me-lg-3' to='/aboutus'>{lang.Navbar.about}</Link>
-              <Link className='text-decoration-none linkNav-light mt-md-2 mt-lg-0' to='/contact'>{lang.Navbar.contact}</Link>
+              <Link className='text-decoration-none linkNav-light mt-md-2 mt-lg-0 me-lg-3' to='/contact'>{lang.Navbar.contact}</Link>
+              <Link className='text-decoration-none linkNav-light mt-md-2 mt-lg-0' to='/panel-admin'>{lang.Navbar.panelAdmin}</Link>
             </Nav>
             <Nav className='ms-auto fw-bold align-items-md-start align-items-lg-center'>
               <Link className='text-decoration-none linkNav-light mt-md-2 mt-lg-0 me-lg-3' to='/login'>{lang.Navbar.login}</Link>
