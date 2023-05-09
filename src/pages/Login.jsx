@@ -1,4 +1,4 @@
- import LoginPage from '../login/LoginPage';
+ import LoginPage from '../components/login/LoginPage';
 
 const Login = (props) => {
   const { modeDL, textDL, lang } = props;
