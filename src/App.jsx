@@ -19,12 +19,9 @@ const App = () => {
   const [lang, setLang] = useState(es);
   const [bgMode, setbgMode] = useState('light');
   const [textMode, settextMode] = useState('dark');
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem('tokenUser-novatech'));
 
-  useEffect(()=>{
-    getToken();
-  },[])
-
+  
   const bgChange = () => {
     bgMode === 'light' ? setbgMode('dark') : setbgMode('light');
     textMode === 'dark' ? settextMode('white') : settextMode('dark');
@@ -36,11 +33,12 @@ const App = () => {
 
   const getToken =()=>{
     setToken(localStorage.getItem('tokenUser-novatech'));
-    console.log(token)
+    //console.log(token)
   }
 
   const closeSesion =()=>{
     localStorage.removeItem('tokenUser-novatech');
+    localStorage.removeItem('id');
     setToken(null);
   }
 
@@ -55,7 +53,7 @@ const App = () => {
         <Route path='/panel-admin' element={adminValidate(token) ? <Panel modeDL={bgMode} textDL={textMode} lang={lang} token={token}/> : <Navigate to='/home'/>}/>
         <Route path='/aboutUs' element={<AboutUS/>} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/profile' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} />} /> {/* Trabajo en proceso */}
+        <Route path='/profile/:id' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} token={token} />} /> {/* Trabajo en proceso */}
         <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken}/> : <Navigate to='/home'/>}/>
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang} />

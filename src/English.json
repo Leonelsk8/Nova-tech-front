@@ -1,9 +1,9 @@
 {
-  "Languaje":{
+  "Languaje": {
     "lang": "en"
   },
-  
-  "Navbar":{
+
+  "Navbar": {
     "home": "Home",
     "services": "Services",
     "about": "About us",
@@ -23,7 +23,7 @@
     "closeSes": "Log out"
   },
 
-  "Landing":{
+  "Landing": {
     "title": "¡¡Take advantage of the monthly offers!!",
     "description": "In Nova Tech don't miss our monthly offers! Every month, we offer an incredible 50% discount on a wide selection of products. Every month we select 8 different products for this great offer.",
     "butt": "See offers",
@@ -31,7 +31,7 @@
     "circletree": "Monthly"
   },
 
-  "Store":{
+  "Store": {
     "sectionOneTitle": "Everything you need to live comfortably",
     "sectionOneDescOne": "We offer appliances with sleek, modern designs that add a sophisticated look to your home or business.",
     "sectionOneDescTwo": "We offer the best brands that guarantee the necessary quality and reliability.",
@@ -82,7 +82,7 @@
     "panelEndTreefive": "More than 10 years of experience in e-commerce."
   },
 
-  "Footer":{
+  "Footer": {
     "title": "electronic shop",
     "subTitle": "Follow us!",
     "contact": "Contact",
@@ -90,9 +90,9 @@
     "questions": "Frequent questions",
     "atention": "Customer Support",
     "term": "Terms and Conditions",
-    "already":"All rights reserved"
+    "already": "All rights reserved"
   },
-  "Login":{
+  "Login": {
     "title": "Login",
     "email": "Email",
     "emailRequired": "Email is required.",
@@ -116,7 +116,7 @@
     "alertErrorButtonText": "Try again",
     "alertButtonText": "Press to continue"
   },
-  "Cartshop":{
+  "Cartshop": {
     "shops": "exmples shops"
   },
   "Register": {
@@ -156,8 +156,8 @@
     "alertButtonText": "Accept"
   },
 
-  "admin":{
-    "title":"Welcome Admin",
+  "admin": {
+    "title": "Welcome Admin",
     "titleProd": "Products",
     "prodOpcone": "Create product",
     "prodOpctwo": "Edit Product",
@@ -167,7 +167,7 @@
     "userOpcone": "List users",
     "userOpctwo": "Suspend user",
     "userOpctree": "Messages",
-    "createProduct":{
+    "createProduct": {
       "title": "Create product",
       "titleEs": "Title in Spanish",
       "titleEn": "Title in English",
@@ -218,7 +218,7 @@
       "alertOne": "Product modified successfully",
       "alertTwo": "The product could not be modified"
     },
-    "offerProd":{
+    "offerProd": {
       "title": "Deals of the month",
       "butt": "Reset bidding",
       "add": "Add new offers",
@@ -226,16 +226,50 @@
       "alertTwo": "There are no more products to restart",
       "noOffert": "There are no offers posted"
     },
-    "notResult" : "No results",
+    "notResult": "No results",
     "searchNot": "The product was not found",
     "buttDelete": "Delete",
-    "deleteProduct":{
+    "deleteProduct": {
       "alertOne": "¿Do you want to remove this product?",
       "alertOneop": "¡You won't be able to reverse this!",
       "alertOneconf": "Yes to delete",
       "alertOnecancel": "Cancel",
       "alertTwo": "Done!",
       "alertTwoop": "Product removed successfully"
+    }
+  },
+  "userProfile": {
+    "header": "Welcome",
+    "sectionMyDataTitle": "My Data",
+    "selectMyData": "View Data",
+    "selectCart": "Go to Cart",
+    "sectionEditDataTitle": "Edit Data",
+    "selectEditName": "Fullname",
+    "selectEditEmail": "Email",
+    "selectEditPassword": "Password",
+    "selectChooseLanguage": "Default language",
+    "userDataPanel": {
+      "name": "Name",
+      "lastName": "Last name",
+      "email": "Email",
+      "language": "Default language",
+      "id": "ID",
+      "createdAt": "Registered since"
+    },
+    "editUserDataPanel": {
+      "title": "Edit data",
+      "newPassword": "New password",
+      "newPasswordCheck": "Confirm new password",
+      "button": "Confirm changes"
+    },
+    "alertInfo": {
+      "title": "Enter your password to confirm changes",
+      "textButton": "Confirm",
+      "cancelTextButton": "Cancel",
+      "errorMessage": "Wrong password",
+      "successTitle": "Good!",
+      "successText": "Data saved successfully",
+      "successButtonText": "Ok"
     }
   }
 }

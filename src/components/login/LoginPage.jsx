@@ -28,7 +28,7 @@ export default function LoginPage(props) {
 
   const onSubmit = async (register) => {
       await login(register)
-      .then((resp)=>{console.log(resp.data); localStorage.setItem('tokenUser-novatech', resp.data.token); customAlert(
+      .then((resp)=>{console.log(resp.data); localStorage.setItem('tokenUser-novatech', resp.data.token); localStorage.setItem('id', resp.data.id); customAlert(
         lang.Login.alertSuccessTitle,
         lang.Login.alertSuccessText,
         'success',
