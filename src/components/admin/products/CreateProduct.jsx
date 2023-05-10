@@ -5,7 +5,7 @@ import {customAlert} from '../../../assets/utils/alters';
 
 
 const CreateProduct = (props) => {
-  const {modeDL, textDL, lang, style} = props;
+  const {modeDL, textDL, lang, style, token} = props;
   const [imageUrl, setImageUrl] = useState('');
   const [imagesUrls, setImagesUrls] = useState([]);
   const [sendDisabled, setSendDisabled] = useState(true);

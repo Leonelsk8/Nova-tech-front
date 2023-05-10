@@ -36,12 +36,11 @@ export const searchProd = async (title) => {
   }
 };
 
-export const getAllProducts = async () => {
+export const getAllProducts = async (accessToken) => {
   try {
     return await axios.get(`${DBURL}${endpointProduct.getAll}`, {
       headers: {
-        'access-token':
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
+        'access-token': accessToken,
       },
     });
   } catch (error) {
@@ -49,12 +48,11 @@ export const getAllProducts = async () => {
   }
 };
 
-export const getProductById = async (id) => {
+export const getProductById = async (id, accessToken) => {
   try {
     return await axios.get(`${DBURL}${endpointProduct.getId}/${id}`, {
       headers: {
-        'access-token':
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
+        'access-token': accessToken,
       },
     });
   } catch (error) {
@@ -97,26 +95,9 @@ export const uploadImagess = async (formImagess) => {
 
 export const editProduct = async (productEdit, id, accessToken) => {
   try {
-    return await axios.patch(
-      `${DBURL}${endpointProduct.edit}/${id}`,
-      productEdit,
-      {
-        headers: {
-          'access-token': accessToken,
-        },
-      }
-    );
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const deleteProduct = async (id) => {
-  try {
-    return await axios.delete(`${DBURL}${endpointProduct.delete}/${id}`, {
-      headers: {
-        'access-token':
-          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
+    return await axios.patch(`${DBURL}${endpointProduct.edit}/${id}`, productEdit,{
+      headers: { 
+        'access-token': accessToken,
       },
     });
   } catch (error) {
@@ -124,39 +105,35 @@ export const deleteProduct = async (id) => {
   }
 };
 
-export const restartOfferts = async () => {
+export const deleteProduct = async (id, accessToken) =>{
   try {
-    return await axios.patch(
-      `${DBURL}${endpointProduct.restartOffert}`,
-      { title: 'title' },
-      {
-        headers: {
-          'access-token':
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
-        },
-      }
-    );
+    return await axios.delete(`${DBURL}${endpointProduct.delete}/${id}`,{
+      'access-token': accessToken,
+    });
   } catch (error) {
     console.log(error);
   }
 };
 
-export const offertProd = async (id) => {
+export const restartOfferts = async(accessToken)=>{
   try {
-    return await axios.patch(
-      `${DBURL}${endpointProduct.offert}/${id}`,
-      { title: 'title' },
-      {
-        headers: {
-          'access-token':
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
-        },
-      }
-    );
+    return await axios.patch(`${DBURL}${endpointProduct.restartOffert}`,{title: 'title'},{
+      headers: { 'access-token': accessToken},
+    });
   } catch (error) {
     console.log(error);
   }
-};
+}
+
+export const offertProd = async(id, accessToken)=>{
+  try {
+    return await axios.patch(`${DBURL}${endpointProduct.offert}/${id}`,{title: 'title'},{
+      headers: { 'access-token': accessToken},
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 //users
 
@@ -277,10 +254,34 @@ export const editUserLanguage = async (id, userData, token) => {
   }
 };
 
-export const login = async (userData) => {
+export const addtoCart = async(id, idProduct, accessToken)=>{
+  try {
+    return await axios.patch(`${DBURL}${endpointUsers.addCart}/${id}`,{'idProduct': idProduct},{
+      headers: { 
+        'access-token': accessToken
+      },
+    })
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const loginApi = async (userData) =>{
   try {
     return await axios.post(`${DBURL}${endpointUsers.login}`, userData);
   } catch (error) {
     console.log(error);
   }
-};
+}
+
+export const getCartItems = async(id, accessToken)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.getCart}/${id}`, {
+      headers: { 
+        'access-token': accessToken
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}

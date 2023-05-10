@@ -23,6 +23,8 @@ const endpointUsers ={
   editUserEmail: '/users/edit-user-email',
   editUserPassword: '/users/edit-user-password',
   editUserLanguage: '/users/edit-user-language',
+  addCart: '/users/add-tocart',
+  getCart: '/users/get-cart',
   login: '/login'
 }
 
