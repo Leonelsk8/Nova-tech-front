@@ -2,7 +2,8 @@ import{ Container, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import style from './NotFound.module.css';
 
-const NotFound = () => {
+const NotFound = (props) => {
+  const { modeDL, textDL, lang } = props;
   return (
     <div className={`${style.body} vh-100 d-flex justify-content-center align-items-center`}>
       <Container className='md-12 '>

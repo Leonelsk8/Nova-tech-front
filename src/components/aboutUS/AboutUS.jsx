@@ -1,15 +1,16 @@
+/* eslint-disable react/prop-types */
 import './AboutUs.css';
 import { Link } from 'react-router-dom';
 
 const AboutUS = (props) => {
   const { modeDL, textDL, lang } = props;
   return (
-    <section className='section-white'>
+    <section className={`section-white  bg-${modeDL}`}>
       <div className='conteiner container-fluid'>
         <div className='row justify-content-between'>
           <div className='text-center'>
             <h2 className='section-title'></h2>
-            <div className='banner'>
+            <div className={`banner bg${modeDL} text-${textDL}`}>
               <h1>{lang.Aboutus.title}</h1>
               <div>
                 <small>
@@ -21,7 +22,7 @@ const AboutUS = (props) => {
             </div>
           </div>
           <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
-            <div className='card team-item p-2'>
+            <div className={`card team-item p-2 bg-${modeDL} text-${textDL}`}>
               <div className='text-center m-2'>
                 <img src='/img/Leo.png' className='team-img' alt='imagen' />
               </div>
@@ -51,7 +52,7 @@ const AboutUS = (props) => {
             </div>
           </div>
           <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
-            <div className='card team-item p-2'>
+            <div className={`card team-item p-2 bg-${modeDL} text-${textDL}`}>
               <div className='text-center m-2 text-black'>
                 <img src='/img/Ivan.png' className='team-img' alt='imagen' />
               </div>
@@ -81,7 +82,7 @@ const AboutUS = (props) => {
             </div>
           </div>
           <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
-            <div className='card team-item p-2'>
+            <div className={`card team-item p-2 bg-${modeDL} text-${textDL}`}>
               <div className='text-center m-2'>
                 <img src='/img/Matias.png' className='team-img' alt='imagen' />
               </div>
@@ -111,7 +112,7 @@ const AboutUS = (props) => {
             </div>
           </div>
           <div className='col-sm-4 col-md-3 d-flex align-content-stretch flex-wrap'>
-            <div className='card team-item p-2'>
+            <div className={`card team-item p-2 bg-${modeDL} text-${textDL}`}>
               <div className='text-center m-2'>
                 <img src='/img/Carlos.png' className='team-img' alt='imagen' />
               </div>
