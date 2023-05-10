@@ -23,7 +23,7 @@ const EditProduct = (props) => {
   useEffect(()=>{
     try {
       const resp = async()=>{
-        await getAllProducts()
+        await getAllProducts(token)
         .then((response)=>{setProducts(response.data); setLoading(false);})
         .catch((error)=>console.log(error))
       }
@@ -34,7 +34,7 @@ const EditProduct = (props) => {
   },[]);
 
   const render = async()=>{
-    await getAllProducts()
+    await getAllProducts(token)
     .then((response)=>{setProducts(response.data); setLoading(false); setProductSearch(null)})
     .catch((error)=>console.log(error))
   }
@@ -55,7 +55,7 @@ const EditProduct = (props) => {
 
   const getProductId = async(id)=>{
     
-    await getProductById(id)
+    await getProductById(id, token)
     .then((response)=>{setProductId(response.data); setProductEdit(response.data); setModal(true)})
     .catch((error)=>{console.log(error)})
   }

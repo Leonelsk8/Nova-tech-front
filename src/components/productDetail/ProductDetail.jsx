@@ -7,7 +7,7 @@ import { Container,Row, Col} from 'react-bootstrap';
 import {useNavigate} from 'react-router-dom';
 
 const ProductDetail = (props) => {
-  const { modeDL, textDL, lang } = props;
+  const { modeDL, textDL, lang, token } = props;
   const [prod, setProd] = useState({});
   const [isLoading,setIsLoading] = useState(false);
   const { id } = useParams();
@@ -15,7 +15,7 @@ const ProductDetail = (props) => {
   useEffect(()=>{
    
       const resp = async()=>{ 
-      await getProductById(id)
+      await getProductById(id, token)
       .then(response => {setProd(response.data); setIsLoading(true);})
       .catch(error => console.log(error))
     };
@@ -41,7 +41,7 @@ const ProductDetail = (props) => {
   return (
     <>{
        isLoading ? <div className={` bg${modeDL} text-${textDL}`}>
-       <Container fluid>
+       <Container fluid className='py-3 px-4'>
         <Row>
           <Col xs={12} md={12} lg={12} className={`bgFootButt-${modeDL} ${style.cards} py-5`}>
             <div className={'text-center text-white'}>
@@ -51,9 +51,9 @@ const ProductDetail = (props) => {
         </Row>
       </Container>
       
-      <div className='py-5'>
+      <div className='pt-2 pb-5'>
           <div className= "container shadow">
-            <div className={`row ${style.cards}`}>
+            <div className={`row ${style.cards} p-4 bgCardBan-${modeDL}`}>
               <div className="col-xs-12 col-lg-6">
                 <h2>{lang.Languaje.lang === 'es' ? prod.titleEs : prod.titleEn}</h2>
                 <div
@@ -69,26 +69,6 @@ const ProductDetail = (props) => {
                       ))}
                     </div>
 
-                  {/* <div className="carousel-inner">
-                    <div className={`carousel-item active ${style.contentImg}`}>
-                      <img src={prod.img[0]}  className={style.imgCards } alt={prod.titleEs} />
-                    </div>
-                    <div className={`carousel-item ${style.contentImg}`}>
-                      <img
-                        src={prod.img[1]}
-                        className={style.imgCards }
-                        alt={prod.titleEs}
-                      />
-                    </div>
-
-                    <div className={`carousel-item ${style.contentImg}`}>
-                      <img
-                        src={prod.img[2]}
-                        className={style.imgCards }
-                        alt={prod.titleEs}
-                      />
-                    </div>
-                  </div> */}
 
                   <button
                     className="carousel-control-prev"
@@ -136,7 +116,7 @@ const ProductDetail = (props) => {
                   
                 </div>
                 <div className="m-3 text-center">
-                  <button className= {`text-white bgFootButt-${modeDL} butt-${modeDL} butt  m-3 `} onClick={() => navigate(`/#`) }>{lang.detailProduct.buy}</button> 
+                  <button className= {`text-white bgFootButt-${modeDL} butt-${modeDL} butt  m-3 `} onClick={() => navigate(`/not-found`) }>{lang.detailProduct.buy}</button> 
                 </div>
               </div>
             </div>
