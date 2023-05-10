@@ -1,4 +1,4 @@
-import { Container, Col, Row } from 'react-bootstrap';
+import{ Container, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import style from './NotFound.module.css';
 

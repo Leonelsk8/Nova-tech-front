@@ -126,7 +126,7 @@
     "shops": "ejemplos venta"
   },
   "Contact": {
-    "Contac": "Contacto",
+    "title": "Contacto",
     "subtitle": "Por favor complete este formulario",
     "nombre": "Nombre",
     "email": "Email",
