@@ -155,6 +155,16 @@
     "alertErrorTextEnd": "ya está en uso. Intenta con otro correo.",
     "alertButtonText": "Aceptar"
   },
+  "detailProduct": {
+    "title": "Detalle del producto",
+    "desc": "Descripcion",
+    "price": "Precio:",
+    "quantity": "Cantidad:",
+    "buy": "Comprar",
+    "textSmall": "Seleccione la cantidad que quiere comprar",
+    "unid": "unidades.",
+    "rest": "Quedan"
+  },
 
   "admin":{
     "title":"Bienvenido Admin",
