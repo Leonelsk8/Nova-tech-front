@@ -4,7 +4,7 @@ import Loader from '../../loader/Loader';
 import {customAlert, alertCancelConfirm} from '../../../assets/utils/alters';
 
 const DeleteProduct = (props) => {
-  const {style, textDL, modeDL, lang} = props;
+  const {style, textDL, modeDL, lang, token} = props;
   const [products, setProducts] = useState(null);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState(null);
@@ -13,7 +13,7 @@ const DeleteProduct = (props) => {
   useEffect(()=>{
     try {
       const resp = async()=>{
-        await getAllProducts()
+        await getAllProducts(token)
         .then((response)=>{setProducts(response.data); setLoading(false);})
         .catch((error)=>console.log(error))
       }
@@ -24,14 +24,14 @@ const DeleteProduct = (props) => {
   },[]);
 
   const render = async()=>{
-    await getAllProducts()
+    await getAllProducts(token)
     .then((response)=>{setProducts(response.data); setLoading(false); setProductSearch(null)})
     .catch((error)=>console.log(error))
   }
 
   const deleteProd = async(id)=>{
     alertCancelConfirm(lang.admin.deleteProduct.alertOne, lang.admin.deleteProduct.alertOneop, 'warning', lang.admin.deleteProduct.alertOneconf, lang.admin.deleteProduct.alertOnecancel, 
-    async ()=>{await deleteProduct(id).then((resp)=>{customAlert(lang.admin.deleteProduct.alertTwo, lang.admin.deleteProduct.alertTwoop, 'success','ok',()=>console.log(resp.data))}).catch((error)=>{console.log(error); setLoading(true); render();})}, 
+    async ()=>{await deleteProduct(id, token).then((resp)=>{customAlert(lang.admin.deleteProduct.alertTwo, lang.admin.deleteProduct.alertTwoop, 'success','ok',()=>console.log(resp.data))}).catch((error)=>{console.log(error); setLoading(true); render();})}, 
     ()=>{return});
   }
 

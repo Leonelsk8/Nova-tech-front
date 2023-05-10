@@ -6,7 +6,7 @@ import AOS from 'aos';
 import { customAlert } from '../../../assets/utils/alters';
 
 const ModifyOfferts = (props) => {
-  const {textDL, modeDL, lang, style} = props;
+  const {textDL, modeDL, lang, style,token} = props;
   const [prodOfferts, setProdOfferts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
@@ -26,7 +26,7 @@ const ModifyOfferts = (props) => {
     if (prodOfferts.length === 0){
       customAlert('Error', lang.admin.offerProd.alertTwo, 'warning', 'ok', ()=>{})
     }else{
-      await restartOfferts()
+      await restartOfferts(token)
       .then((resp)=>{console.log(resp.data); setProdOfferts([])})
       .catch((error)=>console.log(error));
     }
@@ -50,7 +50,7 @@ const ModifyOfferts = (props) => {
 
   const sendOffert = async (id)=>{
     if(prodOfferts.length < 8){
-      await offertProd(id)
+      await offertProd(id, token)
       .then((resp)=>{setProdOfferts([...prodOfferts, resp.data]); console.log(resp.data)})
       .catch((error)=>console.log(error))
     }else{

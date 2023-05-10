@@ -40,11 +40,11 @@ export const searchProd = async (title) => {
   }
 };
 
-export const getAllProducts = async () => {
+export const getAllProducts = async (accessToken) => {
   try {
     return await axios.get(`${DBURL}${endpointProduct.getAll}`, {
       headers: {
-        'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
+        'access-token': accessToken,
       },
     });
   } catch (error) {
@@ -94,7 +94,7 @@ export const editProduct = async (productEdit, id, accessToken)=>{
   try {
     return await axios.patch(`${DBURL}${endpointProduct.edit}/${id}`, productEdit,{
       headers: { 
-        'access-token': accessToken
+        'access-token': accessToken,
       },
     });
   } catch (error) {
@@ -102,30 +102,30 @@ export const editProduct = async (productEdit, id, accessToken)=>{
   }
 }
 
-export const deleteProduct = async (id) =>{
+export const deleteProduct = async (id, accessToken) =>{
   try {
     return await axios.delete(`${DBURL}${endpointProduct.delete}/${id}`,{
-      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+      'access-token': accessToken,
     });
   } catch (error) {
     console.log(error);
   }
 }
 
-export const restartOfferts = async()=>{
+export const restartOfferts = async(accessToken)=>{
   try {
     return await axios.patch(`${DBURL}${endpointProduct.restartOffert}`,{title: 'title'},{
-      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+      headers: { 'access-token': accessToken},
     });
   } catch (error) {
     console.log(error);
   }
 }
 
-export const offertProd = async(id)=>{
+export const offertProd = async(id, accessToken)=>{
   try {
     return await axios.patch(`${DBURL}${endpointProduct.offert}/${id}`,{title: 'title'},{
-      headers: { 'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8'},
+      headers: { 'access-token': accessToken},
     });
   } catch (error) {
     console.log(error);
