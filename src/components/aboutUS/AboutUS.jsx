@@ -9,7 +9,7 @@ const AboutUS = (props) => {
         <div className='row justify-content-between'>
           <div className='text-center'>
             <h2 className='section-title'></h2>
-            <div className={`banner bg${modeDL} text-${textDL}`}>
+            <div className={`p-4 bgFootButt-${modeDL} text-white`}>
               <h1>{lang.Aboutus.title}</h1>
               <div>
                 <small>
@@ -25,9 +25,9 @@ const AboutUS = (props) => {
               <div className='text-center m-2'>
                 <img src='/img/Leo.png' className='team-img' alt='imagen' />
               </div>
-              <h3>Leonel Gomez</h3>
+              <h3 className={`text-${textDL}`}>Leonel Gomez</h3>
               <div className='team-info'>
-                <p>
+                <p className={`text-${textDL}`}>
                 {lang.Aboutus.Leo}
                 </p>
                 <div className='d-flex justify-content-center'>
@@ -55,9 +55,9 @@ const AboutUS = (props) => {
               <div className='text-center m-2 text-black'>
                 <img src='/img/Ivan.png' className='team-img' alt='imagen' />
               </div>
-              <h3>Ivan Economo</h3>
+              <h3 className={`text-${textDL}`}>Ivan Economo</h3>
               <div className='team-info'>
-                <p>
+                <p className={`text-${textDL}`}>
                 {lang.Aboutus.Ivan}
                 </p>
                 <div className='d-flex justify-content-center'>
@@ -85,9 +85,9 @@ const AboutUS = (props) => {
               <div className='text-center m-2'>
                 <img src='/img/Matias.png' className='team-img' alt='imagen' />
               </div>
-              <h3>Matias Rosales</h3>
+              <h3 className={`text-${textDL}`}>Matias Rosales</h3>
               <div className='team-info'>
-                <p>
+                <p className={`text-${textDL}`}>
                 {lang.Aboutus.Matias}
                 </p>
                 <div className='d-flex justify-content-center'>
@@ -115,9 +115,9 @@ const AboutUS = (props) => {
               <div className='text-center m-2'>
                 <img src='/img/Carlos.png' className='team-img' alt='imagen' />
               </div>
-              <h3>Pereyra Carlos</h3>
+              <h3 className={`text-${textDL}`}>Pereyra Carlos</h3>
               <div className='team-info'>
-                <p>
+                <p className={`text-${textDL}`}>
                 {lang.Aboutus.Carlos}
                 </p>
                 <div className='d-flex justify-content-center'>

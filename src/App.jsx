@@ -74,8 +74,8 @@ const App = () => {
         <Route path='/prod/:id' element={token===null ?<Navigate to='/home'/>:<ProductPage modeDL={bgMode} textDL={textMode} lang={lang} token={token}/>}/>
         <Route path='/register'  element={token===null ? <Register modeDL={bgMode} textDL={textMode} lang={lang}/> : <Navigate to='/home'/>}/>
         <Route path='/panel-admin' element={adminValidate(token) ? <Panel modeDL={bgMode} textDL={textMode} lang={lang} token={token}/> : <Navigate to='/home'/>}/>
-        <Route path='/aboutUs' element={<AboutUS/>} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/aboutUs' element={<AboutUS modeDL={bgMode} textDL={textMode} lang={lang}/>} />
+        <Route path='/contact' element={<Contact modeDL={bgMode} textDL={textMode} lang={lang} />} />
         <Route path='/profile' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} />} /> {/* Trabajo en proceso */}
         <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken}/> : <Navigate to='/home'/>}/>
         <Route path='/not-found' element={<NotFound/>}/>
