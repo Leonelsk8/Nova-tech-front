@@ -63,3 +63,9 @@
   background-color: #40bd3ca9;
   color: #ffffff;
 }
+
+.textareaResponsive {
+  max-height: 100%;
+  max-width: 100%;
+  resize: none;
+}

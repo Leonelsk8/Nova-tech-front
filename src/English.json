@@ -247,5 +247,22 @@
       "alertTwo": "Done!",
       "alertTwoop": "Product removed successfully"
     }
+  },
+  "Aboutus": {
+    "title": "About us",
+    "parrafo": "Welcome to our appliance store! We are a company passionate about technology and committed to providing our customers with the best shopping experience. In our extensive catalog you will find a variety of brands and models, all carefully selected to ensure offer you the best quality and performance. We focus not only on offering you high-quality products, but also a unique and satisfying shopping experience. We invite you to visit us and discover everything we have to offer. We are waiting for you with open arms! !",
+
+    "Leo": "Age: 22 years old Student: Web Development (Rolling Code) Information systems engineering student, reason that motivated me to do code school. And now my biggest hobby is programming because it's something I like. I have programming bases thanks to the engineering degree",
+    "Ivan": "Age: 27 Years Student: Web Development (rolling Code) Starting my path as a developer. My goal is to specialize and get to know development tools in depth to be able to create complex structures in a deep and professional way",
+    "Matias": "Age: 27 Years Student: Web Development (Rolling Code). I am a student of Engineering and RollingCode to broaden my knowledge of programming languages",
+    "Carlos": "Age: 34 Years Student: Web Development (rolling Code) Currently working in private security, I have not defined what to do at the end of the course, but with great expectations of changing my future."
+  },
+  "Contact": {
+    "title": "Contact",
+    "subtitle": "Please complete this form",
+    "nombre": "Name",
+    "email": "Email",
+    "mensaje": "Message",
+    "enviar": "Send"
   }
 }
