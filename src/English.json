@@ -155,7 +155,16 @@
     "alertErrorTextEnd": "It is already in use. Try another one.",
     "alertButtonText": "Accept"
   },
-
+  "detailProduct": {
+    "title": "Product detail",
+    "desc": "Description",
+    "price": "Price:",
+    "quantity": "Amount:",
+    "buy": "Buy",
+    "textSmall": "Select the amount you want to buy",
+    "unid": "units.",
+    "rest": "In Stock"
+  },
   "admin":{
     "title":"Welcome Admin",
     "titleProd": "Products",

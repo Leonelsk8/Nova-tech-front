@@ -14,6 +14,7 @@ import Contact from './components/contact/Contact';
 import UserProfilePage from './pages/UserProfilePage'
 import Login from './pages/Login';
 import {adminValidate} from './assets/utils/validations';
+import ProductPage from './pages/ProductPage';
 
 const App = () => {
   const [lang, setLang] = useState(es);
@@ -50,7 +51,7 @@ const App = () => {
       <Routes>
         <Route path='*' element={<Store modeDL={bgMode} textDL={textMode} lang={lang} />}/>
         <Route path='/home' element={<Store modeDL={bgMode} textDL={textMode} lang={lang} />} />
-        <Route path='/prod/:id' element={<h1>hola</h1>}/>
+        <Route path='/prod/:id' element={token===null ?<Navigate to='/home'/>:<ProductPage modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
         <Route path='/register'  element={token===null ? <Register modeDL={bgMode} textDL={textMode} lang={lang}/> : <Navigate to='/home'/>}/>
         <Route path='/panel-admin' element={adminValidate(token) ? <Panel modeDL={bgMode} textDL={textMode} lang={lang} token={token}/> : <Navigate to='/home'/>}/>
         <Route path='/aboutUs' element={<AboutUS/>} />
