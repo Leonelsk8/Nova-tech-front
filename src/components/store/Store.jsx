@@ -19,7 +19,7 @@ import imgEndtwo from '../../assets/imgEndtwo.jpg';
 import imgEndtree from '../../assets/imgEndtree.jpg';
 
 const Store = (props) => {
-  const {lang, modeDL, textDL} = props;
+  const {lang, modeDL, textDL, token} = props;
   AOS.init();
   const [dataProd, setDataProd] = useState([]);
   const [pag, setPag] = useState(1);
@@ -139,7 +139,7 @@ const Store = (props) => {
             <Col xs={12} md={12} lg={9}>
               <Row>
                 {
-                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Card title={lang.Languaje.lang === 'es' ? resp.titleEs : resp.titleEn} price={resp.price} icon={resp.icon} id={resp._id} styles={style} modeDL={modeDL} textDL={textDL} lang={lang}/></Col>))
+                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Card title={lang.Languaje.lang === 'es' ? resp.titleEs : resp.titleEn} price={resp.price} icon={resp.icon} id={resp._id} styles={style} modeDL={modeDL} textDL={textDL} token={token} lang={lang}/></Col>))
                   
                 }
                 {
@@ -181,7 +181,7 @@ const Store = (props) => {
           </Row>
         </Container>
         <section className={`bgCardBan-${modeDL} my-5 pb-5 border-top border-bottom border-1 border-${textDL}`} id='sectionOfferts'>
-          <Offerts style={style} modeDL={modeDL} textDL={textDL} lang={lang}/>
+          <Offerts style={style} modeDL={modeDL} textDL={textDL} lang={lang} token={token}/>
         </section>
         
         <Container className='pt-2 pb-5'>

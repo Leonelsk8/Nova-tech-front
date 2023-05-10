@@ -13,3 +13,24 @@
 .cartShop:hover{
   transform: scale(110%);
 }
+
+.cartRow{
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.cartCol{
+  background-color: rgba(0, 0, 0, 0.849);
+  height: auto;
+  border-radius: 5%;
+}
+
+.imgCart{
+  width: 6em;
+  height: 6em;
+}
+
+.imgshop{
+  width: 100%;
+}

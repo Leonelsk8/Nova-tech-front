@@ -5,7 +5,7 @@ import { getOfferts } from '../../API/Api';
 import Loader from '../loader/Loader';
 
 const Offerts = (props) => {
-  const {style, modeDL, textDL, lang} = props;
+  const {style, modeDL, textDL, lang, token} = props;
   const [Prod, setProd] = useState([]);
   const [isLoading, setLoading] = useState(true);
 
@@ -37,7 +37,7 @@ const Offerts = (props) => {
             <Col xs={12} md={12} lg={12}>
               <Row className={'justify-content-center'}>
                 {
-                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : Prod.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Cards title={lang.Languaje.lang === 'es' ? resp.titleEs : resp.titleEn} price={resp.price} icon={resp.icon} id={resp._id} offert={resp.offert} styles={style} modeDL={modeDL} textDL={textDL} lang={lang}/></Col>))
+                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : Prod.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Cards title={lang.Languaje.lang === 'es' ? resp.titleEs : resp.titleEn} price={resp.price} icon={resp.icon} id={resp._id} offert={resp.offert} styles={style} modeDL={modeDL} textDL={textDL} token={token} lang={lang}/></Col>))
                 }
               </Row>
             </Col>
