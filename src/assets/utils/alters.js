@@ -34,3 +34,13 @@ export const alertCancelConfirm = (title, text, icon ,buttonConfirm, buttonCance
     }
   })
 }
+
+export const alertTime = (title, icon)=>{
+  Swal.fire({
+    position: 'top-end',
+    icon: icon,
+    title: title,
+    showConfirmButton: false,
+    timer: 1500
+  })
+}

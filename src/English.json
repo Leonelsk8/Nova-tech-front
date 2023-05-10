@@ -117,7 +117,8 @@
     "alertButtonText": "Press to continue"
   },
   "Cartshop":{
-    "shops": "exmples shops"
+    "paid": "Paid",
+    "close": "Close"
   },
   "Register": {
     "title": "Register",

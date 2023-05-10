@@ -52,11 +52,11 @@ export const getAllProducts = async () => {
   }
 };
 
-export const getProductById = async (id) => {
+export const getProductById = async (id, accessToken) => {
   try {
     return await axios.get(`${DBURL}${endpointProduct.getId}/${id}`, {
       headers: {
-        'access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NTZiZTE4Y2Y5OWMyZGUxNGM2YjU2ZSIsImVtYWlsIjoiYWRtaW50ZWNoMTU5QGdtYWlsLmNvbSIsInJvbGVBZG1pbiI6dHJ1ZSwiaWF0IjoxNjgzNDE4OTE1fQ.Mbs5uG6pB1a7P4fbyn5DKdeC-l6UK6arFOpcQtANbV8',
+        'access-token': accessToken,
       },
     });
   } catch (error) {
@@ -146,10 +146,34 @@ export const createUser = async (userData) => {
   }
 };
 
-export const login = async (userData) =>{
+export const addtoCart = async(id, idProduct, accessToken)=>{
+  try {
+    return await axios.patch(`${DBURL}${endpointUsers.addCart}/${id}`,{'idProduct': idProduct},{
+      headers: { 
+        'access-token': accessToken
+      },
+    })
+  } catch (error) {
+    
+  }
+}
+
+export const loginApi = async (userData) =>{
   try {
     return await axios.post(`${DBURL}${endpointUsers.login}`, userData);
   } catch (error) {
     console.log(error)
+  }
+}
+
+export const getCartItems = async(id, accessToken)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.getCart}/${id}`, {
+      headers: { 
+        'access-token': accessToken
+      },
+    });
+  } catch (error) {
+    console.log(error);
   }
 }

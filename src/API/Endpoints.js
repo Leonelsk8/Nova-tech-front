@@ -16,6 +16,8 @@ const endpointProduct = {
 
 const endpointUsers ={
   create: '/users/create-user',
+  addCart: '/users/add-tocart',
+  getCart: '/users/get-cart',
   login: '/login'
 }
 

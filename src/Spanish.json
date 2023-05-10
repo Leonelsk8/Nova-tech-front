@@ -116,7 +116,8 @@
     "alertButtonText": "Presione para continuar"
   },
   "Cartshop":{
-    "shops": "ejemplos venta"
+    "paid": "Pagar",
+    "close": "Cerrar"
   },
   "Register": {
     "title": "Registro",
