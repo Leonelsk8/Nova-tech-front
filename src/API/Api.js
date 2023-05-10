@@ -146,7 +146,7 @@ export const createUser = async (userData) => {
   }
 };
 
-export const login = async (userData) =>{
+export const loginApi = async (userData) =>{
   try {
     return await axios.post(`${DBURL}${endpointUsers.login}`, userData);
   } catch (error) {

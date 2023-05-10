@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import { loginApi } from '../../API/Api';
 import { useForm } from 'react-hook-form';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import registerImg from '../../assets/nt-white.png';
 import styles from './LoginPage.module.css';
 import { customAlert } from '../../assets/utils/alters';
-import {login} from '../../API/api';
 
 export default function LoginPage(props) {
   const { modeDL, textDL, lang, getToken } = props;
@@ -23,17 +23,15 @@ export default function LoginPage(props) {
   });
 
   const [showPassword, setShowPassword] = useState(false);
-  const URL_BASE = import.meta.env.VITE_DB_URL;
-  const navigate= useNavigate();
 
   const onSubmit = async (register) => {
-      await login(register)
-      .then((resp)=>{console.log(resp.data); localStorage.setItem('tokenUser-novatech', resp.data.token); customAlert(
+      await loginApi(register)
+      .then((resp)=>{console.log(resp.data); localStorage.setItem('tokenUser-novatech', resp.data.token); localStorage.setItem('idUser-novatech', resp.data.id) ; customAlert(
         lang.Login.alertSuccessTitle,
         lang.Login.alertSuccessText,
         'success',
         lang.Login.alertButtonText,
-        () => {getToken(); navigate('/home');})})
+        () => {getToken(); window.location.reload();})})
       .catch((error)=>{console.log(error); customAlert(
         lang.Login.alertErrorTitle,
         lang.Login.alertError,

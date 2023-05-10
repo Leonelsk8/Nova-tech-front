@@ -19,11 +19,7 @@ const App = () => {
   const [lang, setLang] = useState(es);
   const [bgMode, setbgMode] = useState('light');
   const [textMode, settextMode] = useState('dark');
-  const [token, setToken] = useState(null);
-
-  useEffect(()=>{
-    getToken();
-  },[])
+  const [token, setToken] = useState(localStorage.getItem('tokenUser-novatech'));
 
   const bgChange = () => {
     bgMode === 'light' ? setbgMode('dark') : setbgMode('light');

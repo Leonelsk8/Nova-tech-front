@@ -5,6 +5,7 @@ import Logo from '../../assets/novatechLogo.png';
 import engImg from '../../assets/en.webp';
 import espImg from '../../assets/es.webp';
 import {adminValidate} from '../../assets/utils/validations';
+import style from './navbar.module.css';
 
 const Header = (props) => {
   const {modeDLchange, modeDL, lang, langChange, token, closeSesion} = props;
@@ -39,7 +40,8 @@ const Header = (props) => {
                 <><Link className={`text-decoration-none ${location.pathname === '/login' ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0 me-lg-3`} to='/login'>{lang.Navbar.login}</Link>
                 <Link className={`text-decoration-none ${location.pathname === '/register' ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0`} to='/register'>{lang.Navbar.register}</Link></> 
                 :
-                <><Link className={`text-decoration-none ${location.pathname === '/profile' ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0 me-lg-3`} to='/profile'>{lang.Navbar.profile}</Link>
+                <><button className={`${style.cartShop} mt-md-2 mt-lg-0 me-lg-3`}><i className="bi bi-cart2"></i></button>
+                <Link className={`text-decoration-none ${location.pathname === '/profile' ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0 me-lg-3`} to='/profile'>{lang.Navbar.profile}</Link>
                 <Link className='text-decoration-none linkNav-light mt-md-2 mt-lg-0' onClick={() => closeSesion()} to='/home'>{lang.Navbar.closeSes}</Link></>
                 
               }
