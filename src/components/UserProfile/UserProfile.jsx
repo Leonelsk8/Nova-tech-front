@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import style from './UserProfile.module.css';
@@ -35,7 +34,7 @@ const UserProfile = (props) => {
 
   return (
     <>
-      <Container fluid className={`bg${modeDL} py-5 sectOrigin vh-100`}>
+      <Container fluid className={`bg${modeDL} py-5 sectOrigin`}>
         <Row className='px-2 px-md-4 mb-3'>
           <Col
             xs={12}
@@ -147,7 +146,14 @@ const UserProfile = (props) => {
                 />
               )
             ) : panel === 2 ? (
-              <MyCart />
+              <MyCart
+                modeDL={modeDL}
+                textDL={textDL}
+                lang={lang}
+                userData={userData}
+                token={token}
+                id={id}
+              />
             ) : panel === 3 ? (
               <EditName
                 modeDL={modeDL}

@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
@@ -31,7 +30,7 @@ export default function RegisterForm(props) {
 
   const password = watch('password');
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const onSubmit = async (register) => {
     const response = await createUser(register);
@@ -60,7 +59,7 @@ export default function RegisterForm(props) {
   return (
     <Container fluid className={`bg${modeDL}`}>
       <Row className='d-flex justify-content-center align-items-center'>
-        <Col xs={12} className='d-flex justify-content-center my-4'>
+        <Col xs={12} className='d-flex justify-content-center my-5'>
           <img
             src={registerImg}
             alt='Nova Tech Logo'
@@ -71,7 +70,7 @@ export default function RegisterForm(props) {
         <Col
           md={6}
           lg={4}
-          className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-4`}
+          className={`bgCardBan-${modeDL} text-${textDL} rounded py-3 mb-5`}
         >
           <h2 className='mt-2 mb-4 border-bottom pb-3'>
             {lang.Register.title}
@@ -226,7 +225,6 @@ export default function RegisterForm(props) {
                         ),
                     })}
                   />
-                  {/* MOSTRAR/OCULTAR CONTRASEÑA */}
                   <Button
                     variant='link'
                     className='px-0 ms-2'

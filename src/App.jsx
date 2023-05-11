@@ -32,9 +32,8 @@ const App = () => {
     if(modetext !== null){
       settextMode(modetext)
     }
-  })
+  }, [])
 
-  
   const bgChange = () => {
     if(bgMode === 'light'){
       setbgMode('dark'); 
@@ -58,7 +57,6 @@ const App = () => {
 
   const getToken =()=>{
     setToken(localStorage.getItem('tokenUser-novatech'));
-    //console.log(token)
   }
 
   const closeSesion =()=>{

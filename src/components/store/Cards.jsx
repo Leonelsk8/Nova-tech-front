@@ -1,4 +1,3 @@
-import React from 'react';
 import { addtoCart } from '../../API/Api';
 import {Card} from 'react-bootstrap';
 import AOS from 'aos';

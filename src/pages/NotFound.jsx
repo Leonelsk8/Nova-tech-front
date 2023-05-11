@@ -5,7 +5,7 @@ import style from './NotFound.module.css';
 const NotFound = (props) => {
   const { modeDL, textDL, lang } = props;
   return (
-    <div className={`${style.body} vh-100 d-flex justify-content-center align-items-center`}>
+    <div className={`${style.body} d-flex justify-content-center align-items-center`}>
       <Container className='md-12 '>
         <Row>
           <Col md={{ span: 6, offset: 3 }} className='text-center'>

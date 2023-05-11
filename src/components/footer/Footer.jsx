@@ -1,4 +1,3 @@
-import React from 'react';
 import novatechLogo from '../../assets/novatechLogo.png';
 import style from './footer.module.css';
 import {Link} from 'react-router-dom';
@@ -20,7 +19,6 @@ const Footer=(props)=> {
             <div className="mt-1 d-flex justify-content-center ">
               <h5 className="my-auto ms-1 me-3 text-center m-2">{lang.Footer.subTitle}</h5>
               <div className='d-flex'>
-                {/* le ponemos enlaces de fb ig y tw.. agregamos mas?? */}
               <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-facebook "></i></a>
               <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-instagram"></i></a>
               <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-twitter "></i></a>

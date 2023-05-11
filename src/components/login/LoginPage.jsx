@@ -1,8 +1,7 @@
-/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { loginApi } from '../../API/Api';
 import { useForm } from 'react-hook-form';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Form, Button, Container, Row, Col, InputGroup } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import registerImg from '../../assets/nt-white.png';
 import styles from './LoginPage.module.css';
@@ -26,27 +25,40 @@ export default function LoginPage(props) {
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmit = async (register) => {
-      await loginApi(register)
-      .then((resp)=>{console.log(resp.data); localStorage.setItem('tokenUser-novatech', resp.data.token); localStorage.setItem('idUser-novatech', resp.data.id) ; customAlert(
-        lang.Login.alertSuccessTitle,
-        lang.Login.alertSuccessText,
-        'success',
-        lang.Login.alertButtonText,
-        () => {getToken(); window.location.reload();})})
-      .catch((error)=>{console.log(error); customAlert(
-        lang.Login.alertErrorTitle,
-        lang.Login.alertError,
-        'error',
-        lang.Login.alertErrorButtonText,
-        () => {reset({ email: '', password: ''});}
+    await loginApi(register)
+      .then((resp) => {
+        console.log(resp.data);
+        localStorage.setItem('tokenUser-novatech', resp.data.token);
+        localStorage.setItem('idUser-novatech', resp.data.id);
+        customAlert(
+          lang.Login.alertSuccessTitle,
+          lang.Login.alertSuccessText,
+          'success',
+          lang.Login.alertButtonText,
+          () => {
+            getToken();
+            window.location.reload();
+          }
+        );
+      })
+      .catch((error) => {
+        console.log(error);
+        customAlert(
+          lang.Login.alertErrorTitle,
+          lang.Login.alertError,
+          'error',
+          lang.Login.alertErrorButtonText,
+          () => {
+            reset({ email: '', password: '' });
+          }
         );
       });
-  }
+  };
 
   return (
     <Container fluid className={`bg${modeDL}`}>
       <Row className='d-flex justify-content-center align-items-center'>
-        <Col md={9}  className='d-flex justify-content-center my-4'>
+        <Col md={9} className='d-flex justify-content-center my-5'>
           <img
             src={registerImg}
             alt='Nova Tech Logo'
@@ -54,11 +66,15 @@ export default function LoginPage(props) {
             className={`my-2 me-3 ${styles.regImg}`}
           />
         </Col>
-        <Col md={6} lg={4} className={`bgCardBan text rounded py-3 mb-4 bgCardBan-${modeDL} text-${textDL}`}>
+        <Col
+          md={6}
+          lg={4}
+          className={`bgCardBan text rounded py-3 mb-5 bgCardBan-${modeDL} text-${textDL}`}
+        >
           <h2 className='mt-2 mb-4 border-bottom pb-3'>{lang.Login.title}</h2>
           <Form
             onSubmit={handleSubmit(onSubmit)}
-            className='d-flex flex-column gap-2'
+            className='d-flex flex-column gap-4'
           >
             <Row>
               <Form.Group as={Col}>
@@ -80,8 +96,7 @@ export default function LoginPage(props) {
                     },
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message:
-                      lang.Login.emailPattern,
+                      message: lang.Login.emailPattern,
                     },
                   })}
                 />
@@ -92,30 +107,32 @@ export default function LoginPage(props) {
             </Row>
 
             <Row className=''>
-              <Form.Group as={Col} className='col-6'>
+              <Form.Group as={Col}>
                 <Form.Label>{lang.Login.password}</Form.Label>
-                <Form.Control
-                  type={showPassword ? 'text' : 'password'}
-                  {...register('password', {
-                    required: {
-                      value: true,
-                      message:  lang.Login.passwordRequired,
-                    },
-                    minLength: {
-                      value: 8,
-                      message: lang.Login.passwordMin,
-                    },
-                    maxLength: {
-                      value: 50,
-                      message:  lang.Login.passwordMax,
-                    },
-                    pattern: {
-                      value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,50}$/,
-                      message:  lang.Login.passwordPattern,
-                    },
-                  })}
-                />
-                <Button
+                <InputGroup>
+                  <Form.Control
+                    className='rounded'
+                    type={showPassword ? 'text' : 'password'}
+                    {...register('password', {
+                      required: {
+                        value: true,
+                        message: lang.Login.passwordRequired,
+                      },
+                      minLength: {
+                        value: 8,
+                        message: lang.Login.passwordMin,
+                      },
+                      maxLength: {
+                        value: 50,
+                        message: lang.Login.passwordMax,
+                      },
+                      pattern: {
+                        value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,50}$/,
+                        message: lang.Login.passwordPattern,
+                      },
+                    })}
+                  />
+                  <Button
                     variant='link'
                     className='px-0 ms-2'
                     onClick={() => setShowPassword(!showPassword)}
@@ -126,6 +143,7 @@ export default function LoginPage(props) {
                       <i className='bi bi-eye'></i>
                     )}
                   </Button>
+                </InputGroup>
                 {errors.password && (
                   <small className='text-danger'>
                     {errors.password.message}
@@ -137,7 +155,11 @@ export default function LoginPage(props) {
             <Row>
               <Form.Group as={Col} className=''>
                 <Form.Label>
-                {lang.Login.language}{' '}<small className='text-secondary'> {lang.Login.smallLanguage}</small>
+                  {lang.Login.language}{' '}
+                  <small className='text-secondary'>
+                    {' '}
+                    {lang.Login.smallLanguage}
+                  </small>
                 </Form.Label>
                 <Form.Select {...register('lang')}>
                   <option value='es'>Español</option>
@@ -157,7 +179,7 @@ export default function LoginPage(props) {
             <Row>
               <Form.Group as={Col} className=''>
                 <button type='submit' className={`mt-4 ${styles.regButton}`}>
-                {lang.Login.submitButton}
+                  {lang.Login.submitButton}
                 </button>
               </Form.Group>
             </Row>
