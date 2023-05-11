@@ -30,7 +30,7 @@ const UserProfile = (props) => {
         console.log(error);
         setIsLoading(false);
       });
-  }, [id, token]);
+  }, [id, token, panel]);
   const formattedDate = new Date(userData.createdAt).toLocaleString();
 
   return (
