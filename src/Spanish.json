@@ -113,7 +113,10 @@
     "alertErrorTitle": "Ups...",
     "alertError": "¡Email o contraseña incorrectos!",
     "alertErrorButtonText": "Intentar de nuevo",
-    "alertButtonText": "Presione para continuar"
+    "alertButtonText": "Presione para continuar",
+    "disabledtitle": "No puedes ingresar",
+    "disabledText": "Tu cuenta está suspendida"
+
   },
   "Cartshop":{
     "paid": "Pagar",
@@ -329,5 +332,11 @@
     "alertTextOne": "El usuario fué habilitado",
     "alertTextTwo": "El usuario fué suspendido",
     "title": "Suspender o habilitar usuario (buscar por email)"
+  },
+
+  "notFound":{
+    "title": "Estas en el camino Incorrecto",
+    "reg": "Regresa al ",
+    "butt": "Inicio"
   }
 }

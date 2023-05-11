@@ -27,19 +27,31 @@ export default function LoginPage(props) {
   const onSubmit = async (register) => {
     await loginApi(register)
       .then((resp) => {
-        console.log(resp.data);
-        localStorage.setItem('tokenUser-novatech', resp.data.token);
-        localStorage.setItem('idUser-novatech', resp.data.id);
-        customAlert(
-          lang.Login.alertSuccessTitle,
-          lang.Login.alertSuccessText,
-          'success',
-          lang.Login.alertButtonText,
-          () => {
-            getToken();
-            window.location.reload();
-          }
-        );
+        if(resp.data.disabled){
+          customAlert(
+            lang.Login.disabledtitle,
+            lang.Login.disabledText,
+            'error',
+            'Ok',
+            () => {
+              reset({ email: '', password: '' });
+            }
+          );
+        }else{
+          console.log(resp.data);
+          localStorage.setItem('tokenUser-novatech', resp.data.token);
+          localStorage.setItem('idUser-novatech', resp.data.id);
+          customAlert(
+            lang.Login.alertSuccessTitle,
+            lang.Login.alertSuccessText,
+            'success',
+            lang.Login.alertButtonText,
+            () => {
+              getToken();
+              window.location.reload();
+            }
+          );
+        }
       })
       .catch((error) => {
         console.log(error);

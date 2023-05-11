@@ -78,7 +78,7 @@ const App = () => {
         <Route path='/aboutUs' element={<AboutUS modeDL={bgMode} textDL={textMode} lang={lang}/>} />
         <Route path='/contact' element={<Contact modeDL={bgMode} textDL={textMode} lang={lang} />} />
         <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken}/> : <Navigate to='/home'/>}/>
-        <Route path='/not-found' element={<NotFound/>}/>
+        <Route path='/not-found' element={<NotFound modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang} />
     </>

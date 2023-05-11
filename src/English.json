@@ -114,7 +114,9 @@
     "alertErrorTitle": "Ups...",
     "alertError": "Wrong email or password!",
     "alertErrorButtonText": "Try again",
-    "alertButtonText": "Press to continue"
+    "alertButtonText": "Press to continue",
+    "disabledtitle": "You can't log in",
+    "disabledText": "Your account is suspended"
   },
   "Cartshop":{
     "paid": "Paid",
@@ -327,5 +329,11 @@
     "alertTextOne": "User was enabled",
     "alertTextTwo": "User was suspended",
     "title": "Suspend or enable user (search by email)"
+  },
+
+  "notFound":{
+    "title": "You are on the wrong path",
+    "reg": "Return to ",
+    "butt": "Start"
   }
 }
