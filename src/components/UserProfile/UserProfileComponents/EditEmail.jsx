@@ -1,15 +1,19 @@
 /* eslint-disable react/prop-types */
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { checkPassword, editUserLanguage } from '../../../API/Api';
+import { editUserEmail, checkPassword } from '../../../API/Api';
 import { validateUserAlert } from '../../../assets/utils/alters';
 
-const ChooseLanguage = (props) => {
+const EditEmail = (props) => {
   const { modeDL, textDL, lang, userData, token, id } = props;
 
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     defaultValues: {
-      lang: userData.lang,
+      email: userData.email,
     },
   });
 
@@ -30,7 +34,7 @@ const ChooseLanguage = (props) => {
       id,
       token,
       checkPassword,
-      editUserLanguage,
+      editUserEmail,
       alertInfo
     );
   };
@@ -39,17 +43,37 @@ const ChooseLanguage = (props) => {
     <Container className={`bg${modeDL}`}>
       <Row className='d-flex justify-content-center align-items-center'>
         <Col className={`bgCardBan-${modeDL} text-${textDL} py-3`}>
-          <h2 className='mb-4'>{lang.userProfile.selectChooseLanguage}</h2>
+          <h2 className='mb-4'>{lang.userProfile.selectEditEmail}</h2>
           <Form
             onSubmit={handleSubmit(onSubmit)}
             className='d-flex flex-column gap-2'
           >
-            <Form.Group as={Col} className='col-12 col-md-3 col-lg-2 mb-3'>
-              <Form.Label>{lang.Register.language} </Form.Label>
-              <Form.Select {...register('lang')}>
-                <option value='es'>Español</option>
-                <option value='en'>English</option>
-              </Form.Select>
+            <Form.Group as={Col} className='col-lg-6 mb-3'>
+              <Form.Label>{lang.Register.email}</Form.Label>
+              <Form.Control
+                type='email'
+                {...register('email', {
+                  required: {
+                    value: true,
+                    message: lang.Register.emailRequired,
+                  },
+                  minLength: {
+                    value: 5,
+                    message: lang.Register.emailMin,
+                  },
+                  maxLength: {
+                    value: 100,
+                    message: lang.Register.emailMax,
+                  },
+                  pattern: {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: lang.Register.emailPattern,
+                  },
+                })}
+              />
+              {errors.email && (
+                <small className='text-danger'>{errors.email.message}</small>
+              )}
             </Form.Group>
             <div>
               <Button type='submit' variant='success'>
@@ -63,4 +87,4 @@ const ChooseLanguage = (props) => {
   );
 };
 
-export default ChooseLanguage;
+export default EditEmail;

@@ -1,9 +1,5 @@
 import axios from 'axios';
 import { endpointProduct, endpointUsers } from './Endpoints';
-
-//import { customAlert } from '../assets/utils/alters';
-// import { useNavigate } from 'react-router-dom';
-
 const DBURL = import.meta.env.VITE_DB_URL;
 
 // products
@@ -64,33 +60,40 @@ export const getProductById = async (id, accessToken) => {
   }
 };
 
-export const createProduct = async(productData)=>{
+export const createProduct = async (productData) => {
   try {
     return await axios.post(`${DBURL}${endpointProduct.create}`, productData);
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-export const uploadImage = async(formImage)=>{
+export const uploadImage = async (formImage) => {
   try {
-    return await axios.post(`${DBURL}${endpointProduct.uploadImage}`, formImage);
+    return await axios.post(
+      `${DBURL}${endpointProduct.uploadImage}`,
+      formImage
+    );
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-export const uploadImagess = async (formImagess)=>{
+export const uploadImagess = async (formImagess) => {
   try {
-    return await axios.post(`${DBURL}${endpointProduct.uploadImagess}`, formImagess, {
-      headers: { "Content-Type": "multipart/form-data" },
-    });
+    return await axios.post(
+      `${DBURL}${endpointProduct.uploadImagess}`,
+      formImagess,
+      {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      }
+    );
   } catch (error) {
     console.log(error);
   }
-}
+};
 
-export const editProduct = async (productEdit, id, accessToken)=>{
+export const editProduct = async (productEdit, id, accessToken) => {
   try {
     return await axios.patch(`${DBURL}${endpointProduct.edit}/${id}`, productEdit,{
       headers: { 
@@ -100,7 +103,7 @@ export const editProduct = async (productEdit, id, accessToken)=>{
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const deleteProduct = async (id, accessToken) =>{
   try {
@@ -110,7 +113,7 @@ export const deleteProduct = async (id, accessToken) =>{
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 export const restartOfferts = async(accessToken)=>{
   try {
@@ -136,13 +139,118 @@ export const offertProd = async(id, accessToken)=>{
 
 export const createUser = async (userData) => {
   try {
-    return await axios.post(
-      `${DBURL}${endpointUsers.create}`,
-      userData
+    return await axios.post(`${DBURL}${endpointUsers.create}`, userData);
+  } catch (error) {
+    console.log(error);
+    return error.response.data.errors[0].value;
+  }
+};
+
+export const getUserById = async (id, token) => {
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.getUsers}/${id}`, {
+      headers: {
+        'access-token': token,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editUser = async (id, userData, token) => {
+  try {
+    return await axios.patch(
+      `${DBURL}${endpointUsers.editUser}/${id}`,
+      userData,
+      {
+        headers: {
+          'access-token': token,
+        },
+      }
     );
   } catch (error) {
     console.log(error);
-    return error.response.data.errors[0].value
+  }
+};
+
+export const checkPassword = async (id, password, token) => {
+  try {
+    return await axios.post(
+      `${DBURL}${endpointUsers.checkPassword}/${id}`,
+      { password },
+      {
+        headers: {
+          'access-token': token,
+        },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editUserName = async (id, userData, token) => {
+  try {
+    return await axios.patch(
+      `${DBURL}${endpointUsers.editUserName}/${id}`,
+      userData,
+      {
+        headers: {
+          'access-token': token,
+        },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editUserEmail = async (id, userData, token) => {
+  try {
+    return await axios.patch(
+      `${DBURL}${endpointUsers.editUserEmail}/${id}`,
+      userData,
+      {
+        headers: {
+          'access-token': token,
+        },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editUserPassword = async (id, userData, token) => {
+  try {
+    return await axios.patch(
+      `${DBURL}${endpointUsers.editUserPassword}/${id}`,
+      userData,
+      {
+        headers: {
+          'access-token': token,
+        },
+      }
+    );
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const editUserLanguage = async (id, userData, token) => {
+  try {
+    return await axios.patch(
+      `${DBURL}${endpointUsers.editUserLanguage}/${id}`,
+      userData,
+      {
+        headers: {
+          'access-token': token,
+        },
+      }
+    );
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -154,7 +262,7 @@ export const addtoCart = async(id, idProduct, accessToken)=>{
       },
     })
   } catch (error) {
-    
+    console.log(error);
   }
 }
 
@@ -162,7 +270,7 @@ export const loginApi = async (userData) =>{
   try {
     return await axios.post(`${DBURL}${endpointUsers.login}`, userData);
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
 
