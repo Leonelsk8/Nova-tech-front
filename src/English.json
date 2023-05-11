@@ -297,6 +297,9 @@
     "nombre": "Name",
     "email": "Email",
     "mensaje": "Message",
-    "enviar": "Send"
+    "enviar": "Send",
+    "alertSuccessTitle": "Message sent!",
+    "alertSuccessText":"We will answer your message shortly.",
+    "alertButtonText":"Go to home page"
   }
 }
