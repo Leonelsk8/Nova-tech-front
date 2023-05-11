@@ -112,7 +112,9 @@ export const editProduct = async (productEdit, id, accessToken) => {
 export const deleteProduct = async (id, accessToken) =>{
   try {
     return await axios.delete(`${DBURL}${endpointProduct.delete}/${id}`,{
-      'access-token': accessToken,
+      headers: { 
+        'access-token': accessToken,
+      },
     });
   } catch (error) {
     console.log(error);
