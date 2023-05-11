@@ -60,9 +60,13 @@ export const getProductById = async (id, accessToken) => {
   }
 };
 
-export const createProduct = async (productData) => {
+export const createProduct = async (productData, token) => {
   try {
-    return await axios.post(`${DBURL}${endpointProduct.create}`, productData);
+    return await axios.post(`${DBURL}${endpointProduct.create}`, productData,{
+      headers: { 
+        'access-token': token,
+      },
+    });
   } catch (error) {
     console.log(error);
   }

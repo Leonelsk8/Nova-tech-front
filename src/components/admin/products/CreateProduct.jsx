@@ -69,7 +69,7 @@ const CreateProduct = (props) => {
     console.log(productData);
 
     try {
-      await createProduct(productData)
+      await createProduct(productData, token)
       .then(response => {customAlert(lang.admin.createProduct.success, lang.admin.createProduct.messageAlert2 , 'success', 'Ok', ()=>{console.log(response)})})
       .catch(error => {customAlert('Error', lang.admin.createProduct.messageAlert3,'error', 'Ok', ()=>{console.log(error)})})
     } catch (error) {
