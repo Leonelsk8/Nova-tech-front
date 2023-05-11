@@ -17,8 +17,7 @@ export default function LoginPage(props) {
   } = useForm({
     defaultValues: {
       email: '',
-      password: '',
-      lang: 'es',
+      password: ''
     },
   });
 
@@ -141,7 +140,7 @@ export default function LoginPage(props) {
                       pattern: {
                         value: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,50}$/,
                         message: lang.Login.passwordPattern,
-                      },
+                      }
                     })}
                   />
                   <Button
@@ -165,26 +164,13 @@ export default function LoginPage(props) {
             </Row>
 
             <Row>
-              <Form.Group as={Col} className=''>
-                <Form.Label>
-                  {lang.Login.language}{' '}
-                  <small className='text-secondary'>
-                    {' '}
-                    {lang.Login.smallLanguage}
-                  </small>
-                </Form.Label>
-                <Form.Select {...register('lang')}>
-                  <option value='es'>Español</option>
-                  <option value='en'>English</option>
-                </Form.Select>
-              </Form.Group>
 
               <Form.Group
                 as={Col}
                 className='text-center d-flex flex-column justify-content-center align-items-center flex-md-row align-items-md-end gap-md-2 pb-md-2'
               >
                 <small>{lang.Login.alreadyRegQuest}</small>
-                <Link to='/login'>{lang.Login.alreadyRegLink}</Link>
+                <Link to='/register'>{lang.Login.alreadyRegLink}</Link>
               </Form.Group>
             </Row>
 
