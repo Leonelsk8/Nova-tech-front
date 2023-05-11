@@ -158,6 +158,18 @@ export const getUserById = async (id, token) => {
   }
 };
 
+export const getAllusers = async(token)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.getAllusers}`,{
+      headers: {
+        'access-token': token,
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 export const editUser = async (id, userData, token) => {
   try {
     return await axios.patch(
@@ -279,6 +291,42 @@ export const getCartItems = async(id, accessToken)=>{
     return await axios.get(`${DBURL}${endpointUsers.getCart}/${id}`, {
       headers: { 
         'access-token': accessToken
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const getEmailUser = async(email, token)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.getEmail}/${email}`, {
+      headers: { 
+        'access-token': token
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const disabledUser = async(id, token)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.disabled}/${id}`, {
+      headers: { 
+        'access-token': token
+      },
+    });
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export const abledUser = async(id, token)=>{
+  try {
+    return await axios.get(`${DBURL}${endpointUsers.abled}/${id}`, {
+      headers: { 
+        'access-token': token
       },
     });
   } catch (error) {
