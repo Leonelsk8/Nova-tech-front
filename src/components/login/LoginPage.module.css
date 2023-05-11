@@ -17,6 +17,7 @@
   border: none;
   padding: 8px;
   border-radius: 3px;
+  width: 100%;
 }
 
 .regButton:hover {

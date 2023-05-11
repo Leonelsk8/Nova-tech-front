@@ -19,9 +19,9 @@ const Footer=(props)=> {
             <div className="mt-1 d-flex justify-content-center ">
               <h5 className="my-auto ms-1 me-3 text-center m-2">{lang.Footer.subTitle}</h5>
               <div className='d-flex'>
-              <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-facebook "></i></a>
-              <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-instagram"></i></a>
-              <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/#"> <i className="bi bi-twitter "></i></a>
+              <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/not-found"> <i className="bi bi-facebook "></i></a>
+              <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/not-found"> <i className="bi bi-instagram"></i></a>
+              <a className={`nav-link ${style.icons} text-${textDL} text-decoration-none m-2 `} href="/not-found"> <i className="bi bi-twitter "></i></a>
             </div>
             </div>
           </article>
@@ -58,9 +58,9 @@ const Footer=(props)=> {
           </article>
           <article className={`col-sm-12 col-md-4 mt-2 mb-1 text-center text-white`}>
             <h5 >{lang.Footer.information}</h5>
-            <Link className={`nav-link ${style.icons}`} to="/E404">{lang.Footer.questions}</Link>
-            <Link className={`nav-link ${style.icons}`} to="/E404">{lang.Footer.atention}</Link>
-            <Link className={`nav-link ${style.icons}`} to="/E404">{lang.Footer.term}</Link>
+            <Link className={`nav-link ${style.icons}`} to="/not-found">{lang.Footer.questions}</Link>
+            <Link className={`nav-link ${style.icons}`} to="/not-found">{lang.Footer.atention}</Link>
+            <Link className={`nav-link ${style.icons}`} to="/not-found">{lang.Footer.term}</Link>
           </article>
         </div>
       </section>
@@ -68,7 +68,7 @@ const Footer=(props)=> {
         <i className="fa-solid fa-arrow-up-long"></i>
       </div>
       <section className={`bgNav-${modeDL} py-1`}>
-        <p className={`text-center text-white mb-0`}>
+        <p className={`text-center text-white mb-0 py-3`}>
           &copy; {lang.Footer.already}
         </p>
       </section>
