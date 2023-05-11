@@ -301,5 +301,30 @@
     "mensaje": "Mensaje",
     "enviar": "Enviar",
     "tipo": "Escribe tu mensaje"
+  },
+
+  "cards": {
+    "alertone": "Inicia sesión",
+    "alerttextone": "No puedes agregar productos si aún no iniciaste sesión",
+    "alerttexttwo": "No puedes comprar productos si aún no iniciaste sesión",
+    "added": "Agregado",
+    "noadded": "No pudo aregarse"
+  },
+
+  "listUser": {
+    "title": "Usuarios regitrados",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Email",
+    "suspended": "Suspendido",
+    "susConfirmed": "Sí"
+  },
+
+  "suspendUsers":{
+    "alertOne": "Habilitado",
+    "alertTwo": "Suspendido",
+    "alertTextOne": "El usuario fué habilitado",
+    "alertTextTwo": "El usuario fué suspendido",
+    "title": "Suspender o habilitar usuario (buscar por email)"
   }
 }

@@ -298,5 +298,30 @@
     "email": "Email",
     "mensaje": "Message",
     "enviar": "Send"
+  },
+
+  "cards": {
+    "alertone": "Login",
+    "alerttextone": "You can't add products if you're not logged in yet",
+    "alerttexttwo": "You can't buy products if you're not logged in yet",
+    "added": "Added",
+    "noadded": "Could not add"
+  },
+
+  "listUser": {
+    "title": "Registered Users",
+    "name": "Name",
+    "lastName": "LastName",
+    "email": "Email",
+    "suspended": "Suspended",
+    "susConfirmed": "Yes"
+  },
+
+  "suspendUsers":{
+    "alertOne": "Enabled",
+    "alertTwo": "Suspended",
+    "alertTextOne": "User was enabled",
+    "alertTextTwo": "User was suspended",
+    "title": "Suspend or enable user (search by email)"
   }
 }
