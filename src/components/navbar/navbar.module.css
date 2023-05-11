@@ -21,9 +21,9 @@
 }
 
 .cartCol{
-  background-color: rgba(0, 0, 0, 0.849);
+  background-color: rgba(0, 0, 0, 0.850);
   height: auto;
-  border-radius: 5%;
+  border-radius: 5px;
 }
 
 .imgCart{
@@ -32,5 +32,5 @@
 }
 
 .imgshop{
-  width: 100%;
+  max-width: 100%;
 }

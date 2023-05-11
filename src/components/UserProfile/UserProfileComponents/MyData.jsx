@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { ListGroup } from 'react-bootstrap';
 
 const MyData = (props) => {

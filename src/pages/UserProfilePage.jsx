@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import UserProfile from '../components/UserProfile/UserProfile';
 
 const UserProfilePage = (props) => {

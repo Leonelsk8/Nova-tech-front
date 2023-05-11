@@ -89,10 +89,9 @@ export const validateUserAlert = (
 
 export const alertTime = (title, icon)=>{
   Swal.fire({
-    position: 'top-end',
     icon: icon,
     title: title,
     showConfirmButton: false,
-    timer: 1500
+    timer: 1000
   })
 }
