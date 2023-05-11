@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import { loginApi } from '../../API/Api';
 import { useForm } from 'react-hook-form';

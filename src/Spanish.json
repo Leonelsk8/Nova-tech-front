@@ -1,9 +1,9 @@
 {
-  "Languaje":{
+  "Languaje": {
     "lang": "es"
   },
 
-  "Navbar":{
+  "Navbar": {
     "home": "Inicio",
     "services": "Servicios",
     "about": "Sobre nosotros",
@@ -23,7 +23,7 @@
     "closeSes": "Cerrar sesión"
   },
 
-  "Landing":{
+  "Landing": {
     "title": "¡¡Aprovecha las ofertas mensuales!!",
     "description": "En Nova Tech no te pierdas nuestras ofertas mensuales! Cada mes, ofrecemos un descuento increible del 50% en una amplia selección de productos. Todos los meses seleccionamos 8 productos diferentes para esta gran oferta.",
     "butt": "Ver ofertas",
@@ -31,7 +31,7 @@
     "circletree": "Mensuales"
   },
 
-  "Store":{
+  "Store": {
     "sectionOneTitle": "Todo lo que necesitas para vivir a gusto",
     "sectionOneDescOne": "Ofrecemos electrodomésticos con diseños elegantes y modernos que aportan una apariencia sofisticada a tu casa o negocio.",
     "sectionOneDescTwo": "Ofrecemos las mejores marcas que garantizan la calidad y la confiabilidad necesaria.",
@@ -81,7 +81,7 @@
     "panelEndTreefor": "Productos de alta calidad a precios bajos.",
     "panelEndTreefive": "Más de 10 años de experiencia en el comercio electrónico."
   },
-  "Footer":{
+  "Footer": {
     "title": "tienda de electronica",
     "subTitle": "¡Seguinos!",
     "contact": "Contacto",
@@ -89,9 +89,9 @@
     "questions": "Preguntas frecuentes",
     "atention": "Atención al cliente",
     "term": "Terminos y condiciones",
-    "already":"Todos los derechos reservados"
+    "already": "Todos los derechos reservados"
   },
-  "Login":{
+  "Login": {
     "title": "Iniciar sesion",
     "email": "Email",
     "emailRequired": "El email es obligatorio.",
@@ -166,8 +166,8 @@
     "rest": "Quedan"
   },
 
-  "admin":{
-    "title":"Bienvenido Admin",
+  "admin": {
+    "title": "Bienvenido Admin",
     "titleProd": "Productos",
     "prodOpcone": "Crear producto",
     "prodOpctwo": "Editar producto",
@@ -177,7 +177,7 @@
     "userOpcone": "Listar usuarios",
     "userOpctwo": "Suspender usuario",
     "userOpctree": "Mesajes",
-    "createProduct":{
+    "createProduct": {
       "title": "Crear producto",
       "titleEs": "Título en Español",
       "titleEn": "Título en Inglés",
@@ -228,7 +228,7 @@
       "alertOne": "Producto modificado con éxito",
       "alertTwo": "El producto no se pudo modificar"
     },
-    "offerProd":{
+    "offerProd": {
       "title": "Ofertas del mes",
       "butt": "Reiniciar ofertas",
       "add": "Agregar ofertas nuevas",
@@ -236,16 +236,51 @@
       "alertTwo": "Ya no hay productos que reiniciar",
       "noOffert": "No hay ofertas públicadas"
     },
-    "notResult" : "Sin resultados",
+    "notResult": "Sin resultados",
     "searchNot": "El producto no se encontró",
     "buttDelete": "Eliminar",
-    "deleteProduct":{
+    "deleteProduct": {
       "alertOne": "¿Quieres eliminar este producto?",
       "alertOneop": "¡No podrás revertir esto!",
       "alertOneconf": "Si eliminar",
       "alertOnecancel": "Cancelar",
       "alertTwo": "Hecho!",
       "alertTwoop": "Producto eliminado con éxito"
+    }
+  },
+  
+  "userProfile": {
+    "header": "Bienvenido",
+    "sectionMyDataTitle": "Mis datos",
+    "selectMyData": "Ver datos",
+    "selectCart": "Ir a Carrito",
+    "sectionEditDataTitle": "Editar datos",
+    "selectEditName": "Nombre y Apellido",
+    "selectEditEmail": "Email",
+    "selectEditPassword": "Contraseña",
+    "selectChooseLanguage": "Idioma Preferido",
+    "userDataPanel": {
+      "name": "Nombre",
+      "lastName": "Apellido",
+      "email": "Email",
+      "language": "Idioma preferido",
+      "id": "ID",
+      "createdAt": "Registrado desde"
+    },
+    "editUserDataPanel": {
+      "title": "Modificar datos",
+      "newPassword": "Nueva contraseña",
+      "newPasswordCheck": "Repetir nueva contraseña",
+      "button": "Confirmar cambios"
+    },
+    "alertInfo": {
+      "title": "Introduce tu contraseña para confirmar los cambios",
+      "textButton": "Confirmar",
+      "cancelTextButton": "Cancelar",
+      "errorMessage": "Contraseña incorrecta",
+      "successTitle": "¡Bien!",
+      "successText": "Datos guardados con éxito",
+      "successButtonText": "Aceptar"
     }
   },
 

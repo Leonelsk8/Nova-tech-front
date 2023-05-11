@@ -16,6 +16,13 @@ const endpointProduct = {
 
 const endpointUsers ={
   create: '/users/create-user',
+  getUsers: '/users/get-user-by-id',
+  checkPassword: '/users/check-password',
+  editUser: '/users/edit-user',
+  editUserName: '/users/edit-user-name',
+  editUserEmail: '/users/edit-user-email',
+  editUserPassword: '/users/edit-user-password',
+  editUserLanguage: '/users/edit-user-language',
   addCart: '/users/add-tocart',
   getCart: '/users/get-cart',
   login: '/login'
