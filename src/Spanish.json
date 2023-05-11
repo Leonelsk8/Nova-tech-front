@@ -300,7 +300,10 @@
     "email": "Email",
     "mensaje": "Mensaje",
     "enviar": "Enviar",
-    "tipo": "Escribe tu mensaje"
+    "tipo": "Escribe tu mensaje",
+    "alertSuccessTitle": "Mensaje enviado!",
+    "alertSuccessText":"En breve contestaremos su mensaje.",
+    "alertButtonText":"Ir a pagina de de inicio"
   },
 
   "cards": {

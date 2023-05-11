@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import './Contact.css';
+import { customAlert } from '../../assets/utils/alters';
 import emailjs from '@emailjs/browser';
 
 const Contact = (props) => {
@@ -10,6 +11,12 @@ const Contact = (props) => {
     const serviceId = 'service_53aniis';
     const templateId = 'template_pdtmwf7';
     const apikey = 'HnteRGamNFUVntOte';
+    customAlert(
+      lang.Contact.alertSuccessTitle,
+      lang.Contact.alertSuccessText,
+      'success',
+      lang.Contact.alertButtonText,
+      () => { window.location.href = 'http://localhost:5174/home';});
 
     emailjs
       .sendForm(serviceId, templateId, refForm.current, apikey)
@@ -32,6 +39,8 @@ const Contact = (props) => {
             name='username'
             type='text'
             placeholder='Ej: Nova Tech'
+            minLength='2'
+            maxLength='40'
             required
           />
         </fieldset>
@@ -45,6 +54,7 @@ const Contact = (props) => {
             name='email'
             id='email'
             required
+
           />
         </fieldset>
         <fieldset className='field-message'>
@@ -60,7 +70,7 @@ const Contact = (props) => {
             rows=''
           />
         </fieldset>
-        <button className='btn-send'>{lang.Contact.enviar}</button>
+        <button className='btn-send'  >{lang.Contact.enviar}</button>
       </form>
     </div>
   );

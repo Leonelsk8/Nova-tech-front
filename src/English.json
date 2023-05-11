@@ -297,7 +297,11 @@
     "nombre": "Name",
     "email": "Email",
     "mensaje": "Message",
-    "enviar": "Send"
+    "enviar": "Send",
+    "tipo": "Write your message",
+    "alertSuccessTitle": "Message sent!",
+    "alertSuccessText":"We will answer your message shortly.",
+    "alertButtonText":"Go to home page"
   },
 
   "cards": {
