@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Form, Row, Col, Button, InputGroup, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { checkPassword, editUserPassword } from '../../../API/Api';
@@ -78,7 +77,6 @@ const EditPassword = (props) => {
                     },
                   })}
                 />
-                {/* MOSTRAR/OCULTAR CONTRASEÑA */}
                 <Button
                   variant='link'
                   className='px-0 ms-2'

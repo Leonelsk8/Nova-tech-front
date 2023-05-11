@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { checkPassword, editUserLanguage } from '../../../API/Api';

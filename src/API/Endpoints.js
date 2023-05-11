@@ -25,7 +25,11 @@ const endpointUsers ={
   editUserLanguage: '/users/edit-user-language',
   addCart: '/users/add-tocart',
   getCart: '/users/get-cart',
-  login: '/login'
+  login: '/login',
+  getAllusers: '/users/get-users',
+  getEmail: '/users/get-user-email',
+  disabled: '/users/disable-user',
+  abled: '/users/abled-user'
 }
 
 export {endpointProduct , endpointUsers}

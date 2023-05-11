@@ -253,7 +253,7 @@
     "header": "Bienvenido",
     "sectionMyDataTitle": "Mis datos",
     "selectMyData": "Ver datos",
-    "selectCart": "Ir a Carrito",
+    "selectCart": "Carrito",
     "sectionEditDataTitle": "Editar datos",
     "selectEditName": "Nombre y Apellido",
     "selectEditEmail": "Email",
@@ -304,5 +304,30 @@
     "alertSuccessTitle": "Mensaje enviado!",
     "alertSuccessText":"En breve contestaremos su mensaje.",
     "alertButtonText":"Ir a pagina de de inicio"
+  },
+
+  "cards": {
+    "alertone": "Inicia sesión",
+    "alerttextone": "No puedes agregar productos si aún no iniciaste sesión",
+    "alerttexttwo": "No puedes comprar productos si aún no iniciaste sesión",
+    "added": "Agregado",
+    "noadded": "No pudo aregarse"
+  },
+
+  "listUser": {
+    "title": "Usuarios regitrados",
+    "name": "Nombre",
+    "lastName": "Apellido",
+    "email": "Email",
+    "suspended": "Suspendido",
+    "susConfirmed": "Sí"
+  },
+
+  "suspendUsers":{
+    "alertOne": "Habilitado",
+    "alertTwo": "Suspendido",
+    "alertTextOne": "El usuario fué habilitado",
+    "alertTextTwo": "El usuario fué suspendido",
+    "title": "Suspender o habilitar usuario (buscar por email)"
   }
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { addtoCart } from '../../API/Api';
 import {Card} from 'react-bootstrap';
 import AOS from 'aos';
@@ -16,12 +15,20 @@ const Cards = (props) => {
   const addCart = async(idProduct, accessToken)=>{
     const idUser = localStorage.getItem('idUser-novatech');
     if(token === null || idUser === null){
-      customAlert('Inicia sesión', 'No puedes agregar productos si aún no iniciaste sesión', 'warning', 'Ok', ()=>{});
+      customAlert(lang.cards.alertone, lang.cards.alerttextone, 'warning', 'Ok', ()=>{});
       return;
     }
     await addtoCart(idUser, idProduct, accessToken)
-    .then((resp)=>{alertTime('Agregado', 'success'); console.log(resp.data)})
-    .catch((error)=>{alertTime('No pudo agregarse', 'error'); console.log(error)})
+    .then((resp)=>{alertTime(lang.cards.added, 'success'); console.log(resp.data)})
+    .catch((error)=>{alertTime(lang.cards.noadded, 'error'); console.log(error)})
+  }
+
+  const redirect = (id)=>{
+    if(token === null){
+      customAlert(lang.cards.alertone, lang.cards.alerttexttwo, 'warning', 'Ok', ()=>{});
+      return;
+    }
+    navigate(`/prod/${id}`)
   }
 
   return (
@@ -38,7 +45,7 @@ const Cards = (props) => {
         </div>
         <div className='d-flex justify-content-between'>
           <button className={modeDL === 'dark' ? `${style.buttCartdark} ${style.buttCart}` : `${style.buttCartlight} ${style.buttCart}`} onClick={()=>addCart(id, token)}><i className={`bi bi-cart-plus ${style.cartPlus}`}></i></button>
-          <button className={`text-white bgFootButt-${modeDL} butt-${modeDL} butt`} onClick={() => navigate(`/prod/${id}`)}>{lang.Store.buttBuy}</button>
+          <button className={`text-white bgFootButt-${modeDL} butt-${modeDL} butt`} onClick={() => redirect(id)}>{lang.Store.buttBuy}</button>
         </div>
       </Card.Body>
     </Card>

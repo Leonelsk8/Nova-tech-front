@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+
 import {useState} from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
@@ -43,8 +43,8 @@ const Header = (props) => {
                 <><Link className={`text-decoration-none ${location.pathname === '/login' ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0 me-lg-3`} to='/login'>{lang.Navbar.login}</Link>
                 <Link className={`text-decoration-none ${location.pathname === '/register' ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0`} to='/register'>{lang.Navbar.register}</Link></> 
                 :
-                <><Link className={`text-decoration-none ${location.pathname === `/profile/${userId}` ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0 me-lg-3`} to={`/profile/${userId}`}>{lang.Navbar.profile}</Link>
-                <button className={`${style.cartShop} text-start mt-md-2 mt-lg-0 me-lg-3`} onClick={()=>setCartOn(1)}><i className="bi bi-cart2"></i></button>
+                <><button className={`${style.cartShop} text-start mt-md-2 mt-lg-0 me-lg-3`} onClick={()=>setCartOn(1)}><i className="bi bi-cart2"></i></button>
+                <Link className={`text-decoration-none ${location.pathname === `/profile/${userId}` ? 'linkActive' : 'linkNav-light'} mt-md-2 mt-lg-0 me-lg-3`} to={`/profile/${userId}`}>{lang.Navbar.profile}</Link>
                 <Link className='text-decoration-none linkNav-light mt-md-2 mt-lg-0' onClick={() => closeSesion()} to='/login'>{lang.Navbar.closeSes}</Link></>
               }
               <div className='ms-lg-3 mt-md-2 mt-lg-0'>
