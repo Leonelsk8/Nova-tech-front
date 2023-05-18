@@ -2,7 +2,6 @@ import axios from 'axios';
 import { endpointProduct, endpointUsers } from './Endpoints';
 const DBURL = import.meta.env.VITE_DB_URL;
 
-// products
 
 export const getProducts = async (pag) => {
   try {
@@ -139,9 +138,7 @@ export const offertProd = async(id, accessToken)=>{
   } catch (error) {
     console.log(error);
   }
-}
-
-//users
+};
 
 export const createUser = async (userData) => {
   try {
