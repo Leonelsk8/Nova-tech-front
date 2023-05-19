@@ -26,7 +26,6 @@ const App = () => {
   useEffect(()=>{
     const modebg = localStorage.getItem('modeDL');
     const modetext = localStorage.getItem('textMode');
-    const language = localStorage.getItem('language');
 
     if(modebg !== null){
       setbgMode(modebg)
@@ -34,18 +33,14 @@ const App = () => {
     if(modetext !== null){
       settextMode(modetext)
     }
-    if (language !== null) {
-      language === 'es' ? setLang(es) : setLang(en);
-    }
   }, [bgMode, textMode])
 
-  // useEffect(()=>{
-  //   const language = localStorage.getItem('language');
-
-  //   if (language !== null) {
-  //     language === 'es' ? setLang(es) : setLang(en);
-  //   }
-  // }, [lang])
+   useEffect(()=>{
+     const language = localStorage.getItem('language');
+     if(language !== null){
+      language === 'es' ? setLang(es) : setLang(en);
+     }
+   }, [lang])
 
   const bgChange = () => {
     if(bgMode === 'light'){
@@ -65,6 +60,7 @@ const App = () => {
   };
 
   const langChange = (value) => {
+    localStorage.setItem('language', value);
     value === 'es' ? setLang(es) : setLang(en);
   };
 
@@ -90,7 +86,7 @@ const App = () => {
         <Route path='/profile/:id' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} token={token} langChange={langChange} />} /> 
         <Route path='/aboutUs' element={<AboutUS modeDL={bgMode} textDL={textMode} lang={lang}/>} />
         <Route path='/contact' element={<Contact modeDL={bgMode} textDL={textMode} lang={lang} />} />
-        <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken}/> : <Navigate to='/home'/>}/>
+        <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken} langChange={langChange}/> : <Navigate to='/home'/>}/>
         <Route path='/not-found' element={<NotFound modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang} />
