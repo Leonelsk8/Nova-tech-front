@@ -31,7 +31,7 @@ const DeleteProduct = (props) => {
 
   const deleteProd = async(id)=>{
     alertCancelConfirm(lang.admin.deleteProduct.alertOne, lang.admin.deleteProduct.alertOneop, 'warning', lang.admin.deleteProduct.alertOneconf, lang.admin.deleteProduct.alertOnecancel, 
-    async ()=>{await deleteProduct(id, token).then((resp)=>{customAlert(lang.admin.deleteProduct.alertTwo, lang.admin.deleteProduct.alertTwoop, 'success','ok',()=>console.log(resp.data))}).catch((error)=>{console.log(error); setLoading(true); render();})}, 
+    async ()=>{await deleteProduct(id, token).then((resp)=>{customAlert(lang.admin.deleteProduct.alertTwo, lang.admin.deleteProduct.alertTwoop, 'success','ok',()=>{render()})}).catch((error)=>{console.log(error); setLoading(true); render();})}, 
     ()=>{return});
   }
 
