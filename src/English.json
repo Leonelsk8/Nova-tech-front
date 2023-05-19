@@ -265,7 +265,6 @@
       "lastName": "Last name",
       "email": "Email",
       "language": "Default language",
-      "id": "ID",
       "createdAt": "Registered since"
     },
     "editUserDataPanel": {

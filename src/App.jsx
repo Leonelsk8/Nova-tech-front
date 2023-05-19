@@ -26,11 +26,16 @@ const App = () => {
   useEffect(()=>{
     const modebg = localStorage.getItem('modeDL');
     const modetext = localStorage.getItem('textMode');
+    const language = localStorage.getItem('language');
+
     if(modebg !== null){
       setbgMode(modebg)
     }
     if(modetext !== null){
       settextMode(modetext)
+    }
+    if (language !== null) {
+      language === 'es' ? setLang(es) : setLang(en);
     }
   }, [])
 
@@ -52,7 +57,14 @@ const App = () => {
   };
 
   const langChange = (value) => {
-    value === 'es' ? setLang(es) : setLang(en);
+    if (value === 'es') {
+      setLang(es);
+      localStorage.setItem('language', 'es')
+    }
+    if (value === 'en') {
+      setLang(en);
+      localStorage.setItem('language', 'en')
+    }
   };
 
   const getToken =()=>{
@@ -61,7 +73,7 @@ const App = () => {
 
   const closeSesion =()=>{
     localStorage.removeItem('tokenUser-novatech');
-    localStorage.removeItem('id');
+    localStorage.removeItem('idUser-novatech');
     setToken(null);
   }
 

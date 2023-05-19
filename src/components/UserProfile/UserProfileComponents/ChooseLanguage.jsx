@@ -1,4 +1,3 @@
-
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { checkPassword, editUserLanguage } from '../../../API/Api';
@@ -31,6 +30,10 @@ const ChooseLanguage = (props) => {
       token,
       checkPassword,
       editUserLanguage,
+      () => {
+        localStorage.setItem('language', register.lang);
+        window.location.reload();
+      },
       alertInfo
     );
   };

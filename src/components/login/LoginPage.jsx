@@ -26,6 +26,7 @@ export default function LoginPage(props) {
   const onSubmit = async (register) => {
     await loginApi(register)
       .then((resp) => {
+        console.log(resp);
         if(resp.data.disabled){
           customAlert(
             lang.Login.disabledtitle,
@@ -39,6 +40,7 @@ export default function LoginPage(props) {
         }else{
           localStorage.setItem('tokenUser-novatech', resp.data.token);
           localStorage.setItem('idUser-novatech', resp.data.id);
+          localStorage.setItem('language', resp.data.lang);
           customAlert(
             lang.Login.alertSuccessTitle,
             lang.Login.alertSuccessText,
