@@ -26,7 +26,6 @@ export default function LoginPage(props) {
   const onSubmit = async (register) => {
     await loginApi(register)
       .then((resp) => {
-        console.log(resp);
         if(resp.data.disabled){
           customAlert(
             lang.Login.disabledtitle,
