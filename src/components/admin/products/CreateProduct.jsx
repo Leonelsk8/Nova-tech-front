@@ -66,8 +66,6 @@ const CreateProduct = (props) => {
     
     if(sendDisabled) return customAlert('Error', lang.admin.createProduct.messageAlert1, 'warning', 'Ok', ()=>{console.log('error')});
 
-    console.log(productData);
-
     try {
       await createProduct(productData, token)
       .then(response => {customAlert(lang.admin.createProduct.success, lang.admin.createProduct.messageAlert2 , 'success', 'Ok', ()=>{window.location.reload()})})

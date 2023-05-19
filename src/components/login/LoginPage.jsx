@@ -37,7 +37,6 @@ export default function LoginPage(props) {
             }
           );
         }else{
-          console.log(resp.data);
           localStorage.setItem('tokenUser-novatech', resp.data.token);
           localStorage.setItem('idUser-novatech', resp.data.id);
           customAlert(

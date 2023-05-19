@@ -29,11 +29,11 @@ const SuspendUser = (props) => {
   const sendDisabled = async(id, token, disabled)=>{
     if(disabled){
       await abledUser(id, token)
-      .then((resp)=>{console.log(resp.data); customAlert(lang.suspendUsers.alertOne, lang.suspendUsers.alertTextOne, 'success', 'Ok', ()=>{})})
+      .then((resp)=>{customAlert(lang.suspendUsers.alertOne, lang.suspendUsers.alertTextOne, 'success', 'Ok', ()=>{})})
       .catch((error)=>console.log(error))
     }else{
       await disabledUser(id, token)
-      .then((resp)=>{console.log(resp.data); customAlert(lang.suspendUsers.alertTwo, lang.suspendUsers.alertTextTwo, 'success', 'Ok', ()=>{})})
+      .then((resp)=>{customAlert(lang.suspendUsers.alertTwo, lang.suspendUsers.alertTextTwo, 'success', 'Ok', ()=>{})})
       .catch((error)=>console.log(error))
     }
   }

@@ -27,7 +27,7 @@ const ModifyOfferts = (props) => {
       customAlert('Error', lang.admin.offerProd.alertTwo, 'warning', 'ok', ()=>{})
     }else{
       await restartOfferts(token)
-      .then((resp)=>{console.log(resp.data); setProdOfferts([])})
+      .then((resp)=>{setProdOfferts([])})
       .catch((error)=>console.log(error));
     }
   }
@@ -51,7 +51,7 @@ const ModifyOfferts = (props) => {
   const sendOffert = async (id)=>{
     if(prodOfferts.length < 8){
       await offertProd(id, token)
-      .then((resp)=>{setProdOfferts([...prodOfferts, resp.data]); console.log(resp.data)})
+      .then((resp)=>{setProdOfferts([...prodOfferts, resp.data]);})
       .catch((error)=>console.log(error))
     }else{
       customAlert('Error', lang.admin.offerProd.alertOne , 'warning', 'ok', ()=>{})

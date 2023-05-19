@@ -19,7 +19,7 @@ const Cards = (props) => {
       return;
     }
     await addtoCart(idUser, idProduct, accessToken)
-    .then((resp)=>{alertTime(lang.cards.added, 'success'); console.log(resp.data)})
+    .then((resp)=>{alertTime(lang.cards.added, 'success');})
     .catch((error)=>{alertTime(lang.cards.noadded, 'error'); console.log(error)})
   }
 

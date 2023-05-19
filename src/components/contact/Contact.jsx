@@ -16,7 +16,7 @@ const Contact = (props) => {
       lang.Contact.alertSuccessText,
       'success',
       lang.Contact.alertButtonText,
-      () => { window.location.href = 'http://localhost:5174/home';});
+      () => { window.location.reload()});
 
     emailjs
       .sendForm(serviceId, templateId, refForm.current, apikey)
