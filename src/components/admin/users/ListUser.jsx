@@ -35,7 +35,7 @@ const ListUser = (props) => {
               <tbody>
               {
                 users.map((date, index)=>(
-                  <tr key={index}>
+                  <tr key={index} className={`text-dark`}>
                     <td>{date.name}</td>
                     <td>{date.lastName}</td>
                     <td>{date.email}</td>

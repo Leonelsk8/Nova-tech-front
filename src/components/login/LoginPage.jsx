@@ -47,7 +47,6 @@ export default function LoginPage(props) {
             lang.Login.alertButtonText,
             () => {
               getToken();
-              window.location.reload();
             }
           );
         }

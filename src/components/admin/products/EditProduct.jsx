@@ -61,9 +61,10 @@ const EditProduct = (props) => {
   }
 
   const handleChangeEdit = (e)=>{
+    const nameTarget = e.target.name;
     setProductEdit((prev) =>({
       ...prev,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value === '' ?  productId.nameTarget : e.target.value
     }))
   }
 
@@ -73,8 +74,13 @@ const EditProduct = (props) => {
 
     try {
       await editProduct(productEdit, productEdit._id, token)
-      .then(response => {customAlert(lang.admin.createProduct.success, lang.admin.editProduct.alertOne , 'success', 'Ok', ()=>{console.log(response)});setLoading(true); render()})
-      .catch(error => {customAlert('Error', lang.admin.editProduct.alertTwo,'error', 'Ok', ()=>{console.log(error)})})
+      .then((response) => {customAlert(lang.admin.createProduct.success, lang.admin.editProduct.alertOne , 'success', 'Ok', ()=>{setProductId({titleEs: '',
+      titleEn: '',
+      descriptionEs: '',
+      descriptionEn: '',
+      price: null,
+      quantity: null,}); setModal(false); setLoading(true); render()})})
+      .catch((error) => {customAlert('Error', lang.admin.editProduct.alertTwo,'error', 'Ok', ()=>{window.location.reload()})})
     } catch (error) {
       console.log(error);
     }
@@ -120,13 +126,14 @@ const EditProduct = (props) => {
         }
       </div>
     </div>
-          <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden={modal}>
-            
+          <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel">
+            {
+             modal ? 
               <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div className={`modal-content bg-${modeDL} text-${textDL}`}>
                   <div className="modal-header">
                     <h1 className="modal-title fs-5" id="exampleModalLabel">Editar: {lang.Languaje.lang === 'es' ? productId.titleEs : productId.titleEn}</h1>
-                    <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" className="btn-close" onClick={()=>setModal(false)} data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div className="modal-body">
                     <form className='mt-4' onSubmit={handleSubmitEdit}>
@@ -184,11 +191,12 @@ const EditProduct = (props) => {
                         <label htmlFor="inputQuantity" className="form-label">{lang.admin.createProduct.quantity}</label>
                         <input type="number" className={`form-control ${style.inputWidthTwo}`} name='quantity' onChange={handleChangeEdit} id="inputQuantity" placeholder={productId.quantity}/>
                       </div>
-                      <button type="submit" className={sendDisabled ? 'buttDisabled' : `bgFootButt-${modeDL} butt-${modeDL} butt text-white`} disabled={sendDisabled ? true : false}>{lang.admin.prodOpctwo}</button>
+                      <button type="submit" className={sendDisabled ? 'buttDisabled' : `bgFootButt-${modeDL} butt-${modeDL} butt text-white`} disabled={sendDisabled ? true : false}  data-bs-dismiss="modal" aria-label="Close">{lang.admin.prodOpctwo}</button>
                     </form>
                   </div>
                 </div>
-              </div>
+              </div> : <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable"></div>
+            }
           </div>
       
     
