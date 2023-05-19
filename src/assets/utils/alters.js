@@ -49,6 +49,7 @@ export const validateUserAlert = (
   token,
   action,
   actionTwo,
+  actionThree,
   info
 ) => {
   Swal.fire({
@@ -62,8 +63,8 @@ export const validateUserAlert = (
     confirmButtonText: info.textButton,
     confirmButtonColor: '#6D8B74',
     showLoaderOnConfirm: true,
-    preConfirm: (password) => {
-      return action(id, password, token)
+    preConfirm: async (password) => {
+      return await action(id, password, token)
         .then(async (response) => {
           if (!response) {
             throw new Error(response);
@@ -82,16 +83,18 @@ export const validateUserAlert = (
         text: info.successText,
         confirmButtonText: info.successButtonText,
         confirmButtonColor: '#6D8B74',
+      }).then(() => {
+        actionThree();
       });
     }
   });
 };
 
-export const alertTime = (title, icon)=>{
+export const alertTime = (title, icon) => {
   Swal.fire({
     icon: icon,
     title: title,
     showConfirmButton: false,
-    timer: 1000
-  })
-}
+    timer: 1000,
+  });
+};

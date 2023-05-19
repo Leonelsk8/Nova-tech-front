@@ -8,7 +8,7 @@ import styles from './LoginPage.module.css';
 import { customAlert } from '../../assets/utils/alters';
 
 export default function LoginPage(props) {
-  const { modeDL, textDL, lang, getToken } = props;
+  const { modeDL, textDL, lang, getToken, langChange } = props;
   const {
     register,
     handleSubmit,
@@ -39,6 +39,7 @@ export default function LoginPage(props) {
         }else{
           localStorage.setItem('tokenUser-novatech', resp.data.token);
           localStorage.setItem('idUser-novatech', resp.data.id);
+          langChange(resp.data.lang);
           customAlert(
             lang.Login.alertSuccessTitle,
             lang.Login.alertSuccessText,

@@ -24,10 +24,6 @@ const MyData = (props) => {
           <span className={`text-${textDL} ms-1`}>{`"${userData.lang}"`}</span>
         </ListGroup.Item>
         <ListGroup.Item className={`bg-${modeDL} text-${textDL}`}>
-          {lang.userProfile.userDataPanel.id}:{' '}
-          <span className={`text-${textDL} ms-1`}>{userData._id}</span>
-        </ListGroup.Item>
-        <ListGroup.Item className={`bg-${modeDL} text-${textDL}`}>
           {lang.userProfile.userDataPanel.createdAt}:{' '}
           <span className={`text-${textDL} ms-1`}>{formattedDate}</span>
         </ListGroup.Item>

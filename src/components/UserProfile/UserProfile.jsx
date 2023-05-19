@@ -12,7 +12,7 @@ import { getUserById } from '../../API/Api';
 import { useParams } from 'react-router-dom';
 
 const UserProfile = (props) => {
-  const { modeDL, textDL, lang, token } = props;
+  const { modeDL, textDL, lang, token, langChange } = props;
   const [panel, setPanel] = useState(1);
   const [userData, setUserData] = useState({});
   const [isLoading, setIsLoading] = useState(false);
@@ -189,6 +189,7 @@ const UserProfile = (props) => {
                 userData={userData}
                 token={token}
                 id={id}
+                langChange={langChange}
               />
             )}
           </Col>

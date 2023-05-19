@@ -267,7 +267,6 @@
       "lastName": "Apellido",
       "email": "Email",
       "language": "Idioma preferido",
-      "id": "ID",
       "createdAt": "Registrado desde"
     },
     "editUserDataPanel": {

@@ -55,7 +55,7 @@ const Header = (props) => {
               </div>
               <div className='lang-div mt-md-2 mt-lg-0 d-flex align-items-center ms-lg-2'>
                 <label htmlFor="Select-Lang" className='pe-1'><img src={lang.Languaje.lang ==='es' ? espImg : engImg} width='25px' alt="langimg"/></label>
-                <select onChange={handleChangeLang} className='lang-select' id='Select-Lang'>
+                <select onChange={handleChangeLang} className='lang-select' id='Select-Lang' value={lang.Languaje.lang}>
                   <option value="es">es</option>
                   <option value="en">en</option>
                 </select>

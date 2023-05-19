@@ -1,11 +1,11 @@
-
+/* eslint-disable react/prop-types */
 import { Form, Row, Col, Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { checkPassword, editUserLanguage } from '../../../API/Api';
 import { validateUserAlert } from '../../../assets/utils/alters';
 
 const ChooseLanguage = (props) => {
-  const { modeDL, textDL, lang, userData, token, id } = props;
+  const { modeDL, textDL, lang, userData, token, id, langChange } = props;
 
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -31,6 +31,9 @@ const ChooseLanguage = (props) => {
       token,
       checkPassword,
       editUserLanguage,
+      () => {
+        langChange(register.lang);
+      },
       alertInfo
     );
   };

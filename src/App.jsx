@@ -22,17 +22,25 @@ const App = () => {
   const [bgMode, setbgMode] = useState('light');
   const [textMode, settextMode] = useState('dark');
   const [token, setToken] = useState(localStorage.getItem('tokenUser-novatech'));
-
+  
   useEffect(()=>{
     const modebg = localStorage.getItem('modeDL');
     const modetext = localStorage.getItem('textMode');
+
     if(modebg !== null){
       setbgMode(modebg)
     }
     if(modetext !== null){
       settextMode(modetext)
     }
-  }, [])
+  }, [bgMode, textMode])
+
+   useEffect(()=>{
+     const language = localStorage.getItem('language');
+     if(language !== null){
+      language === 'es' ? setLang(es) : setLang(en);
+     }
+   }, [lang])
 
   const bgChange = () => {
     if(bgMode === 'light'){
@@ -52,6 +60,7 @@ const App = () => {
   };
 
   const langChange = (value) => {
+    localStorage.setItem('language', value);
     value === 'es' ? setLang(es) : setLang(en);
   };
 
@@ -61,7 +70,7 @@ const App = () => {
 
   const closeSesion =()=>{
     localStorage.removeItem('tokenUser-novatech');
-    localStorage.removeItem('id');
+    localStorage.removeItem('idUser-novatech');
     setToken(null);
   }
 
@@ -74,10 +83,10 @@ const App = () => {
         <Route path='/prod/:id' element={token===null ?<Navigate to='/home'/>:<ProductPage modeDL={bgMode} textDL={textMode} lang={lang} token={token}/>}/>
         <Route path='/register'  element={token===null ? <Register modeDL={bgMode} textDL={textMode} lang={lang}/> : <Navigate to='/home'/>}/>
         <Route path='/panel-admin' element={adminValidate(token) ? <Panel modeDL={bgMode} textDL={textMode} lang={lang} token={token}/> : <Navigate to='/home'/>}/>
-        <Route path='/profile/:id' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} token={token} />} /> 
+        <Route path='/profile/:id' element={<UserProfilePage modeDL={bgMode} textDL={textMode} lang={lang} token={token} langChange={langChange} />} /> 
         <Route path='/aboutUs' element={<AboutUS modeDL={bgMode} textDL={textMode} lang={lang}/>} />
         <Route path='/contact' element={<Contact modeDL={bgMode} textDL={textMode} lang={lang} />} />
-        <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken}/> : <Navigate to='/home'/>}/>
+        <Route path='/login' element={token===null ? <Login modeDL={bgMode} textDL={textMode} lang={lang} getToken={getToken} langChange={langChange}/> : <Navigate to='/home'/>}/>
         <Route path='/not-found' element={<NotFound modeDL={bgMode} textDL={textMode} lang={lang}/>}/>
       </Routes>
       <Footer modeDL={bgMode} textDL={textMode} lang={lang} />
