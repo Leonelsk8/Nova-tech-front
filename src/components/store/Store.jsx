@@ -21,7 +21,7 @@ import imgEndtree from '../../assets/imgEndtree.jpg';
 const Store = (props) => {
   const {lang, modeDL, textDL, token} = props;
   AOS.init();
-  const [dataProd, setDataProd] = useState([]);
+  const [dataProd, setDataProd] = useState([null,null,null,null,null,null,null,null,null,null,null,null]);
   const [pag, setPag] = useState(1);
   const [isLoading, setLoading] = useState(true);
   const [category, setCategory] = useState('none');
@@ -139,7 +139,7 @@ const Store = (props) => {
             <Col xs={12} md={12} lg={9}>
               <Row>
                 {
-                  isLoading ? <Col xs={12} md={12} lg={12}><Loader/></Col> : dataProd.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Card title={lang.Languaje.lang === 'es' ? resp.titleEs : resp.titleEn} price={resp.price} icon={resp.icon} id={resp._id} styles={style} modeDL={modeDL} textDL={textDL} token={token} lang={lang}/></Col>))
+                  isLoading&&dataProd[0]===null ? dataProd.map((element, index)=>(<Col key={index} xs={6} md={4} lg={3} className='mt-4 px-1 px-md-2'><div className={`bgCardBan-${modeDL} ${style.loaderContainer}`}><div className={`${modeDL==='dark'? style.LoaderImgDark : style.LoaderImgLight} mb-3`}></div><div className={`${style.LoaderTitle} px-3`}><div className={`${modeDL==='dark'? style.loaderTitleDark : style.loaderTitleLight}`}></div></div></div></Col>)) : dataProd.map((resp, index)=>(<Col xs={6} md={4} lg={3} key={index}  className='mt-4 px-1 px-md-2'><Card title={lang.Languaje.lang === 'es' ? resp.titleEs : resp.titleEn} price={resp.price} icon={resp.icon} id={resp._id} styles={style} modeDL={modeDL} textDL={textDL} token={token} lang={lang}/></Col>))
                   
                 }
                 {

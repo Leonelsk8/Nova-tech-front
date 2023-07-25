@@ -153,6 +153,67 @@
 }
 
 
+.loaderContainer{
+  width: 100%;
+  height: 24em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.LoaderImgDark{
+  width: 100%;
+  height: 48%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: linear-gradient(90deg,#383838 0px, #9c9c9c 40px, #383838 80px);
+  background-size: 300%;
+  background-position: 100% 0;
+  animation: loaderCamp infinite 1.5s;
+}
+
+.LoaderImgLight{
+  width: 100%;
+  height: 48%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: linear-gradient(90deg,#c2c2c2 0px, #e9e9e9 40px, #c2c2c2 80px);
+  background-size: 300%;
+  background-position: 100% 0;
+  animation: loaderCamp infinite 1.5s;
+}
+
+.LoaderTitle{
+  width: 100%;
+  height: 10%;
+}
+
+.loaderTitleDark{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg,#383838 0px, #9c9c9c 40px, #383838 80px);
+  background-size: 300%;
+  background-position: 100% 0;
+  animation: loaderCamp infinite 1.5s;
+}
+
+.loaderTitleLight{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-image: linear-gradient(90deg,#c2c2c2 0px, #e9e9e9 40px, #c2c2c2 80px);
+  background-size: 300%;
+  background-position: 100% 0;
+  animation: loaderCamp infinite 1.5s;
+}
+
+@keyframes loaderCamp {
+  to{
+    background-position: -100% 0;
+  }
+}
+
 
 @media (min-width: 200px) and (max-width: 991px) {
   .colCatSearch{
