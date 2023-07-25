@@ -82,6 +82,12 @@
     padding: 0px 5px 0px 5px;
     margin: 0px;
   }
+  .circles h1{
+    font-size: 25px;
+  }
+  .circles h4{
+    font-size: 20px;
+  }
   .butt{
     background-color: #5F7161;
     padding: 6px 85px;
@@ -91,6 +97,9 @@
     transition: 0.5s;
     text-decoration: none;
     cursor: pointer;
+  }
+  .backBan{
+    font-size: 12px;
   }
 }
 
@@ -111,12 +120,24 @@
   }
 
   .backBan{
-    position: relative;
+    position: absolute;
     background-color: rgba(0, 0, 0, 0.288);
     width: 100%;
     height: auto;
     overflow-x: hidden;
+    font-size: 10px;
+    padding: 0.5em;
   }
+
+  .butt{
+    padding: 7px 70px;
+    border-radius: 20px;
+    color: #fff;
+    border: solid #fff 1.5px;
+    transition: 0.5s;
+    text-decoration: none;
+    cursor: pointer;
+  }  
 
   .textXS{
     top: 15%;

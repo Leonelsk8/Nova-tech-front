@@ -47,9 +47,7 @@ const landing = (props) => {
             <img className="d-block w-100" src={land3} alt="Third slide" />
           </Carousel.Item>
         </Carousel>
-        <div className={`${style.textXS} text-center position-absolute d-md-none`}><h2>{lang.Landing.title}</h2></div>
         <div className={style.backBan}>
-
           <Row className={`${style.rowLand}`}>
             <Col xs={12} md={6} lg={5} className={`${style.cardLand} animate__animated animate__fadeInLeft mt-3 mt-md-0 py-4 py-md-0`}>
               <div className='text-center text-white px-md-3 pt-md-1 p-lg-4'>

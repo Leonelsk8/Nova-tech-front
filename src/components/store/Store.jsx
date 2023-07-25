@@ -6,7 +6,6 @@ import img1 from '../../assets/img1Bann.jpg';
 import img2 from '../../assets/img2Bann.jpg';
 import img3 from '../../assets/img3Bann.jpg';
 import { getProducts, getProductCategory, searchProd } from '../../API/Api';
-import Loader from '../loader/Loader';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Landing from '../landing/Landing';
